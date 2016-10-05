@@ -1,0 +1,17 @@
+<?php
+/**
+ * @file
+ * Functions to support theming in the Tieto Base theme.
+ */
+
+use Drupal\Core\Template\Attribute;
+use Drupal\Core\Link;
+use Drupal\Component\Utility\Html;
+
+function tieto_base_preprocess_menu_local_task(&$variables) {
+  $link = $variables['element']['#link'];
+  $url = $link['url'];
+  $options = $url->getOptions();
+  $url->setOptions($options + $link['localized_options']);
+  $variables['item'] = Link::fromTextAndUrl($link['title'], $url);
+}
