@@ -28,5 +28,6 @@ You need [Node.js](https://nodejs.org/en/) for theme development. After you have
 
 ## Links
 
-Styleguide: https://drive.google.com/file/d/0B8W_7QR5lW39MXJfWWsyTUdPSms/view?ts=57c5882b
-Specs: https://drive.google.com/open?id=1Ruu0794rHVA4O5hpyQIXBqlp3jQ_qMEUQNFX7TJDWyU
+* Styleguide: https://drive.google.com/file/d/0B8W_7QR5lW39MXJfWWsyTUdPSms/view?ts=57c5882b
+* Specs: https://drive.google.com/open?id=1Ruu0794rHVA4O5hpyQIXBqlp3jQ_qMEUQNFX7TJDWyU
+* Tutorials: https://www.drupal.org/docs/8/theming-drupal-8
