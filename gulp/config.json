@@ -9,6 +9,11 @@
 		"entry": "./assets/scripts/**/*.js",
 		"dest": "./dist/js"
 	},
+	"fonts": {
+		"watch": "./assets/fonts/**/*.{ttf,otf}",
+		"entry": "./assets/fonts/**/*.{ttf,otf}",
+		"dest": "./dist/fonts"
+	},
 	"browserSync": {
 		"notify": false
 	}
