@@ -14,8 +14,9 @@ let options = {
   sass: {
     outputStyle: 'expanded',
     includePaths: [
-
-    ]
+      process.cwd() + '/node_modules/normalize.css',
+      process.cwd() + '/node_modules/bootstrap/scss',
+    ],
   },
 
   // autoprefixer
