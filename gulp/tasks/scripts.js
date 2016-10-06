@@ -1,6 +1,7 @@
 import gulp from 'gulp';
 import babel from 'gulp-babel';
 import config from '../config';
+import browserSync from 'browser-sync';
 
 gulp.task('scripts', () => {
   gulp
@@ -8,6 +9,7 @@ gulp.task('scripts', () => {
     .pipe(babel({
       presets: ['es2015']
     }))
-    .pipe(gulp.dest(config.scripts.dest));
+    .pipe(gulp.dest(config.scripts.dest))
+    .pipe(browserSync.stream());
 });
 
