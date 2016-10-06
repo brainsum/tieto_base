@@ -2,7 +2,7 @@ export default {
   project: './',
 
   styles: {
-    src: './assets/scss/**/*.scss'
+    src: './assets/scss/**/*.scss',
     entry: './assets/scss/global.scss',
     dest: './dist/css'
   },
