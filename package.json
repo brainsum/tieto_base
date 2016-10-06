@@ -6,8 +6,7 @@
   "homepage": "https://www.brainsum.com/",
   "private": true,
   "scripts": {
-    "prod": "gulp --production",
-    "dev": "gulp",
+    "build": "gulp",
     "watch": "gulp watch"
   },
   "devDependencies": {

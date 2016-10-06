@@ -9,7 +9,7 @@ gulp.task('scripts', () => {
     .src(config.scripts.entry)
     .pipe(sourcemaps.init())
     .pipe(babel())
-    .pipe(sourcemaps.write())
+    .pipe(sourcemaps.write('.'))
     .pipe(gulp.dest(config.scripts.dest))
     .pipe(browserSync.stream());
 });

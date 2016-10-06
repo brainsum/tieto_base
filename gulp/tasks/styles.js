@@ -9,7 +9,7 @@ gulp.task('styles', () => {
     .src(config.styles.entry)
     .pipe(sourcemaps.init())
     .pipe(sass())
-    .pipe(sourcemaps.write())
+    .pipe(sourcemaps.write('.'))
     .pipe(gulp.dest(config.styles.dest))
     .pipe(browserSync.stream());
 });
