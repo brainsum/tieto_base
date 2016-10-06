@@ -9,6 +9,9 @@
  *
  * @author Gergely Pap <gpap@brainsum.com>
  * @see https://laravel.com/docs/master/elixir
+ *
+ * @todo Pimp this file when normal Gulpfile.babel.js is ready, to allow
+ *       people to use Elixir too.
  */
 
 import Elixir from 'laravel-elixir'
