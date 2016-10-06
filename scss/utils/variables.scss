@@ -1,0 +1,22 @@
+/**
+ * @file
+ * Variables
+ */
+
+ // Typography
+ //
+ // Font, line-height, and color for body text, headings, and more.
+
+$font-path: '../fonts'; // Custom webfont's path
+$font-family-sans-serif:
+  'HelveticaNeue', // Custom webfont
+  -apple-system, // Safari for OS X and iOS (San Francisco)
+  BlinkMacSystemFont, // Chrome for OS X (San Francisco)
+  "Segoe UI", // Windows
+  "Roboto", // Android
+  "Oxygen", // Linux KDE
+  "Ubuntu", // Linux GNOME
+  "Cantarell", // Linux GNOME
+  "Fira Sans", // Firefox OS [R.I.P.]
+  "Droid Sans", // Older Android
+  "Helvetica Neue", Arial, sans-serif; // Basic web fallback
