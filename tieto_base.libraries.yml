@@ -1,4 +1,6 @@
 global:
   css:
     base:
-      css/global.css: {}
+      dist/css/global.css: {}
+  js:
+    dist/js/global.js: {}

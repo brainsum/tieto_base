@@ -5,10 +5,10 @@ import browserSync from 'browser-sync';
 browserSync.create();
 
 gulp.task('reload', () => {
-  var files = [
-    config.styles.dest + '/**/*.css',
-    config.scripts.dest + '/**/*.js'
-  ];
+  // let files = [
+  //   config.styles.dest + '/**/*.css',
+  //   config.scripts.dest + '/**/*.js'
+  // ];
 
-  browserSync.init(files, config.browserSync);
+  browserSync.init(config.browserSync);
 });
