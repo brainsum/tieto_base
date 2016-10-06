@@ -8,7 +8,7 @@ export default {
 
   scripts: {
     entry: './assets/scripts/**/*.js',
-    dest: './dist/js',
+    dest: './dist/js'
   },
 
   browserSync: {
