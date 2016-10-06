@@ -1,5 +1,5 @@
+import config from '../init';
 import gulp from 'gulp';
-import CONFIG from '../config';
 import sass from 'gulp-sass';
 import cssnano from 'gulp-cssnano';
 import sourcemaps from 'gulp-sourcemaps';
@@ -7,12 +7,10 @@ import autoprefixer from 'gulp-autoprefixer';
 import browserSync from 'browser-sync';
 import util from 'gulp-util';
 
-/**
- * Style specific options.
- *
- * @type {Object}
- */
 let options = {
+
+  // node-sass
+  // @see https://github.com/sass/node-sass#options
   sass: {
     outputStyle: 'expanded',
     includePaths: [
@@ -20,10 +18,14 @@ let options = {
     ]
   },
 
+  // autoprefixer
+  // @see https://github.com/postcss/autoprefixer#options
   autoprefixer: {
     browsers: ['last 2 versions']
   },
 
+  // cssnano
+  // @see http://cssnano.co/optimisations/
   cssnano: {
     discardComments: {
       removeAll: true
@@ -35,10 +37,9 @@ let options = {
  * Styles task.
  */
 gulp.task('styles', () => {
-
   gulp
     // Get these style assets...
-    .src(CONFIG.styles.entry)
+    .src(config.styles.entry)
 
     // If not running with --production, init sourcemaps.
     .pipe(util.env.production ? util.noop() : sourcemaps.init())
@@ -54,7 +55,7 @@ gulp.task('styles', () => {
     .pipe(util.env.production ? cssnano(options.cssnano) : sourcemaps.write('.'))
 
     // Save the final output.
-    .pipe(gulp.dest(CONFIG.styles.dest))
+    .pipe(gulp.dest(config.styles.dest))
 
     // Notify the browser that compile is finished.
     .pipe(browserSync.stream());

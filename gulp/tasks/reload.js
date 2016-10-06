@@ -1,9 +1,9 @@
 import gulp from 'gulp';
-import CONFIG from '../config';
+import config from '../init';
 import browserSync from 'browser-sync';
 
 browserSync.create();
 
 gulp.task('reload', () => {
-  browserSync.init(CONFIG.browserSync);
+  browserSync.init(config.browserSync);
 });
