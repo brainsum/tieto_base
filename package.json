@@ -1,5 +1,5 @@
 {
-  "name": "tieto-theme",
+  "name": "tieto-base",
   "version": "1.0.0",
   "description": "Drupal 8 Theme",
   "author": "Gergely Pap <gpap@brainsum.com>",
@@ -17,11 +17,11 @@
     "babel-polyfill": "^6.13.0",
     "babel-preset-es2015": "^6.13.2",
     "bootstrap": "^4.0.0-alpha.4",
+    "browser-sync": "^2.17.0",
     "gulp": "^3.9.1",
-    "jquery": "^3.1.0",
-    "laravel-elixir": "^6.0.0-9",
-    "laravel-elixir-browsersync-official": "^1.0.0",
-    "laravel-elixir-rollup-official": "^1.0.4",
-    "normalize.css": "^4.2.0"
+    "gulp-babel": "^6.1.2",
+    "gulp-sass": "^2.3.2",
+    "normalize.css": "^4.2.0",
+    "require-dir": "^0.3.0"
   }
 }
