@@ -2,7 +2,7 @@ import { statSync } from 'fs';
 import extend from 'extend';
 import util from 'gulp-util';
 
-let config = {
+let CONFIG = {
 
   styles: {
     watch: './assets/scss/**/*.{sass,scss}',
@@ -18,23 +18,6 @@ let config = {
 
   browserSync: {
     notify: false
-  },
-
-  sass: {
-    outputStyle: 'expanded',
-    includePaths: [
-
-    ]
-  },
-
-  autoprefixer: {
-    browsers: ['last 2 versions']
-  },
-
-  cssnano: {
-    discardComments: {
-      removeAll: true
-    }
   }
 }
 
@@ -44,9 +27,9 @@ let config = {
 const localConfigFile = 'config.local.js';
 try {
   statSync(`${__dirname}/${localConfigFile}`);
-  extend(true, config, require('./' + localConfigFile).default)
+  extend(true, CONFIG, require('./' + localConfigFile).default)
 } catch (err) {
   util.log(util.colors.yellow(`No ${localConfigFile} file found! If you want to override the configuration, create one.`));
 }
 
-export default config
+export default CONFIG
