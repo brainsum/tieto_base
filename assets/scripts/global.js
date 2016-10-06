@@ -1,5 +1,9 @@
-const test = (...args) => {
-  console.log(args)
-}
+/**
+ * @file
+ * Global JavaScript, which loads on every page.
+ */
+(function () {
+  'use strict';
 
-test('mukodj', 'legyszi')
+  console.log('works!');
+})();
