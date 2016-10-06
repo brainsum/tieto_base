@@ -9,7 +9,7 @@ gulp.task('scripts', () => {
     .pipe(babel({
       presets: ['es2015']
     }))
-    .pipe(gulp.dest(config.scripts.dist))
+    .pipe(gulp.dest(config.scripts.dest))
     .pipe(browserSync.reload(config.browserSync));
 });
 
