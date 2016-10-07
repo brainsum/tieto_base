@@ -7,33 +7,6 @@ import autoprefixer from 'gulp-autoprefixer';
 import browserSync from 'browser-sync';
 import util from 'gulp-util';
 
-let options = {
-
-  // node-sass
-  // @see https://github.com/sass/node-sass#options
-  sass: {
-    outputStyle: 'expanded',
-    includePaths: [
-      process.cwd() + '/node_modules/normalize.css',
-      process.cwd() + '/node_modules/bootstrap/scss',
-    ],
-  },
-
-  // autoprefixer
-  // @see https://github.com/postcss/autoprefixer#options
-  autoprefixer: {
-    browsers: ['last 2 versions']
-  },
-
-  // cssnano
-  // @see http://cssnano.co/optimisations/
-  cssnano: {
-    discardComments: {
-      removeAll: true
-    }
-  }
-}
-
 /**
  * Styles task.
  */
@@ -46,14 +19,14 @@ gulp.task('styles', () => {
     .pipe(util.env.production ? util.noop() : sourcemaps.init())
 
     // Convert the assets to plain CSS.
-    .pipe(sass(options.sass)).on('error', sass.logError)
+    .pipe(sass(config.sass)).on('error', sass.logError)
 
     // Add vendor prefixes for older browsers.
-    .pipe(autoprefixer(options.autoprefixer))
+    .pipe(autoprefixer(config.autoprefixer))
 
     // If not running with --production, create sourcemaps,
     // otherwise compress the CSS.
-    .pipe(util.env.production ? cssnano(options.cssnano) : sourcemaps.write('.'))
+    .pipe(util.env.production ? cssnano(config.cssnano) : sourcemaps.write('.'))
 
     // Save the final output.
     .pipe(gulp.dest(config.styles.dest))

@@ -6,9 +6,11 @@ import requireDir from 'require-dir';
 
 requireDir('./gulp/tasks', { recurse: true });
 
-gulp.task('default', ['scripts', 'styles']);
+gulp.task('build', [
+  'scripts',
+  'styles',
+  'fonts',
+  'images'
+]);
 
-gulp.task('watch', ['scripts', 'styles', 'reload'], () => {
-  gulp.watch(config.scripts.watch, ['scripts']);
-  gulp.watch(config.styles.watch, ['styles']);
-});
+gulp.task('default', ['watch']);

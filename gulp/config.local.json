@@ -1,6 +1,0 @@
-{
-	"browserSync": {
-		"proxy": "http://tietotheme.local",
-		"open": true
-	}
-}
