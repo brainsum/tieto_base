@@ -19,7 +19,7 @@ gulp.task('styles', () => {
     .pipe(util.env.production ? util.noop() : sourcemaps.init())
 
     // Convert the assets to plain CSS.
-    .pipe(sass(config.sass)).on('error', sass.logError)
+    .pipe(sass(config.sass).on('error', sass.logError))
 
     // Add vendor prefixes for older browsers.
     .pipe(autoprefixer(config.autoprefixer))

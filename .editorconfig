@@ -11,6 +11,8 @@ trim_trailing_whitespace = true
 insert_final_newline = true
 
 # JSON files.
-[*.json]
+[{*.json, *.lock, .babelrc}]
 indent_style = tab
 indent_size = 4
+quote_type = double
+
