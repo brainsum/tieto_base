@@ -1,9 +1,10 @@
 name: Tieto Base
 description: 'Base theme for all Tieto sites, based on corporate styleguides.'
 type: theme
+base theme: seven
 core: 8.x
-hidden: true
 
+# Regions copied from Seven
 regions:
   header: 'Header'
   pre_content: 'Pre-content'
@@ -14,6 +15,3 @@ regions:
   page_top: 'Page top'
   page_bottom: 'Page bottom'
   sidebar_first: 'First sidebar'
-
-libraries:
-  - tieto_base/global
