@@ -9,8 +9,13 @@ requireDir('./gulp/tasks', { recurse: true });
 gulp.task('build', [
   'scripts',
   'styles',
-  'fonts',
-  'images'
 ]);
 
-gulp.task('default', ['watch']);
+gulp.task('build:full', [
+  'scripts',
+  'styles',
+  'fonts',
+  'images',
+]);
+
+gulp.task('default', ['build']);

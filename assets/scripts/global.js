@@ -10,5 +10,6 @@ import Drupal from 'drupal';
 Drupal.behaviors.myBehavior = {
   attach: function (context, settings) {
     console.log('sup');
+    $('.asdfasdf').hide();
   }
 };

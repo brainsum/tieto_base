@@ -1,29 +1,26 @@
-const SRC = './assets';
-const DIST = './dist';
-
 export default {
 
   // Paths
   styles: {
-    watch: `${SRC}/scss/**/*.{sass,scss}`,
-    entry: `${SRC}/scss/global.scss`,
-    dest: `${DIST}/css`
+    watch: './assets/scss/**/*.{sass,scss}',
+    entry: './assets/scss/global.scss',
+    dest: './css'
   },
 
   scripts: {
-    watch: `${SRC}/scripts/**/*.js`,
-    entry: `${SRC}/scripts/**/*.js`,
-    dest: `${DIST}/js`
+    watch: './assets/scripts/**/*.js',
+    entry: './assets/scripts/**/*.js',
+    dest: './js'
   },
 
   fonts: {
-    entry: `${SRC}/fonts/**/*.{ttf,otf}`,
-    dest: `${DIST}/fonts`
+    entry: './assets/fonts/**/*.{ttf,otf}',
+    dest: './fonts'
   },
 
   images: {
-    entry: `${SRC}/images/**/*.{jpg,jpeg,gif,png,svg}`,
-    dest: `${DIST}/img`,
+    entry: '/assets/images/**/*.{jpg,jpeg,gif,png,svg}',
+    dest: './img',
   },
 
   // gulp-imagemin

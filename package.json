@@ -1,9 +1,9 @@
 {
   "name": "tieto-base",
   "version": "1.0.0",
-  "description": "Drupal 8 Theme",
+  "description": "Base theme for all Tieto sites, based on corporate styleguides.",
   "author": "Gergely Pap <gpap@brainsum.com>",
-  "homepage": "https://www.brainsum.com/",
+  "homepage": "https://www.tieto.com/",
   "private": true,
   "scripts": {
     "build": "gulp build",
@@ -25,6 +25,7 @@
     "gulp": "^3.9.1",
     "gulp-autoprefixer": "^3.1.1",
     "gulp-babel": "^6.1.2",
+    "gulp-csscomb": "^3.0.8",
     "gulp-cssnano": "^2.1.2",
     "gulp-fontgen": "^0.2.5",
     "gulp-imagemin": "^3.0.3",
