@@ -66,13 +66,7 @@ function tieto_base_preprocess_page(&$variables) {
   $sidebar_second_width = 'col-md-3';
 
   // Define default classes for containers
-  $variables['content_attributes'] = array(
-    'class' => array (
-      'main-content',
-    $content_width ),
-  'id' => array ( 'content' ),
-  'role' => array ( 'main' ),
-  );
+
   $variables['sidebar_first_attributes'] = array(
     'class' => array (
       'sidebar',
@@ -88,13 +82,13 @@ function tieto_base_preprocess_page(&$variables) {
   );
 
   // Define column layout classes
-  if (!empty($variables['page']['sidebar_first'])) {
-    $variables['content_attributes']['class'][] = 'col-md-push-3';
-  }
-  $variables['sidebar_first_attributes']['class'][] = 'col-md-pull-' . $width;
+  // if (!empty($variables['page']['sidebar_first'])) {
+  //   $variables['content_attributes']['class'][] = 'col-md-push-3';
+  // }
+  // $variables['sidebar_first_attributes']['class'][] = 'col-md-pull-' . $width;
 
   // Declare region attributes
-  $variables['content_attributes'] = new Attribute($variables['content_attributes']);
+  // $variables['content_attributes'] = new Attribute($variables['content_attributes']);
   $variables['sidebar_first_attributes'] = new Attribute($variables['sidebar_first_attributes']);
   $variables['sidebar_second_attributes'] = new Attribute($variables['sidebar_second_attributes']);
 }

@@ -66,27 +66,11 @@
  */
 #}
 <header id="header" class="header" role="banner" aria-label="{{ 'Site header'|t}}">
-  <nav id="navbar-main" class="navbar">
+  <nav class="navbar">
     <div class="container">
       {{ page.header }}
-      {% if page.primary_menu %}
-        <button class="navbar-toggler hidden-sm-up" type="button" data-toggle="collapse" data-target="#CollapsingNavbar">&#9776;</button>
-        <div class="collapse navbar-toggleable-xs navbar-nav" id="CollapsingNavbar">
-          {{ page.primary_menu }}
-        </div>
-      {% endif %}
     </div>
   </nav>
-
-  {% if page.secondary_menu %}
-    <nav id="navbar-secondary" class="navbar">
-      <div class="container">
-        <div class="navbar-nav">
-          {{ page.secondary_menu }}
-        </div>
-      </div>
-    </nav>
-  {% endif %}
 </header>
 
 {% if page.highlighted %}
@@ -95,35 +79,38 @@
   </section>
 {% endif %}
 
-<div id="main-wrapper" class="layout-main-wrapper clearfix">
-  {% block content %}
-    <div id="main" class="container">
-      <div class="row row-offcanvas row-offcanvas-left clearfix">
-        {{ page.breadcrumb }}
-          <main{{ content_attributes }}>
-            <section class="section">
-              <a id="main-content" tabindex="-1"></a>
-              {{ page.content }}
-            </section>
-          </main>
-        {% if page.sidebar_first %}
-          <div{{ sidebar_first_attributes }}>
-            <aside class="section" role="complementary">
-              {{ page.sidebar_first }}
-            </aside>
-          </div>
-        {% endif %}
-        {% if page.sidebar_second %}
-          <div{{ sidebar_second_attributes }}>
-            <aside class="section" role="complementary">
-              {{ page.sidebar_second }}
-            </aside>
-          </div>
-        {% endif %}
+{% if page.content_top %}
+  <div class="container">
+    {{ page.content_top }}
+  </div>
+{% endif %}
+
+<main id="main" role="main">
+  <div class="container">
+    {{ page.breadcrumb }}
+
+    <section class="section">
+      <a id="main-content" tabindex="-1"></a>
+      {{ page.content }}
+    </section>
+
+    {% if page.sidebar_first %}
+      <div{{ sidebar_first_attributes }}>
+        <aside class="section" role="complementary">
+          {{ page.sidebar_first }}
+        </aside>
       </div>
-    </div>
-  {% endblock %}
-</div>
+    {% endif %}
+
+    {% if page.sidebar_second %}
+      <div{{ sidebar_second_attributes }}>
+        <aside class="section" role="complementary">
+          {{ page.sidebar_second }}
+        </aside>
+      </div>
+    {% endif %}
+  </div>
+</main>
 
 {% if page.footer %}
   <footer class="site-footer">
