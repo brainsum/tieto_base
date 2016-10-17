@@ -6,17 +6,8 @@
 @import "normalize";
 @import "bootstrap";
 
-// Tieto
+// Base
 @import "base/typography";
 
-// Regions
-// @import "regions/header";
-// @import "regions/pre_content";
-// @import "regions/breadcrumb";
-// @import "regions/highlighted";
-// @import "regions/help";
-// @import "regions/content";
-// @import "regions/sidebar";
-// @import "regions/page_top";
-// @import "regions/page_bottom";
-// @import "regions/footer";
+// Components
+@import "components/navbar";

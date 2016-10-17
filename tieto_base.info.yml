@@ -1,20 +1,28 @@
 name: Tieto Base
 description: 'Base theme for all Tieto sites, based on corporate styleguides.'
 type: theme
-base theme: seven
 core: 8.x
+version: 0.1
 
 libraries:
   - tieto_base/global
 
+# @todo Typography and components should be loaded in WYSIWYG too.
+# ckeditor_stylesheets:
+#   - css/base/elements.css
+#   - css/components/captions.css
+#   - css/components/table.css
+
 # Regions copied from Seven
 regions:
   header: 'Header'
-  pre_content: 'Pre-content'
-  breadcrumb: Breadcrumb
-  highlighted: Highlighted
-  help: Help
-  content: Content
+  primary_menu: 'Primary menu'
+  secondary_menu: 'Secondary menu'
   page_top: 'Page top'
   page_bottom: 'Page bottom'
-  sidebar_first: 'First sidebar'
+  highlighted: 'Highlighted'
+  breadcrumb: 'Breadcrumb'
+  content: 'Content'
+  sidebar_first: 'Sidebar first'
+  sidebar_second: 'Sidebar second'
+  footer: 'Footer'
