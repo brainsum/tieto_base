@@ -50,8 +50,12 @@ $brand-danger: $tieto-red;
 //
 // Style anchor elements.
 
-$link-color:            $tieto-blue-dark;
-$link-hover-color:      $tieto-red-dark;
+$link-color: $tieto-blue-dark;
+$link-hover-color: $tieto-red-dark;
+$link-hover-decoration: none;
+$link-active-color: $tieto-red;
+$link-visited-color: $tieto-blue;
+$link-disabled-color: $tieto-grey-darker;
 
  // Typography
  //
