@@ -164,7 +164,8 @@ function tieto_base_preprocess_form_element(&$variables) {
  * Implements hook_preprocess_HOOK() for menu.html.twig.
  */
 function tieto_base_preprocess_menu(&$variables) {
-  // $variables['attributes']['class'][] = 'clearfix';
+  // kint($variables);
+
 }
 
 function tieto_base_preprocess_menu_local_task(&$variables) {

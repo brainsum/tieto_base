@@ -67,10 +67,13 @@ a {
   &:visited {
     color: $link-visited-color;
   }
+  &:visited:hover {
+    color: $link-hover-color;
+  }
   &:active {
     color: $link-active-color;
   }
-  &:disabled, &.disabled {
+  &.disabled, &[disabled] {
     color: $link-disabled-color;
     pointer-events: none;
     cursor: not-allowed;
