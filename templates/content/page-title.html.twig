@@ -15,7 +15,5 @@
  */
 #}
 {{ title_prefix }}
-{% if title %}
-  <h1{{ title_attributes.addClass('page-title') }}>{{ title }}</h1>
-{% endif %}
+<h1{{ title_attributes.addClass('page-title') }}>{{ title|default(site_name) }}</h1>
 {{ title_suffix }}

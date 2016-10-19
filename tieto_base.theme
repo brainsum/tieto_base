@@ -97,7 +97,6 @@ function tieto_base_preprocess_page(&$variables) {
  * Implements hook_preprocess_HOOK() for page templates.
  */
 function tieto_base_preprocess_page_title(&$variables) {
-  // if( !strlen($variables['title']) ) unset($variables['title']);
   // Since the title and the shortcut link are both block level elements,
   // positioning them next to each other is much simpler with a wrapper div.
   if (!empty($variables['title_suffix']['add_or_remove_shortcut']) && $variables['title']) {
@@ -113,6 +112,10 @@ function tieto_base_preprocess_page_title(&$variables) {
     );
     // Make sure the shortcut link is the first item in title_suffix.
     $variables['title_suffix']['add_or_remove_shortcut']['#weight'] = -100;
+  }
+
+  if (!strlen($variables['title']['#markup'])) {
+    $variables['title']['#markup'] = Drupal::config('system.site')->get('name');
   }
 }
 
