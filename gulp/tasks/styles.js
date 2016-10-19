@@ -16,7 +16,7 @@ import util from 'gulp-util';
 gulp.task('styles', () => {
   gulp
     // Get these style assets...
-    .src(config.styles.entry)
+    .src(config.styles.entry, { base: config.styles.base })
 
     // [DEV] Init sourcemaps
     .pipe(util.env.production ? util.noop() : sourcemaps.init())

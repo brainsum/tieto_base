@@ -1,8 +1,8 @@
 // Tieto variables go first, so we can override Bootstrap defaults here.
-@import "utils/variables";
-@import "utils/mixins";
+@import "variables";
+@import "mixins";
 
-// Import vendor.
+// Import the latest Normalize.css.
 @import "normalize";
 @import "bootstrap";
 

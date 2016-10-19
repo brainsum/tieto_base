@@ -2,8 +2,12 @@ export default {
 
   // Paths
   styles: {
+    base: './assets/scss',
     watch: './assets/scss/**/*.{sass,scss}',
-    entry: './assets/scss/global.scss',
+    entry: [
+      './assets/scss/global.scss',
+      './assets/scss/**/*.{sass,scss}',
+    ],
     dest: './css'
   },
 
@@ -39,9 +43,11 @@ export default {
   // @see https://github.com/sass/node-sass#options
   sass: {
     outputStyle: 'expanded',
+    precision: 3,
     includePaths: [
+      process.cwd() + '/assets/scss/utils',
+      process.cwd() + '/node_modules',
       process.cwd() + '/node_modules/normalize.css',
-      process.cwd() + '/node_modules/bootstrap/scss',
     ],
   },
 

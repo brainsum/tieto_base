@@ -1,6 +1,52 @@
 global:
+  version: VERSION
+  css:
+    base:
+      css/base/typography.css: {}
+    # layout:
+      # css/layout/grid.css: {}
+    component:
+      css/components/navbar.css: {}
+      # css/components/action-links.css: {}
+      # css/components/breadcrumb.css: {}
+      # css/components/button.css: {}
+      # css/components/collapse-processed.css: {}
+      # css/components/container-inline.css: {}
+      # css/components/details.css: {}
+      # css/components/exposed-filters.css: {}
+      # css/components/field.css: {}
+      # css/components/form.css: {}
+      # css/components/icons.css: {}
+      # css/components/inline-form.css: {}
+      # css/components/item-list.css: {}
+      # css/components/link.css: {}
+      # css/components/links.css: {}
+      # css/components/menu.css: {}
+      # css/components/more-link.css: {}
+      # css/components/pager.css: {}
+      # css/components/tabledrag.css: {}
+      # css/components/tableselect.css: {}
+      # css/components/tablesort.css: {}
+      # css/components/tabs.css: {}
+      # css/components/textarea.css: {}
+      # css/components/ui-dialog.css: {}
+    # theme:
+      # css/theme/print.css: { media: print }
+  js:
+    js/global.js: {}
+  dependencies:
+    - tieto_base/vendor.bootstrap
+
+global-merged:
+  version: VERSION
   css:
     base:
       css/global.css: {}
   js:
     js/global.js: {}
+
+vendor.bootstrap:
+  version: 4.0-alpha
+  css:
+    base:
+      css/bootstrap.css: {}
