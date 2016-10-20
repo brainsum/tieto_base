@@ -18,11 +18,7 @@ libraries:
 # @see https://www.drupal.org/docs/8/theming-drupal-8/adding-stylesheets-css-and-javascript-js-to-a-drupal-8-theme#override-extend
 # @todo Move the override/extend ȧssets out of `components` directory?
 libraries-override:
-
-  core/views.module:
-    css:
-      component:
-        css/views.module.css: css/components/views.css
+  views/views.module: tieto_base/views.module
 
 # Replace just a part of a library asset.
 #
@@ -64,6 +60,9 @@ stylesheets-remove:
   - "@stable/css/system/components/autocomplete-loading.module.css"
   - "@stable/css/system/components/ajax-progress.module.css"
   - "@stable/css/system/components/sticky-header.module.css"
+
+  # Core modules
+  - "@stable/css/views/views.module.css"
 
 # Content and design related styles must be available in WYSIWYG editors too.
 #

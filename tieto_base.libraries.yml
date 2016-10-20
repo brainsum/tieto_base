@@ -52,7 +52,10 @@ global:
 # Overridden & Extended libraries
 # ------------------------------------------------------------------------------
 
-
+views.module:
+  css:
+    component:
+      css/components/views.module.css: {}
 
 # ------------------------------------------------------------------------------
 # External and Vendor libraries
