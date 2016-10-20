@@ -4,13 +4,18 @@
 
 .tabs {
   margin-top: $spacer-y;
+  border-bottom: 3px solid $brand-primary;
 
   .nav-item + .nav-item {
-    margin-left: .1rem;
+    margin-left: 1px;
+  }
+
+  .nav-item.active {
+    box-shadow: $tabs-box-shadow;
   }
 
   .nav-link {
-    padding: .5em .8em;
+    padding: .4em 1em;
     line-height: normal;
 
     &.is-active {
@@ -20,13 +25,17 @@
   }
 
   &.tabs--primary {
-    border-bottom: 3px solid $brand-primary;
     .nav-link {
-      box-shadow: $tabs-box-shadow;
+      background-color: $tieto-blue-lightest;
+      &.is-active {
+        background-color: $brand-primary;
+        color: #fff;
+      }
     }
   }
 
-  &.tabs--main {
+  &.tabs--header {
+    border-bottom: 0;
     .nav-link {
       background-color: $tieto-blue-lightest;
       color: $link-color;
@@ -38,8 +47,15 @@
     }
   }
 
+  &.tabs--primary,
+  &.tabs--header {
+    .nav-item {
+      box-shadow: $tabs-box-shadow;
+    }
+  }
+
   &.tabs--sm {
-    border-bottom: 2px solid $brand-primary;
+    border-bottom-width: 2px;
     font-size: $font-size-sm;
   }
 }
