@@ -5,7 +5,6 @@ export default {
     base: './assets/scss',
     watch: './assets/scss/**/*.{sass,scss}',
     entry: [
-      // './assets/scss/global.scss',
       './assets/scss/**/*.{sass,scss}',
     ],
     dest: './css'

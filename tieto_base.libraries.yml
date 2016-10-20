@@ -33,8 +33,9 @@ global:
       # css/components/tabs.css: {}
       # css/components/textarea.css: {}
       # css/components/ui-dialog.css: {}
-    # theme:
-      # css/theme/print.css: { media: print }
+    theme:
+      css/theme/helpers.css: {}
+      css/theme/print.css: { media: print }
 
 bootstrap:
   version: 4.0-alpha5
