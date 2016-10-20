@@ -36,9 +36,19 @@ global:
     theme:
       css/theme/helpers.css: {}
       css/theme/print.css: { media: print }
+  dependencies:
+    - core/jquery
+    - core/drupal
 
 bootstrap:
-  version: 4.0-alpha5
+  remote: https://github.com/twbs/bootstrap
+  version: "4.0-alpha5"
+  license:
+    name: MIT
+    url: https://github.com/twbs/bootstrap/blob/v4-dev/LICENSE
+    gpl-compatible: true
   css:
     base:
       css/vendor/bootstrap.css: {}
+  dependencies:
+    - core/jquery

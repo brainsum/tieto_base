@@ -4,12 +4,14 @@
  */
 
 // @todo fix imports
-import $ from 'jquery';
-import Drupal from 'drupal';
+(function ($, Drupal) {
+  'use strict';
 
-Drupal.behaviors.myBehavior = {
-  attach: function (context, settings) {
-    console.log('sup');
-    $('.asdfasdf').hide();
-  }
-};
+  Drupal.behaviors.myBehavior = {
+    attach: function (context, settings) {
+      console.log('sup');
+      $('.asdfasdf').hide();
+    }
+  };
+
+})(jQuery, Drupal);

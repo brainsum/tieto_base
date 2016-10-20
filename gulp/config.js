@@ -11,8 +11,11 @@ export default {
   },
 
   scripts: {
+    base: './assets/scripts',
     watch: './assets/scripts/**/*.js',
-    entry: './assets/scripts/**/*.js',
+    entry: [
+      './assets/scripts/**/*.js',
+    ],
     dest: './js'
   },
 
