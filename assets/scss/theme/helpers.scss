@@ -18,3 +18,71 @@
 @import "bootstrap/scss/utilities/spacing";
 @import "bootstrap/scss/utilities/text";
 @import "bootstrap/scss/utilities/visibility";
+
+// Reset default form element look.
+.reset-appearance {
+  appearance: none;
+  border: 0 none;
+  background: transparent;
+  padding: 0;
+  margin: 0;
+  line-height: inherit;
+}
+
+// Resizable textareas
+// @todo move this to form elements.
+.resize-none {
+  resize: none;
+}
+.resize-vertical {
+  resize: vertical;
+  min-height: 2em;
+}
+.resize-horizontal {
+  resize: horizontal;
+  max-width: 100%;
+}
+.resize-both {
+  resize: both;
+  max-width: 100%;
+  min-height: 2em;
+}
+
+// Nowrap
+.nowrap {
+  white-space: nowrap;
+}
+
+/**
+ * @file
+ * Alignment classes for text and block level elements.
+ *
+ * @todo Check if conflicts with Bootstarp + REFACTOR
+ */
+.text-align-left {
+  text-align: left;
+}
+.text-align-right {
+  text-align: right;
+}
+.text-align-center {
+  text-align: center;
+}
+.text-align-justify {
+  text-align: justify;
+}
+
+/**
+ * Alignment classes for block level elements (images, videos, blockquotes, etc.)
+ */
+.align-left {
+  float: left;
+}
+.align-right {
+  float: right;
+}
+.align-center {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+}

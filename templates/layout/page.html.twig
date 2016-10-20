@@ -1,0 +1,68 @@
+{#
+/**
+ * @file
+ * Page template.
+ *
+ * @see template_preprocess_page()
+ * @see html.html.twig
+ */
+#}
+{% if page.top %}
+  {{ page.top }}
+{% endif %}
+<header class="header" role="banner" aria-label="{{ 'Site header'|t}}">
+  <section class="container">
+    {{ page.header }}
+    {{ page.primary_nav }}
+    {{ page.secondary_nav }}
+  </section>
+</header>
+
+<section>
+  <div class="container">
+
+    {% if page.highlighted %}
+      {{ page.highlighted }}
+    {% endif %}
+
+    {% if page.help %}
+      {{ page.help }}
+    {% endif %}
+
+    {{ page.breadcrumb }}
+
+    <main class="region-content" role="main">
+      <a id="main-content" tabindex="-1"></a>
+      {{ page.content }}
+    </main>
+
+    {% if page.sidebar_first %}
+      <div{{ sidebar_first_attributes }}>
+        <aside class="section" role="complementary">
+          {{ page.sidebar_first }}
+        </aside>
+      </div>
+    {% endif %}
+
+    {% if page.sidebar_second %}
+      <div{{ sidebar_second_attributes }}>
+        <aside class="section" role="complementary">
+          {{ page.sidebar_second }}
+        </aside>
+      </div>
+    {% endif %}
+  </div>
+</section>
+
+{% if page.footer %}
+  <footer class="site-footer">
+    {% block footer %}
+      <div class="container">
+        {{ page.footer }}
+      </div>
+    {% endblock %}
+  </footer>
+{% endif %}
+{% if page.bottom %}
+  {{ page.bottom }}
+{% endif %}

@@ -1,0 +1,8 @@
+@import "index";
+@import "bootstrap/scss/nav";
+@import "bootstrap/scss/navbar";
+
+.tabs--primary,
+.tabs--secondary {
+  margin: $spacer-y 0;
+}

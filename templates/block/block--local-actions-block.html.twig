@@ -1,12 +1,14 @@
-{% extends "block.html.twig" %}
+{% extends "block--bare.html.twig" %}
 {#
 /**
  * @file
  * Theme override for local actions (primary admin actions.)
+ *
+ * @ingroup templates
  */
 #}
 {% block content %}
   {% if content %}
-    <ul class="nav nav-pills">{{ content }}</ul>
+    <ul class="list-inline local-actions">{{ content }}</ul>
   {% endif %}
 {% endblock %}

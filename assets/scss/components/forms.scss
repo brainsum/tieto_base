@@ -1,0 +1,13 @@
+@import "index";
+@import "bootstrap/scss/forms";
+
+/**
+ * @file
+ * Fieldgroup border reset.
+ *
+ * @todo What is this? Replace with Bootstrap styles.
+ */
+.fieldgroup {
+  border-width: 0;
+  padding: 0;
+}

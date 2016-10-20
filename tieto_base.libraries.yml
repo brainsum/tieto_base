@@ -4,32 +4,41 @@ global:
     js/global.js: {}
   css:
     base:
-      css/base/reset.css: {}
+      css/base/reset.css: { weight: -10 }
+      css/base/elements.css: {}
       css/base/typography.css: {}
+      css/base/fonts.css: {}
     layout:
       css/layout/grid.css: {}
+      css/layout/regions.css: {}
     component:
-      css/components/navbar.css: {}
+      css/components/buttons.css: {}
+      css/components/forms.css: {}
+      css/components/code.css: {}
+      css/components/images.css: {}
+      css/components/nav.css: {}
+      css/components/breadcrumbs.css: {}
+      css/components/tables.css: {}
+      css/components/tabledrag.css: {}
+      css/components/tablesort.css: {}
+      css/components/tree-child.css: {}
+      css/components/ajax-progress.css: {}
+      css/components/container-inline.css: {}
+      css/components/item-list.module.css: {}
+      css/components/javascript.css: {}
+      css/components/progress.css: {}
+      css/components/pager.css: {}
       # css/components/action-links.css: {}
-      # css/components/breadcrumb.css: {}
-      # css/components/button.css: {}
       # css/components/collapse-processed.css: {}
-      # css/components/container-inline.css: {}
-      # css/components/details.css: {}
       # css/components/exposed-filters.css: {}
       # css/components/field.css: {}
-      # css/components/form.css: {}
       # css/components/icons.css: {}
       # css/components/inline-form.css: {}
-      # css/components/item-list.css: {}
       # css/components/link.css: {}
       # css/components/links.css: {}
       # css/components/menu.css: {}
       # css/components/more-link.css: {}
-      # css/components/pager.css: {}
-      # css/components/tabledrag.css: {}
       # css/components/tableselect.css: {}
-      # css/components/tablesort.css: {}
       # css/components/tabs.css: {}
       # css/components/textarea.css: {}
       # css/components/ui-dialog.css: {}

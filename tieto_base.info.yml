@@ -7,24 +7,59 @@ version: 0.1
 libraries:
   - tieto_base/global
 
-# stylesheets-remove:
-  # Normalize.css in core is outdated, we install the latest via npm.
-  # - core/assets/vendor/normalize-css/normalize.css
+# @todo Grep for the removed classes in core, and replace all.
+stylesheets-remove:
+  # These are replaced by Bootstrap.
+  - "@stable/css/system/components/hidden.module.css"
+  - "@stable/css/system/components/clearfix.module.css"
 
-# @todo Typography and components should be loaded in WYSIWYG too.
-# ckeditor_stylesheets:
-#   - css/base/elements.css
-#   - css/components/captions.css
-#   - css/components/table.css
+  # These are moved to `helpers.scss`.
+  - "@stable/css/system/components/reset-appearance.module.css"
+  - "@stable/css/system/components/resize.module.css"
+  - "@stable/css/system/components/nowrap.module.css"
+  - "@stable/css/system/components/align.module.css"
+
+  # These are moved to or refactored in `components`, or not needed at all.
+  # All coming from the `system/base` library.
+  #
+  # @see system.libraries.yml
+  # @see bootstrap.info.yml
+  # @todo Move something to libraries-override / libraries-extend,
+  #       after we have refactored and restyled it.
+  - "@stable/css/system/components/progress.module.css"
+  - "@stable/css/system/components/tabledrag.module.css"
+  - "@stable/css/system/components/tablesort.module.css"
+  - "@stable/css/system/components/tree-child.module.css"
+  - "@stable/css/system/components/position-container.module.css"
+  - "@stable/css/system/components/js.module.css"
+  - "@stable/css/system/components/item-list.module.css"
+  - "@stable/css/system/components/details.module.css"
+  - "@stable/css/system/components/container-inline.module.css"
+  - "@stable/css/system/components/fieldgroup.module.css"
+  - "@stable/css/system/components/autocomplete-loading.module.css"
+  - "@stable/css/system/components/ajax-progress.module.css"
+  - "@stable/css/system/components/sticky-header.module.css"
+
+# Content and design related styles must be available in WYSIWYG editors too.
+ckeditor_stylesheets:
+  - css/base/reset.css
+  - css/base/elements.css
+  - css/base/fonts.css
+  - css/base/typography.css
+  - css/components/tables.css
+  - css/components/code.css
+  - css/components/images.css
 
 regions:
+  top: 'Page top'
   header: 'Header'
-  primary_menu: 'Primary menu'
-  secondary_menu: 'Secondary menu'
-  highlighted: 'highlighted'
+  primary_nav: 'Primary navigation'
+  secondary_nav: 'Secondary navigation'
+  breadcrumb: 'Breadcrumb'
+  highlighted: 'Highlighted'
   help: 'Help'
   content: 'Content'
   sidebar_first: 'Sidebar (first)'
   sidebar_second: 'Sidebar (second)'
   footer: 'Footer'
-  breadcrumb: 'Breadcrumb'
+  bottom: 'Page bottom'

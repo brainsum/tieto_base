@@ -1,6 +1,9 @@
-@import "index";
-
 // Import latest Normalize.css and Bootstrap's Reboot.
+@import "utils/variables";
+@import "bootstrap/scss/variables";
+@import "bootstrap/scss/mixins/hover";
+@import "bootstrap/scss/mixins/tab-focus";
+
 @import "normalize";
 @import "bootstrap/scss/reboot";
 
