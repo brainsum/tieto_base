@@ -1,13 +1,41 @@
 name: Tieto Base
 description: 'Base theme for all Tieto sites, based on corporate styleguides.'
+package: BRAINSUM
 type: theme
 core: 8.x
 version: 0.1
 
+# These assets are loaded on every page.
+#
+# @see https://www.drupal.org/developing/api/8/assets
+# @see https://www.drupal.org/node/2349827
 libraries:
   - tieto_base/global
 
+# Replace any library files, or even the whole library.
+# NOTE: Try to follow the original library names for easiness!
+#
+# @see https://www.drupal.org/docs/8/theming-drupal-8/adding-stylesheets-css-and-javascript-js-to-a-drupal-8-theme#override-extend
+# @todo Move the override/extend ȧssets out of `components` directory?
+libraries-override:
+
+  core/views.module:
+    css:
+      component:
+        css/views.module.css: css/components/views.css
+
+# Replace just a part of a library asset.
+#
+# @see https://www.drupal.org/docs/8/theming-drupal-8/adding-stylesheets-css-and-javascript-js-to-a-drupal-8-theme#override-extend
+# libraries-extend:
+#   - MODULE/LIBRARY.NAME: tieto_base/LIBRARY.NAME
+
+# Remove unneeded CSS files.
+#
 # @todo Grep for the removed classes in core, and replace all.
+# @todo Move something to libraries-override / libraries-extend,
+#       after we have refactored and restyled it.
+# @deprecated
 stylesheets-remove:
   # These are replaced by Bootstrap.
   - "@stable/css/system/components/hidden.module.css"
@@ -23,9 +51,6 @@ stylesheets-remove:
   # All coming from the `system/base` library.
   #
   # @see system.libraries.yml
-  # @see bootstrap.info.yml
-  # @todo Move something to libraries-override / libraries-extend,
-  #       after we have refactored and restyled it.
   - "@stable/css/system/components/progress.module.css"
   - "@stable/css/system/components/tabledrag.module.css"
   - "@stable/css/system/components/tablesort.module.css"
@@ -41,6 +66,8 @@ stylesheets-remove:
   - "@stable/css/system/components/sticky-header.module.css"
 
 # Content and design related styles must be available in WYSIWYG editors too.
+#
+# @see https://www.drupal.org/docs/8/api/ckeditor-api
 ckeditor_stylesheets:
   - css/base/reset.css
   - css/base/elements.css
@@ -50,6 +77,7 @@ ckeditor_stylesheets:
   - css/components/code.css
   - css/components/images.css
 
+# These regions will show on Admin > Structure > Blocks.
 regions:
   top: 'Page top'
   header: 'Header'
@@ -58,7 +86,7 @@ regions:
   breadcrumb: 'Breadcrumb'
   highlighted: 'Highlighted'
   help: 'Help'
-  content: 'Content'
+  content: 'Content' # required!
   sidebar_first: 'Sidebar (first)'
   sidebar_second: 'Sidebar (second)'
   footer: 'Footer'

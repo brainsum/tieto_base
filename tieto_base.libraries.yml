@@ -1,7 +1,8 @@
+# ------------------------------------------------------------------------------
+# Theme related libraries
+# ------------------------------------------------------------------------------
+
 global:
-  version: VERSION
-  js:
-    js/global.js: {}
   css:
     base:
       css/base/reset.css: { weight: -10 }
@@ -12,6 +13,21 @@ global:
       css/layout/grid.css: {}
       css/layout/regions.css: {}
     component:
+      # @todo Check these:
+      # css/components/action-links.css: {}
+      # css/components/collapse-processed.css: {}
+      # css/components/exposed-filters.css: {}
+      # css/components/field.css: {}
+      # css/components/icons.css: {}
+      # css/components/inline-form.css: {}
+      # css/components/link.css: {}
+      # css/components/links.css: {}
+      # css/components/menu.css: {}
+      # css/components/more-link.css: {}
+      # css/components/tableselect.css: {}
+      # css/components/tabs.css: {}
+      # css/components/textarea.css: {}
+      # css/components/ui-dialog.css: {}
       css/components/buttons.css: {}
       css/components/forms.css: {}
       css/components/code.css: {}
@@ -28,26 +44,20 @@ global:
       css/components/javascript.css: {}
       css/components/progress.css: {}
       css/components/pager.css: {}
-      # css/components/action-links.css: {}
-      # css/components/collapse-processed.css: {}
-      # css/components/exposed-filters.css: {}
-      # css/components/field.css: {}
-      # css/components/icons.css: {}
-      # css/components/inline-form.css: {}
-      # css/components/link.css: {}
-      # css/components/links.css: {}
-      # css/components/menu.css: {}
-      # css/components/more-link.css: {}
-      # css/components/tableselect.css: {}
-      # css/components/tabs.css: {}
-      # css/components/textarea.css: {}
-      # css/components/ui-dialog.css: {}
     theme:
       css/theme/helpers.css: {}
       css/theme/print.css: { media: print }
-  dependencies:
-    - core/jquery
-    - core/drupal
+
+# ------------------------------------------------------------------------------
+# Overridden & Extended libraries
+# ------------------------------------------------------------------------------
+
+
+
+# ------------------------------------------------------------------------------
+# External and Vendor libraries
+# ------------------------------------------------------------------------------
+# @see https://www.drupal.org/developing/api/8/assets#external
 
 bootstrap:
   remote: https://github.com/twbs/bootstrap
