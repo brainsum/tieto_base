@@ -33,9 +33,9 @@
   {% import _self as menus %}
   {% if items %}
     {% if menu_level == 0 %}
-      <ul{{ attributes.addClass('nav nav-tabs') }}>
+      <ul role="navigation" {{ attributes.addClass('tabs tabs--main nav nav-tabs') }}>
     {% else %}
-      <ul class="dropdown-menu">
+      <ul role="navigation" class="dropdown-menu">
     {% endif %}
     {% for item in items %}
       {%

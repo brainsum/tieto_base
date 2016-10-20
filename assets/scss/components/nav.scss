@@ -2,7 +2,45 @@
 @import "bootstrap/scss/nav";
 @import "bootstrap/scss/navbar";
 
-.tabs--primary,
-.tabs--secondary {
-  margin: $spacer-y 0;
+.tabs {
+  margin-top: $spacer-y;
+
+  .nav-item + .nav-item {
+    margin-left: .1rem;
+  }
+
+  .nav-link {
+    padding: .5em .8em;
+    line-height: normal;
+
+    &.is-active {
+      background-color: $brand-primary;
+      color: #fff;
+    }
+  }
+
+  &.tabs--primary {
+    border-bottom: 3px solid $brand-primary;
+    .nav-link {
+      box-shadow: $tabs-box-shadow;
+    }
+  }
+
+  &.tabs--main {
+    .nav-link {
+      background-color: $tieto-blue-lightest;
+      color: $link-color;
+      padding: .5em 2em;
+
+      &.is-active {
+        background-color: #fff;
+      }
+    }
+  }
+
+  &.tabs--sm {
+    border-bottom: 2px solid $brand-primary;
+    font-size: $font-size-sm;
+  }
 }
+

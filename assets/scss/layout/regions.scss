@@ -3,5 +3,19 @@
 
 .header {
   background: $brand-primary;
+}
 
+.header__tabs {
+  .nav-link {
+    background-color: $tieto-blue-lightest;
+
+    &.active, &.is-active {
+      background-color: #fff;
+    }
+  }
+}
+
+.header__title {
+  font-size: $font-size-h2;
+  font-weight: 300;
 }

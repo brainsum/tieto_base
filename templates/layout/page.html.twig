@@ -10,35 +10,34 @@
 {% if page.top %}
   {{ page.top }}
 {% endif %}
-<header class="header" role="banner" aria-label="{{ 'Site header'|t}}">
-  <section class="container">
+
+<header class="header" role="banner" aria-label="{{ 'Site header'|t }}">
+  <div class="container">
     {{ page.header }}
     {{ page.primary_nav }}
-    {{ page.secondary_nav }}
-  </section>
+  </div>
 </header>
 
-<section>
-  <div class="container">
+{% if page.highlighted %}
+  <section class="container">
+    {{ page.highlighted }}
+  </section>
+{% endif %}
 
-    {% if page.highlighted %}
-      {{ page.highlighted }}
-    {% endif %}
-
-    {% if page.help %}
-      {{ page.help }}
-    {% endif %}
+<main role="main" class="main container">
+  <a id="main-content" tabindex="-1"></a>
+    {{ page.secondary_nav }}
 
     {{ page.breadcrumb }}
 
-    <main class="region-content" role="main">
-      <a id="main-content" tabindex="-1"></a>
+    <section class="main__content">
+      {{ page.help }}
       {{ page.content }}
-    </main>
+    </section>
 
     {% if page.sidebar_first %}
       <div{{ sidebar_first_attributes }}>
-        <aside class="section" role="complementary">
+        <aside class="main__sidebar" role="complementary">
           {{ page.sidebar_first }}
         </aside>
       </div>
@@ -46,16 +45,15 @@
 
     {% if page.sidebar_second %}
       <div{{ sidebar_second_attributes }}>
-        <aside class="section" role="complementary">
+        <aside class="main__sidebar" role="complementary">
           {{ page.sidebar_second }}
         </aside>
       </div>
     {% endif %}
-  </div>
-</section>
+</main>
 
 {% if page.footer %}
-  <footer class="site-footer">
+  <footer class="footer">
     {% block footer %}
       <div class="container">
         {{ page.footer }}
@@ -63,6 +61,7 @@
     {% endblock %}
   </footer>
 {% endif %}
+
 {% if page.bottom %}
   {{ page.bottom }}
 {% endif %}

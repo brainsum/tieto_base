@@ -1,12 +1,7 @@
-//
 // Variables
-//
-//
-
-
 
 // Tieto brand colors
-
+// @todo Move/merge this with the Style Guide partials!
 $tieto-blue-very-light: #e9f0f5;
 $tieto-blue-lightest: #cce5f4;
 $tieto-blue-light: #9acaeb;
@@ -77,3 +72,14 @@ $font-size-root: 16px;
 $line-height-base: 1.6;
 
 $navbar-border-radius: 0;
+
+$nav-tabs-border-width: 0;
+$nav-tabs-border-radius: 2px;
+$nav-tabs-active-link-hover-color: #fff;
+$nav-tabs-active-link-hover-bg: $brand-primary;
+$tabs-box-shadow: 0 -1px 2px 0 rgba(0, 0, 0, .1);
+
+$breadcrumb-padding-y: 0;
+$breadcrumb-padding-x: 0;
+$breadcrumb-bg: none;
+$breadcrumb-divider: ">"; // @fixme
