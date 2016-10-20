@@ -114,9 +114,9 @@ function tieto_base_preprocess_page_title(&$variables) {
     $variables['title_suffix']['add_or_remove_shortcut']['#weight'] = -100;
   }
 
-  if (!strlen($variables['title']['#markup'])) {
-    $variables['title']['#markup'] = Drupal::config('system.site')->get('name');
-  }
+  // if (!strlen($variables['title']['#markup'])) {
+  //   $variables['title']['#markup'] = Drupal::config('system.site')->get('name');
+  // }
 }
 
 /**

@@ -2,11 +2,14 @@ name: Tieto Base
 description: 'Base theme for all Tieto sites, based on corporate styleguides.'
 type: theme
 core: 8.x
-base theme: false
 version: 0.1
 
 libraries:
   - tieto_base/global
+
+# stylesheets-remove:
+  # Normalize.css in core is outdated, we install the latest via npm.
+  # - core/assets/vendor/normalize-css/normalize.css
 
 # @todo Typography and components should be loaded in WYSIWYG too.
 # ckeditor_stylesheets:
@@ -14,14 +17,14 @@ libraries:
 #   - css/components/captions.css
 #   - css/components/table.css
 
-# Regions copied from Seven
 regions:
   header: 'Header'
   primary_menu: 'Primary menu'
   secondary_menu: 'Secondary menu'
-  highlighted: 'Highlighted'
-  content_top: 'Content Top'
+  highlighted: 'highlighted'
+  help: 'Help'
   content: 'Content'
-  sidebar_first: 'Sidebar first'
-  sidebar_second: 'Sidebar second'
+  sidebar_first: 'Sidebar (first)'
+  sidebar_second: 'Sidebar (second)'
   footer: 'Footer'
+  breadcrumb: 'Breadcrumb'

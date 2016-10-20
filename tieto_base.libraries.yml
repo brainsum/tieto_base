@@ -1,10 +1,13 @@
 global:
   version: VERSION
+  js:
+    js/global.js: {}
   css:
     base:
+      css/base/reset.css: {}
       css/base/typography.css: {}
-    # layout:
-      # css/layout/grid.css: {}
+    layout:
+      css/layout/grid.css: {}
     component:
       css/components/navbar.css: {}
       # css/components/action-links.css: {}
@@ -32,21 +35,9 @@ global:
       # css/components/ui-dialog.css: {}
     # theme:
       # css/theme/print.css: { media: print }
-  js:
-    js/global.js: {}
-  dependencies:
-    - tieto_base/vendor.bootstrap
 
-global-merged:
-  version: VERSION
+bootstrap:
+  version: 4.0-alpha5
   css:
     base:
-      css/global.css: {}
-  js:
-    js/global.js: {}
-
-vendor.bootstrap:
-  version: 4.0-alpha
-  css:
-    base:
-      css/bootstrap.css: {}
+      css/vendor/bootstrap.css: {}
