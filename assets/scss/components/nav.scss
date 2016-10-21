@@ -36,6 +36,8 @@
 
   &.tabs--header {
     border-bottom: 0;
+    margin-left: 1em;
+
     .nav-link {
       background-color: $tieto-blue-lightest;
       color: $link-color;
