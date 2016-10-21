@@ -7,61 +7,49 @@
  * @see html.html.twig
  */
 #}
-{% if page.top %}
-  {{ page.top }}
-{% endif %}
+<div class="page-wrapper">
+  {% if page.top %}
+    {{ page.top }}
+  {% endif %}
 
-<header class="header" role="banner" aria-label="{{ 'Site header'|t }}">
-  <div class="container">
-    {{ page.header }}
-    {{ page.primary_nav }}
-  </div>
-</header>
+  <header class="page__header" aria-label="{{ 'Site header'|t }}" role="banner">
+    <div class="container">
+      {{ page.header }}
+      {{ page.primary_nav }}
+    </div>
+  </header>
 
-{% if page.highlighted %}
-  <section class="container">
+  <main class="page__main container" role="main">
+    <a id="main-content" tabindex="-1"></a>
+    {{ page.breadcrumb }}
     {{ page.highlighted }}
-  </section>
-{% endif %}
-
-<main role="main" class="main container">
-  <a id="main-content" tabindex="-1"></a>
     {{ page.secondary_nav }}
 
-    {{ page.breadcrumb }}
-
-    <section class="main__content">
+    <div class="page__content">
       {{ page.help }}
       {{ page.content }}
-    </section>
+    </div>
 
     {% if page.sidebar_first %}
-      <div{{ sidebar_first_attributes }}>
-        <aside class="main__sidebar" role="complementary">
-          {{ page.sidebar_first }}
-        </aside>
-      </div>
+      <aside class="page__sidebar" role="complementary"{{ sidebar_first_attributes }}>
+        {{ page.sidebar_first }}
+      </aside>
     {% endif %}
 
     {% if page.sidebar_second %}
-      <div{{ sidebar_second_attributes }}>
-        <aside class="main__sidebar" role="complementary">
-          {{ page.sidebar_second }}
-        </aside>
-      </div>
+      <aside class="page__sidebar" role="complementary"{{ sidebar_second_attributes }}>
+        {{ page.sidebar_second }}
+      </aside>
     {% endif %}
-</main>
+  </main>
 
-{% if page.footer %}
-  <footer class="footer">
-    {% block footer %}
-      <div class="container">
-        {{ page.footer }}
-      </div>
-    {% endblock %}
-  </footer>
-{% endif %}
+  {% if page.footer %}
+    <footer class="page__footer container">
+      {{ page.footer }}
+    </footer>
+  {% endif %}
 
-{% if page.bottom %}
-  {{ page.bottom }}
-{% endif %}
+  {% if page.bottom %}
+    {{ page.bottom }}
+  {% endif %}
+</div>

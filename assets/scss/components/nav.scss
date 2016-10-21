@@ -3,62 +3,68 @@
 @import "bootstrap/scss/navbar";
 
 .tabs {
-  margin-top: $spacer-y;
   border-bottom: 3px solid $brand-primary;
 
   .nav-item + .nav-item {
     margin-left: 1px;
   }
 
-  .nav-item.active {
-    box-shadow: $tabs-box-shadow;
-  }
-
   .nav-link {
     padding: .4em 1em;
     line-height: normal;
+  }
+}
+
+// Sizes
+.tabs--sm {
+  border-bottom-width: 2px;
+  font-size: $font-size-sm;
+}
+
+.tabs--lg {
+  border-bottom-width: 4px;
+  font-size: $font-size-lg;
+}
+
+.tabs--header {
+  border-bottom: 0;
+
+  @include media-breakpoint-up(sm) {
+    margin-left: 1em;
+  }
+
+  .nav-link {
+    background-color: $tieto-blue-lightest;
+    color: $link-color;
+    padding: .5em 2em;
+
+    &.is-active {
+      background-color: #fff;
+      color: $link-color;
+    }
+  }
+}
+
+// Variants
+.tabs--primary {
+  .nav-link {
+    background-color: $tieto-blue-lightest;
 
     &.is-active {
       background-color: $brand-primary;
       color: #fff;
     }
   }
-
-  &.tabs--primary {
-    .nav-link {
-      background-color: $tieto-blue-lightest;
-      &.is-active {
-        background-color: $brand-primary;
-        color: #fff;
-      }
-    }
-  }
-
-  &.tabs--header {
-    border-bottom: 0;
-    margin-left: 1em;
-
-    .nav-link {
-      background-color: $tieto-blue-lightest;
-      color: $link-color;
-      padding: .5em 2em;
-
-      &.is-active {
-        background-color: #fff;
-      }
-    }
-  }
-
-  &.tabs--primary,
-  &.tabs--header {
-    .nav-item {
-      box-shadow: $tabs-box-shadow;
-    }
-  }
-
-  &.tabs--sm {
-    border-bottom-width: 2px;
-    font-size: $font-size-sm;
-  }
 }
 
+.tabs--secondary {
+  border: 0;
+  background-color: $tieto-grey-lightest;
+
+  .nav-link {
+    padding: .5em 1em;
+    &.is-active {
+      color: $body-color;
+    }
+  }
+}
