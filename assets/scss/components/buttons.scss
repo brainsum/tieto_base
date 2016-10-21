@@ -1,2 +1,39 @@
 @import "index";
 @import "bootstrap/scss/buttons";
+
+/*
+  Buttons
+
+  Markup: <button class="btn {{modifier_class}}">Push me</button>
+
+  .btn-primary - Primary buttons are blue, because the primary brand color is blue. This is a generic button and can be used for everything.
+  .btn-success - In interfaces, however, green buttons are mostly used to symbolize positive actions, like saving, creating, publishing and similar.
+  .btn-danger - Buttons in red are mainly used for negative actions, like deleting, unpublishing, rejecting and similar.
+  .btn-warning - Buttons in orange are not widely used, but can be a nice contrasting alternative.
+  .btn-disabled - Use disabled buttons to show important actions not available to user temporarily or permanently depending on the use case. There are not hover and active states, the cursor however should change to disabled cursor.
+
+  Style guide: 4.7.1
+*/
+
+/*
+  Outline buttons
+
+  All color variants has an outline variant
+
+  Markup: <button class="btn {{modifier_class}}">Push me</button>
+
+  .btn-outline-primary - Primary button outline variant
+
+  Style guide: 4.7.1.1
+*/
+
+/*
+  Button sizes
+
+  Markup: <button class="btn btn-primary {{modifier_class}}">Push me</button>
+
+  .btn-lg - Button with larger size
+  .btn-sm - Button with smaller size
+
+  Style guide: 4.7.1.2
+*/

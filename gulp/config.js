@@ -65,5 +65,9 @@ export default {
     discardComments: {
       removeAll: true
     }
+  },
+
+  kss: {
+    dest: './styleguide'
   }
 }

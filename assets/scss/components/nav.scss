@@ -34,7 +34,7 @@
   }
 
   .nav-link {
-    background-color: $tieto-blue-lightest;
+    background-color: color(tieto-blue-lightest);
     color: $link-color;
     padding: .5em 2em;
 
@@ -48,7 +48,7 @@
 // Variants
 .tabs--primary {
   .nav-link {
-    background-color: $tieto-blue-lightest;
+    background-color: color(tieto-blue-lightest);
 
     &.is-active {
       background-color: $brand-primary;
@@ -59,7 +59,7 @@
 
 .tabs--secondary {
   border: 0;
-  background-color: $tieto-grey-lightest;
+  background-color: color(tieto-grey-lightest);
 
   .nav-link {
     padding: .5em 1em;

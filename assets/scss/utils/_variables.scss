@@ -1,55 +1,58 @@
 // Variables
 
-// Tieto brand colors
-// @todo Move/merge this with the Style Guide partials!
-$tieto-blue-very-light: #e9f0f5;
-$tieto-blue-lightest: #cce5f4;
-$tieto-blue-light: #9acaeb;
-$tieto-blue: #62b3e5;
-$tieto-blue-darker: #2c89c3;
-$tieto-blue-dark: #0065a0;
+// Colors can be altered by using SASS's default map-set, map-merge functions
+$colors: (
+  white: #fff,
+  black: #000,
+  blue-very-light: #e9f0f5,
+  blue-lightest: #cce5f4,
+  blue-light: #9acaeb,
+  blue: #62b3e5,
+  blue-darker: #2c89c3,
+  blue-dark: #0065a0,
+  red-lightest: #eed9e1,
+  red-light: #f0b3ca,
+  red: #e56385,
+  red-darker: #dd3a76,
+  red-dark: #d51067,
+  green-lightest: #d7e8c4,
+  green-light: #bde093,
+  green: #6cc04a,
+  green-darker: #28a834,
+  green-dark: #00833e,
+  orange-lightest: #ffe1c6,
+  orange-light: #ffbe85,
+  orange: #f78d2d,
+  orange-darker: #e57a18,
+  orange-dark: #d75f00,
+  grey-lightest: #eeeeee,
+  grey-light: #d2d2d2,
+  grey-lighter: #c1c1c1,
+  grey: #999999,
+  grey-darker: #7b7b7b,
+  grey-dark: #5e5e5e,
+  grey-darkest: #333333
+);
 
-$tieto-red-lightest: #eed9e1;
-$tieto-red-light: #f0b3ca;
-$tieto-red: #e56385;
-$tieto-red-darker: #dd3a76;
-$tieto-red-dark: #d51067;
-
-$tieto-green-lightest: #d7e8c4;
-$tieto-green-light: #bde093;
-$tieto-green: #6cc04a;
-$tieto-green-darker: #28a834;
-$tieto-green-dark: #00833e;
-
-$tieto-orange-lightest: #ffe1c6;
-$tieto-orange-light: #ffbe85;
-$tieto-orange: #f78d2d;
-$tieto-orange-darker: #e57a18;
-$tieto-orange-dark: #d75f00;
-
-$tieto-grey-lightest: #eeeeee;
-$tieto-grey-light: #d2d2d2;
-$tieto-grey-lighter: #c1c1c1;
-$tieto-grey: #999999;
-$tieto-grey-darker: #7b7b7b;
-$tieto-grey-dark: #5e5e5e;
-$tieto-grey-darkest: #333333;
+@function color($name) {
+  @return map-get($colors, $name);
+}
 
 // Override some Bootstrap variables.
 $enable-flex: true;
 
-$brand-primary: $tieto-blue;
-$brand-success: $tieto-green;
-$brand-info: $tieto-blue-light;
-$brand-warning: $tieto-orange;
-$brand-danger: $tieto-red;
+$brand-primary: color(blue);
+$brand-success: color(green);
+$brand-info: color(blue-light);
+$brand-warning: color(orange);
+$brand-danger: color(red);
 
-$link-color: $tieto-blue-dark;
-$link-hover-color: $tieto-red-dark;
+$link-color: color(blue-dark);
+$link-hover-color: color(red-dark);
 $link-hover-decoration: none;
-$link-active-color: $tieto-red;
-$link-visited-color: $tieto-blue;
-$link-disabled-color: $tieto-grey-darker;
+$link-active-color: color(red);
+$link-visited-color: color(blue);
+$link-disabled-color: color(grey-darker);
 
 // Typography
 //
@@ -78,6 +81,11 @@ $nav-tabs-border-radius: 2px;
 $nav-tabs-active-link-hover-color: #fff;
 $nav-tabs-active-link-hover-bg: $brand-primary;
 $tabs-box-shadow: 0 -1px 2px 0 rgba(0, 0, 0, .1);
+
+// Pagination
+
+$pagination-padding-x:                .75rem;
+$pagination-padding-y:                .25rem;
 
 $breadcrumb-padding-y: 0;
 $breadcrumb-padding-x: 0;
