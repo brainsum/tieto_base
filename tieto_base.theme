@@ -149,11 +149,12 @@ function tieto_base_preprocess_node(&$variables) {
 /**
  * Implements hook_preprocess_HOOK() for block.html.twig.
  */
-function tieto_base_preprocess_block(&$variables) {
-  // Add a clearfix class to system branding blocks.
-  // if ($variables['plugin_id'] == 'system_branding_block') {
-  //   $variables['attributes']['class'][] = 'clearfix';
-  // }
+function tieto_base_preprocess_block__system_breadcrumb_block(&$variables) {
+  // Remove 'Home' from the Breadcrumbs.
+  $links = &$variables['content']['#links'];
+  if ($links[0]->getUrl()->getRouteName() === '<front>') {
+    array_shift($links);
+  }
 }
 
 function tieto_base_preprocess_form_element(&$variables) {
