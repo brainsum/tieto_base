@@ -12,6 +12,11 @@ use Drupal\Core\Template\Attribute;
 use Drupal\Core\Link;
 use Drupal\Component\Utility\Html;
 
+// @todo move to theme settings.
+define('SIDEBAR_BOTH_WIDTH', 2);
+define('SIDEBAR_SINGLE_WIDTH', 3);
+define('GRID_COLUMNS', 12);
+
 /**
  * Implements hook_preprocess_HOOK() for HTML document templates.
  *
@@ -60,37 +65,28 @@ function tieto_base_preprocess_html(&$variables) {
  */
 function tieto_base_preprocess_page(&$variables) {
 
-  $width = _tieto_base_content_width(!empty($variables['page']['sidebar_first']), !empty($variables['page']['sidebar_second']));
-  $content_width = 'col-md-' . $width;
-  $sidebar_first_width = 'col-md-3';
-  $sidebar_second_width = 'col-md-3';
+  // @todo Move widths to theme_settings and configs!
+  // @fixme Fix classes, use pulls, pushes and offsets.
+  // If both are present, they are 2 wide.
+  if (!empty($variables['page']['sidebar_first']) && !empty($variables['page']['sidebar_second'])) {
+    $sidebars_width = SIDEBAR_BOTH_WIDTH;
+  }
+  // If any of them is present, it is 3 wide.
+  elseif (!empty($variables['page']['sidebar_first'])) {
+    $variables['page']['sidebar_first']['#attributes'] = new Attribute([
+      'class' => ['col-md-' . SIDEBAR_SINGLE_WIDTH]
+    ]);
+  }
+  elseif (!empty($variables['page']['sidebar_second'])) {
+    $variables['page']['sidebar_second']['#attributes'] = new Attribute([
+      'class' => ['col-md-' . SIDEBAR_SINGLE_WIDTH]
+    ]);
+  }
 
-  // Define default classes for containers
-
-  // $variables['sidebar_first_attributes'] = array(
-  //   'class' => array (
-  //     'sidebar',
-  //   $sidebar_first_width
-  // ),
-  // 'id' => array ( 'sidebar_first' ),
-  // );
-  // $variables['sidebar_second_attributes'] = array(
-  //   'class' => array (
-  //     'sidebar',
-  //     $sidebar_second_width ),
-  //   'id' => array ( 'sidebar_second' ),
-  // );
-
-  // Define column layout classes
-  // if (!empty($variables['page']['sidebar_first'])) {
-  //   $variables['content_attributes']['class'][] = 'col-md-push-3';
-  // }
-  // $variables['sidebar_first_attributes']['class'][] = 'col-md-pull-' . $width;
-
-  // Declare region attributes
-  // $variables['content_attributes'] = new Attribute($variables['content_attributes']);
-  // $variables['sidebar_first_attributes'] = new Attribute($variables['sidebar_first_attributes']);
-  // $variables['sidebar_second_attributes'] = new Attribute($variables['sidebar_second_attributes']);
+  $main_width = _tieto_base_content_width(!empty($variables['page']['sidebar_first']), !empty($variables['page']['sidebar_second']));
+  $variables['main_attributes'] = new Attribute([
+    'class' => ['col-md-' . $main_width],
+  ]);
 }
 
 /**
@@ -204,12 +200,17 @@ function tieto_base_theme_suggestions_form_alter(array &$suggestions, array $var
  *
  * Calculates content width based on first and second column width parameters.
  */
-function _tieto_base_content_width($first = 0, $second = 0) {
+function _tieto_base_content_width($first = FALSE, $second = FALSE) {
   $content_offset = 0;
-  $sidebar_first_width = ( $first ) ? 3 : 0;
+
+  $sidebar_width = ($first && $second) ? SIDEBAR_BOTH_WIDTH : SIDEBAR_SINGLE_WIDTH;
+  $sidebar_first_width = ($first) ? $sidebar_width : 0;
   $sidebar_first_offset = 0;
-  $sidebar_second_width = ( $second ) ? 3 : 0;
+
+  $sidebar_second_width = ($second) ? $sidebar_width : 0;
   $sidebar_second_offset = 0;
-  $content_width = 12 - $content_offset - $sidebar_first_width - $sidebar_first_offset - $sidebar_second_width - $sidebar_second_offset;
+
+  $content_width = GRID_COLUMNS - $content_offset - $sidebar_first_width - $sidebar_first_offset - $sidebar_second_width - $sidebar_second_offset;
+
   return $content_width;
 }

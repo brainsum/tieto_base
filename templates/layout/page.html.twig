@@ -14,23 +14,23 @@
 
   {{ page.header }}
 
-  <div class="page__content container">
-
-    {# Breadcrumbs, navigation and other pre-content regions. #}
+  <div class="container">
     {{ page.breadcrumb }}
     {{ page.highlighted }}
-    {{ page.navigation }}
 
-    {# The main content of the site, which changes. #}
-    <main class="page__main" role="main">
-      <a id="main-content" tabindex="-1"></a>
-      {{ page.help }}
-      {{ page.content }}
-    </main>
+    <div class="row">
+      {{ page.sidebar_first }}
 
-    {# Sidebars. #}
-    {{ page.sidebar_first }}
-    {{ page.sidebar_second }}
+      {# The main content of the site, which changes. #}
+      <main role="main"{{ main_attributes }}>
+        <a id="main-content" tabindex="-1"></a>
+        {{ page.navigation }}
+        {{ page.help }}
+        {{ page.content }}
+      </main>
+
+      {{ page.sidebar_second }}
+    </div>
   </div>
 
   {{ page.footer }}
