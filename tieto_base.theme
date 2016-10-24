@@ -151,6 +151,7 @@ function tieto_base_preprocess_node(&$variables) {
  */
 function tieto_base_preprocess_block__system_breadcrumb_block(&$variables) {
   // Remove 'Home' from the Breadcrumbs.
+  // @todo Optionally show all crumbs, but use <span> for the Current item.
   $links = &$variables['content']['#links'];
   if ($links[0]->getUrl()->getRouteName() === '<front>') {
     array_shift($links);

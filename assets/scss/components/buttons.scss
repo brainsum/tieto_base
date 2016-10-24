@@ -7,7 +7,9 @@
 // @see http://codepen.io/vfrvqarkbt/pen/BNmGPJ
 @import "index";
 
-.button {
+input.button,
+button.button,
+a.button {
   display: inline-block;
   font-weight: $btn-font-weight;
   font-family: sans-serif;

@@ -18,16 +18,17 @@
     </div>
   </header>
 
-  <main class="page__main container" role="main">
-    <a id="main-content" tabindex="-1"></a>
+  <div class="container">
     {{ page.breadcrumb }}
     {{ page.highlighted }}
     {{ page.navigation }}
 
-    <div class="page__content">
+    {# The main content of the site, which changes. #}
+    <main class="page__content" role="main">
+      <a id="main-content" tabindex="-1"></a>
       {{ page.help }}
       {{ page.content }}
-    </div>
+    </main>
 
     {% if page.sidebar_first %}
       <aside class="page__sidebar" role="complementary"{{ sidebar_first_attributes }}>
@@ -40,7 +41,7 @@
         {{ page.sidebar_second }}
       </aside>
     {% endif %}
-  </main>
+  </div>
 
   {% if page.footer %}
     <footer class="page__footer container">
