@@ -7,47 +7,33 @@
  * @see html.html.twig
  */
 #}
-<div class="page-wrapper">
+<div class="page__wrapper">
   {% if page.top %}
     {{ page.top }}
   {% endif %}
 
-  <header class="page__header bg-primary" aria-label="{{ 'Site header'|t }}" role="banner">
-    <div class="container">
-      {{ page.header }}
-    </div>
-  </header>
+  {{ page.header }}
 
-  <div class="container">
+  <div class="page__content container">
+
+    {# Breadcrumbs, navigation and other pre-content regions. #}
     {{ page.breadcrumb }}
     {{ page.highlighted }}
     {{ page.navigation }}
 
     {# The main content of the site, which changes. #}
-    <main class="page__content" role="main">
+    <main class="page__main" role="main">
       <a id="main-content" tabindex="-1"></a>
       {{ page.help }}
       {{ page.content }}
     </main>
 
-    {% if page.sidebar_first %}
-      <aside class="page__sidebar" role="complementary"{{ sidebar_first_attributes }}>
-        {{ page.sidebar_first }}
-      </aside>
-    {% endif %}
-
-    {% if page.sidebar_second %}
-      <aside class="page__sidebar" role="complementary"{{ sidebar_second_attributes }}>
-        {{ page.sidebar_second }}
-      </aside>
-    {% endif %}
+    {# Sidebars. #}
+    {{ page.sidebar_first }}
+    {{ page.sidebar_second }}
   </div>
 
-  {% if page.footer %}
-    <footer class="page__footer container">
-      {{ page.footer }}
-    </footer>
-  {% endif %}
+  {{ page.footer }}
 
   {% if page.bottom %}
     {{ page.bottom }}

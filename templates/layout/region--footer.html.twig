@@ -15,11 +15,7 @@
 {% extends 'region.html.twig' %}
 
 {% block content %}
-  <header role="banner"{{ attributes|without('role') }}>
-    <nav class="navbar navbar-dark bg-primary">
-      <div class="container">
-        {{ content }}
-      </div>
-    </nav>
-  </header>
+  <footer{{ attributes.addClass('container') }}>
+    {{ content }}
+  </footer>
 {% endblock %}

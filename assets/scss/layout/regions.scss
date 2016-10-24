@@ -1,15 +1,13 @@
 // Regions
+//
+//
 @import "index";
 
-.page__header {
+.region__header {
   margin-bottom: $spacer;
 }
 
 .page__title {
   font-weight: bold;
   margin-bottom: $spacer * 2;
-}
-
-.block {
-  margin-bottom: $spacer;
 }

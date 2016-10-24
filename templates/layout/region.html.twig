@@ -12,6 +12,12 @@
  * @see template_preprocess_region()
  */
 #}
-{% if content %}
+{%
+  set attributes = attributes.addClass([
+    'region',
+    'region__' ~ region|clean_class,
+  ])
+%}
+{% block content %}
   {{ content }}
-{% endif %}
+{% endblock %}

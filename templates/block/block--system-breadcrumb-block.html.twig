@@ -14,9 +14,10 @@
  * @ingroup templates
  */
 #}
-<div aria-labelledby="system-breadcrumb"{{ attributes }}>
-  <h2 id="system-breadcrumb" class="sr-only">{{ 'Breadcrumbs'|t }}</h2>
+{% set label = plugin_id ~ '_title' %}
+<section aria-labelledby="{{ label }}"{{ attributes }}>
+  <h2 id="{{ label }}" class="sr-only">{{ 'Breadcrumbs'|t }}</h2>
   {% block content %}
     {{ content }}
   {% endblock %}
-</div>
+</section>

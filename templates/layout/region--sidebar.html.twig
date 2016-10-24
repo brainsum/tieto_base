@@ -12,14 +12,10 @@
  * @see template_preprocess_region()
  */
 #}
-{%
-  set classes = [
-    'region',
-    'region-' ~ region|clean_class,
-  ]
-%}
-{% if content %}
-  <div{{ attributes.addClass(classes) }}>
+{% extends 'region.html.twig' %}
+
+{% block content %}
+  <aside{{ attributes }} role="complementary">
     {{ content }}
-  </div>
-{% endif %}
+  </aside>
+{% endblock %}

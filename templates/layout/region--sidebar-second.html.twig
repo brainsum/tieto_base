@@ -12,14 +12,4 @@
  * @see template_preprocess_region()
  */
 #}
-{% extends 'region.html.twig' %}
-
-{% block content %}
-  <header role="banner"{{ attributes|without('role') }}>
-    <nav class="navbar navbar-dark bg-primary">
-      <div class="container">
-        {{ content }}
-      </div>
-    </nav>
-  </header>
-{% endblock %}
+{% extends 'region--sidebar.html.twig' %}
