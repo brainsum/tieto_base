@@ -4,7 +4,7 @@
 // Links
 //
 //
-a:not(.button) {
+a {
   &:visited {
     color: $link-visited-color;
   }

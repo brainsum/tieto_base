@@ -2,27 +2,7 @@
 @import "index";
 
 .page__header {
-  background: $brand-primary;
   margin-bottom: $spacer;
-
-  .logo, .nav-link {
-    // @todo
-    &, &:active {
-      color: #fff;
-    }
-  }
-
-  .logo {
-    font-size: $font-size-h1;
-    display: inline-block;
-    padding: .5rem;
-    font-weight: bold;
-    letter-spacing: -1px;
-
-    &:hover {
-      color: #fff;
-    }
-  }
 }
 
 .page__title {

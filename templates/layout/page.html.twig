@@ -12,10 +12,9 @@
     {{ page.top }}
   {% endif %}
 
-  <header class="page__header" aria-label="{{ 'Site header'|t }}" role="banner">
+  <header class="page__header bg-primary" aria-label="{{ 'Site header'|t }}" role="banner">
     <div class="container">
       {{ page.header }}
-      {{ page.primary_nav }}
     </div>
   </header>
 
@@ -23,7 +22,7 @@
     <a id="main-content" tabindex="-1"></a>
     {{ page.breadcrumb }}
     {{ page.highlighted }}
-    {{ page.secondary_nav }}
+    {{ page.navigation }}
 
     <div class="page__content">
       {{ page.help }}

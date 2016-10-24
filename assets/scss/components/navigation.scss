@@ -2,6 +2,12 @@
 @import "bootstrap/scss/nav";
 @import "bootstrap/scss/navbar";
 
+// Logo
+.navbar-brand img {
+  display: inline-block;
+}
+
+// Tabs
 .tabs {
   border-bottom: 3px solid $brand-primary;
 
@@ -28,6 +34,7 @@
 }
 
 .tabs--header {
+  clear: both;
   border-bottom: 0;
 
   @include media-breakpoint-up(sm) {
