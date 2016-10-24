@@ -163,14 +163,6 @@ function tieto_base_preprocess_form_element(&$variables) {
   $variables['input_attributes'] = new Attribute($variables['element']['#attributes']);
 }
 
-/**
- * Implements hook_preprocess_HOOK() for menu.html.twig.
- */
-// function tieto_base_preprocess_menu(&$variables) {
-//   // kint($variables);
-
-// }
-
 function tieto_base_preprocess_menu_local_task(&$variables) {
   $link = $variables['element']['#link'];
   $url = $link['url'];
@@ -202,27 +194,6 @@ function tieto_base_theme_suggestions_form_alter(array &$suggestions, array $var
   }
   if ($variables['element']['#form_id'] == 'node_form') {
     $suggestions[] = 'node_edit_form';
-  }
-}
-
-/**
- * Implements hook_preprocess_input() to add classes to inputs.
- */
-function tieto_base_preprocess_input(&$variables) {
-  if ($variables['element']['#type'] == 'submit') {
-    if (is_object($variables['attributes']['class'])) {
-      if (empty(array_intersect(array('button--primary', 'button--secondary', 'button--success', 'button--warning', 'button--danger', 'button--link'), $variables['attributes']['class']->value()))) {
-        $variables['attributes']['class']->addClass('button--primary');
-      }
-      if ( !in_array( 'button-', $variables['attributes']['class']->value() ) ) {
-        $variables['attributes']['class']->addClass('button-');
-      }
-    }
-    else {
-      $variables['attributes']['class'][] = 'button-';
-      $variables['attributes']['class'][] = 'button--primary';
-      $variables['attributes'] = new Attribute( $variables['attributes'] );
-    }
   }
 }
 

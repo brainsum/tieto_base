@@ -36,7 +36,19 @@ $tieto-grey-dark: #5e5e5e;
 $tieto-grey-darkest: #333333;
 
 // Override some Bootstrap variables.
-$enable-flex: true;
+//
+// Options
+//
+//
+
+$enable-flex:               true;
+// $enable-rounded:            true !default;
+$enable-shadows:            true;
+// $enable-gradients:          false !default;
+$enable-transitions:        true;
+// $enable-hover-media-query:  false !default;
+// $enable-grid-classes:       true !default;
+// $enable-print-styles:       true !default;
 
 $brand-primary: $tieto-blue;
 $brand-success: $tieto-green;
@@ -53,7 +65,7 @@ $link-disabled-color: $tieto-grey-darker;
 
 // Typography
 //
-// Font, line-height, and color for body text, headings, and more.
+//
 
 $font-path: '../../fonts'; // Custom webfont's path
 $font-family-sans-serif:
@@ -69,12 +81,20 @@ $font-family-sans-serif:
   "Droid Sans", // Older Android
   "Helvetica Neue", Arial, sans-serif; // Basic web fallback
 $font-size-root: 16px;
+$font-size-base: 1rem;
+$font-size-lg:   1.25rem;
+$font-size-sm:   .875rem;
+$font-size-xs:   .75rem;
+
 $line-height-base: 1.6;
+
+// Components
+//
+//
 
 $navbar-border-radius: 0;
 
 $nav-tabs-border-width: 0;
-$nav-tabs-border-radius: 2px;
 $nav-tabs-active-link-hover-color: #fff;
 $nav-tabs-active-link-hover-bg: $brand-primary;
 $tabs-box-shadow: 0 -1px 2px 0 rgba(0, 0, 0, .1);
@@ -83,3 +103,80 @@ $breadcrumb-padding-y: 0;
 $breadcrumb-padding-x: 0;
 $breadcrumb-bg: none;
 $breadcrumb-divider: ">"; // @fixme
+
+// Buttons
+//
+//
+
+$btn-padding-x:                  1rem;
+$btn-padding-y:                  .25rem;
+
+$btn-padding-x-sm:               .5rem;
+$btn-padding-y-sm:               .125rem;
+
+$btn-padding-x-lg:               1.5rem;
+$btn-padding-y-lg:               .5rem;
+
+// $btn-line-height:                1.25 !default;
+$btn-font-weight:                bold;
+$btn-box-shadow:                 0px 1px 3px 0px rgba(0,0,0,.2);
+$btn-active-box-shadow:          inset 0px 0px 2px 0px rgba(0,0,0,.2);
+
+$btn-color:              $tieto-grey-dark;
+$btn-bg:                 $tieto-grey-lightest;
+$btn-border:             $tieto-grey;
+
+$btn-disabled-color:              $tieto-grey-lighter;
+$btn-disabled-bg:                 $tieto-grey-lightest;
+$btn-disabled-border:             $tieto-grey-lightest;
+
+$btn-primary-color:              #fff;
+$btn-primary-bg:                 $tieto-blue;
+$btn-primary-border:             $tieto-blue-darker;
+
+$btn-primary-plain-color: $tieto-blue-dark;
+$btn-primary-plain-border: $tieto-blue;
+
+$btn-success-plain-color: $tieto-green-dark;
+$btn-success-plain-border: $tieto-green;
+
+$btn-warning-plain-color: $tieto-orange-dark;
+$btn-warning-plain-border: $tieto-orange;
+
+$btn-danger-plain-color: $tieto-red-dark;
+$btn-danger-plain-border: $tieto-red;
+
+$btn-disabled-plain-color: $tieto-grey-lighter;
+$btn-disabled-plain-border: $tieto-grey-light;
+$btn-disabled-plain-bg: transparent;
+
+$btn-border-radius:              2px;
+$btn-border-radius-lg:           3px;
+
+$btn-link-disabled-color: $btn-disabled-color;
+
+
+// $btn-secondary-color:            $gray-dark !default;
+// $btn-secondary-bg:               #fff !default;
+// $btn-secondary-border:           #ccc !default;
+
+// $btn-info-color:                 #fff !default;
+// $btn-info-bg:                    $brand-info !default;
+// $btn-info-border:                $btn-info-bg !default;
+
+// $btn-success-color:              #fff !default;
+// $btn-success-bg:                 $brand-success !default;
+// $btn-success-border:             $btn-success-bg !default;
+
+// $btn-warning-color:              #fff !default;
+// $btn-warning-bg:                 $brand-warning !default;
+// $btn-warning-border:             $btn-warning-bg !default;
+
+// $btn-danger-color:               #fff !default;
+// $btn-danger-bg:                  $brand-danger !default;
+// $btn-danger-border:              $btn-danger-bg !default;
+
+// $btn-block-spacing-y:            .5rem !default;
+// $btn-toolbar-margin:             .5rem !default;
+
+
