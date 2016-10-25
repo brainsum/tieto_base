@@ -6,6 +6,14 @@ import concat from 'gulp-concat';
 import sequence from 'gulp-sequence';
 
 gulp.task('kss', () => {
+  sequence(
+      'styles',
+      'kss:concat',
+      'kss:generate'
+  )();
+});
+
+gulp.task('kss:generate', () => {
   return kss({
     title: 'Tieto Style Guide',
     source: config.styles.base,
@@ -23,10 +31,6 @@ gulp.task('kss:concat', () => {
 
 gulp.task('kss:watch', () => {
   gulp.watch(config.styles.watch, () => {
-    sequence(
-      'styles',
-      'kss:concat',
-      'kss'
-    )();
+    gulp.task('kss');
   });
 });

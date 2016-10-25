@@ -14,6 +14,7 @@ global:
       css/layout/regions.css: {}
     component:
       css/components/buttons.css: {}
+      css/components/details.css: {}
       css/components/forms.css: {}
       css/components/code.css: {}
       css/components/images.css: {}

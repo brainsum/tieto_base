@@ -66,6 +66,22 @@ $link-active-color: color(red);
 $link-visited-color: color(blue);
 $link-disabled-color: color(grey-darker);
 
+// States
+//
+//
+
+$state-success-text:             color(green-dark);
+$state-success-bg:               color(green-lightest);
+
+$state-info-text:                color(blue-dark);
+$state-info-bg:                  color(blue-lightest);
+
+$state-warning-text:             color(orange-dark);
+$state-warning-bg:               color(orange-lightest);
+
+$state-danger-text:              color(red-dark);
+$state-danger-bg:                color(red-lightest);
+
 // Typography
 //
 //
@@ -98,7 +114,9 @@ $font-weight-normal: 400; // normal
 $font-weight-bold: 700; // bold
 $font-weight-black: 800; // bolder
 
-$line-height-base: 1.6;
+$line-height-sm: 1.5;
+$line-height-base: 1.5;
+$line-height-lg: (4 / 3);
 
 // Body
 //
@@ -119,6 +137,10 @@ $component-padding-y-sm:               .125rem;
 $component-padding-x-lg:               1.5rem;
 $component-padding-y-lg:               .5rem;
 
+// Navbar
+//
+//
+
 $navbar-border-radius: 0;
 
 $navbar-padding-x: 0;
@@ -126,6 +148,10 @@ $navbar-padding-y: 0;
 
 $navbar-dark-color:                 rgba(255,255,255,.75);
 $navbar-dark-hover-color:           rgba(255,255,255,1);
+
+// Navs
+//
+//
 
 $nav-tabs-border-width: 0;
 $nav-tabs-active-link-hover-color: #fff;
@@ -141,6 +167,16 @@ $breadcrumb-padding-y: 0;
 $breadcrumb-padding-x: 0;
 $breadcrumb-bg: none;
 $breadcrumb-divider: ">"; // @fixme
+
+// Alerts
+//
+//
+
+$alert-padding-x:             $component-padding-x-lg;
+$alert-padding-y:             $component-padding-y-lg;
+$alert-border-radius:         0;
+$alert-link-font-weight:      inherit;
+$alert-border-width:          0;
 
 // Buttons
 //
@@ -206,7 +242,7 @@ $label-color: color(grey-darker);
 $label-font-weight: $font-weight-bold;
 $label-font-size: $font-size-sm;
 
-$input-line-height:              1.4375rem;
+$input-line-height: $line-height-base;
 
 $input-color:                    $body-color;
 $input-border-color:             color(grey-lighter);
@@ -232,3 +268,13 @@ $input-padding-y-sm: $component-padding-y-sm;
 
 $input-padding-x-lg: $component-padding-x-lg;
 $input-padding-y-lg: $component-padding-y-lg;
+
+$input-height:                   (($font-size-base * $line-height-base) + ($component-padding-y * 2));
+$input-height-lg:                (($font-size-lg * $line-height-lg) + ($component-padding-y-lg * 2));
+$input-height-sm:                (($font-size-sm * $line-height-sm) + ($component-padding-y-sm * 2));
+
+// Helpers
+//
+//
+
+$caret-color: $body-color;

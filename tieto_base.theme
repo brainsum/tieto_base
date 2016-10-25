@@ -154,15 +154,31 @@ function tieto_base_preprocess_block__system_breadcrumb_block(&$variables) {
   }
 }
 
+// function tieto_base_preprocess_form(&$variables) {
+//   $form = &$variables['element'];
+
+
+// }
+
 function tieto_base_preprocess_form_element(&$variables) {
-  if (is_object($variables['label']['#title'])) {
-    $variables['input_title'] = $variables['label']['#title']->render();
+  if (isset($variables['label']['#title'])) {
+    $variables['input_title'] = $variables['label']['#title'];
   }
-  $variables['input_attributes'] = new Attribute($variables['element']['#attributes']);
+  if (isset($variables['element']['#attributes'])) {
+    $variables['input_attributes'] = new Attribute($variables['element']['#attributes']);
+  }
 }
+
+// function tieto_base_preprocess_form_element_label(&$variables) {
+//   // kint($variables);
+// }
 
 function tieto_base_preprocess_menu_local_action(&$variables) {
   $variables['link']['#options']['attributes']['class'][] = 'button--green';
+}
+
+function tieto_base_preprocess_details(&$variables) {
+  $variables['is_open'] = $variables['element']['#open'];
 }
 
 function tieto_base_preprocess_menu_local_task(&$variables) {
@@ -180,24 +196,34 @@ function tieto_base_preprocess_menu_local_task(&$variables) {
 /**
  * Implements hook_theme_suggestions_HOOK_alter() for links templates.
  */
-function tieto_base_theme_suggestions_links_alter(array &$suggestions, array $variables) {
-  // ToDo get from core a variable to flag inline links
-  if ( in_array('inline', $variables['attributes']['class']) ) {
-    $suggestions[] = 'links__inline';
-  }
-}
+// function tieto_base_theme_suggestions_links_alter(array &$suggestions, array $variables) {
+//   // ToDo get from core a variable to flag inline links
+//   if ( in_array('inline', $variables['attributes']['class']) ) {
+//     $suggestions[] = 'links__inline';
+//   }
+// }
 
 /**
  * Implements hook_theme_suggestions_HOOK_alter() for form templates.
  */
 function tieto_base_theme_suggestions_form_alter(array &$suggestions, array $variables) {
-  if ($variables['element']['#form_id'] == 'search_block_form') {
-    $suggestions[] = 'form__search_block_form';
-  }
-  if ($variables['element']['#form_id'] == 'node_form') {
-    $suggestions[] = 'node_edit_form';
+  $form_id = $variables['element']['#form_id'];
+  $suggestions[] = 'form__' . $form_id;
+
+  // Inline forms.
+  $inline_forms = [
+    'user_form',
+  ];
+  if (in_array($form_id, $inline_forms)) {
+    $suggestions[] = 'form__inline';
+    $suggestions[] = 'form__inline__' . $form_id;
   }
 }
+
+// function tieto_base_theme_suggestions_form_element_alter(array &$suggestions, array $variables) {
+//   // $suggestions[] = 'form__' . $variables['element']['#form_id'];
+//   dump($variables);
+// }
 
 /**
  * Returns width of content region.

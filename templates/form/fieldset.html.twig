@@ -25,7 +25,7 @@
     'js-form-item',
     'form-item',
     'js-form-wrapper',
-    'form-goup',
+    'form-group',
     errors ? 'has-error',
   ]
 %}
@@ -38,21 +38,21 @@
     ]
   %}
   {#  Always wrap fieldset legends in a SPAN for CSS positioning. #}
-  <legend{{ legend.attributes }}>
+  <legend{{ legend.attributes.addClass('form-control-label') }}>
     <span{{ legend_span.attributes.addClass(legend_span_classes) }}>{{ legend.title }}</span>
   </legend>
   <div class="fieldset-wrapper">
-    {% if errors %}
-      <div class="alert alert-danger" role="alert">
-        <strong>{{ errors }}</strong>
-      </div>
-    {% endif %}
     {% if prefix %}
       <span class="field-prefix">{{ prefix }}</span>
     {% endif %}
     {{ children }}
     {% if suffix %}
       <span class="field-suffix">{{ suffix }}</span>
+    {% endif %}
+    {% if errors %}
+      <div class="form-control-feedback" role="alert">
+        {{ errors }}
+      </div>
     {% endif %}
     {% if description.content %}
       <small{{ description.attributes.addClass('description', 'text-muted') }}>{{ description.content }}</small>
