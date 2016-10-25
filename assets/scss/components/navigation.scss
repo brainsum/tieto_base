@@ -7,7 +7,28 @@
   display: inline-block;
 }
 
-// Tabs
+/*
+  Tabs
+
+  Use tabs to create groups of content and show only one group at a time.
+
+  Markup:
+  <div class="bg-blue pt-1">
+    <ul class="tabs tabs--header nav nav-tabs">
+      <li class="nav-item">
+        <a href="#" class="nav-link">First</a>
+      </li>
+      <li class="nav-item">
+        <a href="#" class="nav-link is-active">Second</a>
+      </li>
+      <li class="nav-item">
+        <a href="#" class="nav-link">Third</a>
+      </li>
+    </ul>
+  </div>
+
+  Style guide 4.3
+*/
 .tabs {
   border-bottom: 3px solid $brand-primary;
 
@@ -22,17 +43,6 @@
   }
 }
 
-// Sizes
-.tabs--sm {
-  border-bottom-width: 2px;
-  font-size: $font-size-sm;
-}
-
-.tabs--lg {
-  border-bottom-width: 4px;
-  font-size: $font-size-lg;
-}
-
 .tabs--header {
   clear: both;
   border-bottom: 0;
@@ -42,7 +52,7 @@
   }
 
   .nav-link {
-    background-color: color(tieto-blue-lightest);
+    background-color: color(blue-lightest);
     color: $link-color;
     padding: .5em 2em;
 
@@ -53,10 +63,32 @@
   }
 }
 
-// Variants
+/*
+  Color variants
+
+  Markup:
+  <div class="pt-1">
+    <ul class="tabs tabs--header nav nav-tabs {{modifier_class}}">
+      <li class="nav-item">
+        <a href="#" class="nav-link">First</a>
+      </li>
+      <li class="nav-item">
+        <a href="#" class="nav-link is-active">Second</a>
+      </li>
+      <li class="nav-item">
+        <a href="#" class="nav-link">Third</a>
+      </li>
+    </ul>
+  </div>
+
+  .tabs--primary - Primary color
+  .tabs--secondary - Secondary color
+
+  Style guide 4.3.1
+*/
 .tabs--primary {
   .nav-link {
-    background-color: color(tieto-blue-lightest);
+    background-color: color(blue-lightest);
 
     &.is-active {
       background-color: $brand-primary;
@@ -67,12 +99,45 @@
 
 .tabs--secondary {
   border: 0;
-  background-color: color(tieto-grey-lightest);
+  background-color: color(grey-lightest);
 
   .nav-link {
-    padding: .5em 1em;
     &.is-active {
       color: $body-color;
     }
   }
+}
+
+
+/*
+  Size variants
+
+  Markup:
+  <div class="bg-blue pt-1">
+    <ul class="tabs tabs--header nav nav-tabs {{modifier_class}}">
+      <li class="nav-item">
+        <a href="#" class="nav-link">First</a>
+      </li>
+      <li class="nav-item">
+        <a href="#" class="nav-link is-active">Second</a>
+      </li>
+      <li class="nav-item">
+        <a href="#" class="nav-link">Third</a>
+      </li>
+    </ul>
+  </div>
+
+  .tabs--lg - Larger tabs
+  .tabs--sm - Smaller tabs
+
+  Style guide 4.3.2
+*/
+.tabs--sm {
+  border-bottom-width: 2px;
+  font-size: $font-size-sm;
+}
+
+.tabs--lg {
+  border-bottom-width: 4px;
+  font-size: $font-size-lg;
 }

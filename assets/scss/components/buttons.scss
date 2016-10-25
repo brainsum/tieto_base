@@ -1,7 +1,7 @@
 /*
   Buttons
 
-  Style guide 4.7
+  Style guide 4.8
  */
 
 // Copied and customized from Bootstrap 4.
@@ -66,7 +66,7 @@
   .button--red - Buttons in red are mainly used for negative actions, like deleting, unpublishing, rejecting and similar.
   .button--orange - Buttons in orange are not widely used, but can be a nice contrasting alternative.
 
-  Style guide: 4.7.1
+  Style guide: 4.8.1
 */
 .button--primary,
 .button--blue {
@@ -95,7 +95,7 @@
   .button--plain--red - Buttons in red are mainly used for negative actions, like deleting, unpublishing, rejecting and similar.
   .button--plain--orange - Buttons in orange are not widely used, but can be a nice contrasting alternative.
 
-  Style guide: 4.7.2
+  Style guide: 4.8.2
  */
 .button--plain--primary,
 .button--plain--blue {
@@ -123,7 +123,7 @@
 
   .button--link.btn--blue - Blue link button
 
-  Style guide 4.7.3
+  Style guide 4.8.3
  */
 button.link,
 input.link,
@@ -184,7 +184,7 @@ input.link,
   .button--lg - Button with larger size
   .button--sm - Button with smaller size
 
-  Style guide 4.7.4
+  Style guide 4.8.4
  */
 .button--lg {
   // line-height: ensure even-numbered height of button next to large input
@@ -202,7 +202,7 @@ input.link,
   
   Markup: <button class="button" disabled>Can't push me</button>
 
-  Style guide 4.7.5
+  Style guide 4.8.5
  */
 // Future-proof disabling of clicks on `<a>` elements
 // @todo Fix :active and :focus states for older IE.
@@ -218,7 +218,7 @@ fieldset[disabled] a.button {
 
   Markup: <button class="button button--block button--blue">Push me</button>
 
-  Style guide 4.7.6
+  Style guide 4.8.6
  */
 .button--block {
   display: block;
