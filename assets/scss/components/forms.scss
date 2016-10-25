@@ -1,6 +1,7 @@
 @import "index";
 @import "bootstrap/scss/forms";
 
+// All form controls, inputs, buttons, etc.
 .form-control {
   font-family: inherit;
 
@@ -9,17 +10,19 @@
   }
 }
 
-.form-label {
+// Form labels.
+.form-control-label {
   font-weight: $label-font-weight;
   font-size: $label-font-size;
   color: $label-color;
   cursor: pointer;
-}
 
-.form-inline .form-label,
-.col-form-label {
-  text-transform: uppercase;
-  font-weight: $font-weight-normal;
+  // Inline forms get slightly modified <label>s.
+  .form-inline & {
+    @extend .col-form-label;
+    text-transform: uppercase;
+    font-weight: $font-weight-normal;
+  }
 }
 
 .text-format-wrapper .form-group {
@@ -31,7 +34,7 @@
   // This is needed to fix weird line-heights with <small>.
   > .description {
     display: inline-block;
-    margin-top: .25rem;
+    margin-top: .5rem;
   }
 }
 
@@ -39,14 +42,8 @@
 .has-error {
   @include form-control-validation($brand-danger);
 
-  .form-label {
+  .form-control-label {
     color: $brand-danger;
-  }
-}
-
-select.form-control {
-  &:not([size]):not([multiple]) {
-    height: calc(#{$input-height} - #{($border-width * 4)} - #{($component-padding-y)});
   }
 }
 
