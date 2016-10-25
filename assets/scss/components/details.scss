@@ -18,12 +18,12 @@ summary {
   border-bottom: 2px solid $brand-primary;
 
   @include hover {
-    background-color: $tieto-blue-lightest;
+    background-color: color(blue-lightest);
   }
 }
 
 // Replace default browser icons.
 // @fixme with background SVG for cross-browsers!
 summary::-webkit-details-marker {
-  color: $tieto-blue;
+  color: color(blue);
 }

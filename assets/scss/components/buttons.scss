@@ -1,6 +1,9 @@
-//
-// Buttons
-//
+/*
+  Buttons
+
+  Style guide 4.8
+ */
+
 // Copied and customized from Bootstrap 4.
 //
 // @todo Finalize according to style guide
@@ -52,10 +55,19 @@
   }
 }
 
-//
-// Alternate buttons
-//
+/*
+  Color variants
 
+  Markup: <button class="button {{modifier_class}}">Push me</button>
+
+  .button--blue - Primary buttons are blue, because the primary brand color is blue. This is a generic button and can be used for everything.
+  .button--primary - Alias for .button--blue
+  .button--green - In interfaces, however, green buttons are mostly used to symbolize positive actions, like saving, creating, publishing and similar.
+  .button--red - Buttons in red are mainly used for negative actions, like deleting, unpublishing, rejecting and similar.
+  .button--orange - Buttons in orange are not widely used, but can be a nice contrasting alternative.
+
+  Style guide: 4.8.1
+*/
 .button--primary,
 .button--blue {
   @include button-variant($btn-primary-color, $btn-primary-bg, $btn-primary-border);
@@ -70,10 +82,21 @@
   @include button-variant($btn-danger-color, $btn-danger-bg, $btn-danger-border);
 }
 
-//
-// Plain buttons (outline)
-//
+/*
+  Plain variants
 
+  Each button variant has a plain version.
+
+  Markup: <button class="button {{modifier_class}}">Push me</button>
+
+  .button--plain--blue - Primary buttons are blue, because the primary brand color is blue. This is a generic button and can be used for everything.
+  .button--plain--primary - Alias for .button--plain--blue
+  .button--plain--green - In interfaces, however, green buttons are mostly used to symbolize positive actions, like saving, creating, publishing and similar.
+  .button--plain--red - Buttons in red are mainly used for negative actions, like deleting, unpublishing, rejecting and similar.
+  .button--plain--orange - Buttons in orange are not widely used, but can be a nice contrasting alternative.
+
+  Style guide: 4.8.2
+ */
 .button--plain--primary,
 .button--plain--blue {
   @include button-plain-variant($btn-primary-plain-color, $btn-primary-plain-border);
@@ -91,16 +114,20 @@
   @include button-plain-variant($btn-danger-plain-color, $btn-danger-plain-border);
 }
 
+/*
+  Link variants
 
-//
-// Link buttons
-//
+  Buttons can be look and behave like a link, by adding one of these classes: .link, .button--link
 
-// Make a button look and behave like a link
+  Markup: <button class="button {{modifier_class}}">Push me</button>
+
+  .button--link.btn--blue - Blue link button
+
+  Style guide 4.8.3
+ */
 button.link,
 input.link,
 .button--link {
-  // font-weight: bold;
   color: $link-color;
   border-radius: 0;
   cursor: pointer;
@@ -149,10 +176,16 @@ input.link,
 
 }
 
-//
-// Button Sizes
-//
+/*
+  Sizes
 
+  Markup: <button class="button {{modifier_class}}">Push me</button>
+
+  .button--lg - Button with larger size
+  .button--sm - Button with smaller size
+
+  Style guide 4.8.4
+ */
 .button--lg {
   // line-height: ensure even-numbered height of button next to large input
   @include button-size($btn-padding-y-lg, $btn-padding-x-lg, $font-size-lg, $btn-border-radius-lg);
@@ -162,6 +195,15 @@ input.link,
   @include button-size($btn-padding-y-sm, $btn-padding-x-sm, $font-size-sm, $btn-border-radius-sm);
 }
 
+/*
+  Disabled state 
+
+  Use disabled buttons to show important actions not available to user temporarily or permanently depending on the use case. Add disabled attribute or .disabled class.
+  
+  Markup: <button class="button" disabled>Can't push me</button>
+
+  Style guide 4.8.5
+ */
 // Future-proof disabling of clicks on `<a>` elements
 // @todo Fix :active and :focus states for older IE.
 a.button.disabled,
@@ -169,10 +211,15 @@ fieldset[disabled] a.button {
   pointer-events: none;
 }
 
-//
-// Block button
-//
+/*
+  Block buttons
 
+  To create block level buttons add .button--block. The will span the full width of the parent.
+
+  Markup: <button class="button button--block button--blue">Push me</button>
+
+  Style guide 4.8.6
+ */
 .button--block {
   display: block;
   width: 100%;
