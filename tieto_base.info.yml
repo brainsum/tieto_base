@@ -80,11 +80,9 @@ ckeditor_stylesheets:
 regions:
   top: 'Page top'
   header: 'Header'
-  primary_nav: 'Primary navigation'
-  secondary_nav: 'Secondary navigation'
   breadcrumb: 'Breadcrumb'
   highlighted: 'Highlighted'
-  help: 'Help'
+  navigation: 'Navigation'
   content: 'Content' # required!
   sidebar_first: 'Sidebar (first)'
   sidebar_second: 'Sidebar (second)'

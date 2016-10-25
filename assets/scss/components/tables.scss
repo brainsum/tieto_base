@@ -1,6 +1,32 @@
 @import "index";
 @import "bootstrap/scss/tables";
 
+.table {
+  margin: $spacer 0;
+
+  thead th {
+    text-transform: uppercase;
+    font-size: $font-size-sm;
+    font-weight: normal;
+    color: $table-header-color;
+
+    a {
+      color: inherit;
+    }
+
+    &.is-active a {
+      color: $link-color;
+    }
+
+    a,
+    &.is-active a {
+      @include hover {
+        color: $link-hover-color;
+      }
+    }
+  }
+}
+
 /**
  * @file
  * Table header behavior.

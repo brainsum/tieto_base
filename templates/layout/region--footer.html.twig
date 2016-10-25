@@ -12,12 +12,10 @@
  * @see template_preprocess_region()
  */
 #}
-{%
-  set attributes = attributes.addClass([
-    'region',
-    'region__' ~ region|clean_class,
-  ])
-%}
+{% extends 'region.html.twig' %}
+
 {% block content %}
-  {{ content }}
+  <footer{{ attributes.addClass('container') }}>
+    {{ content }}
+  </footer>
 {% endblock %}

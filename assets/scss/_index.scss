@@ -22,9 +22,12 @@
 //    - Placeholders
 //    - Functions
 //    - etc.
-//
+
+@import "utils/functions";
 @import "utils/variables";
-@import "utils/mixins";
 
 @import "bootstrap/scss/variables";
 @import "bootstrap/scss/mixins";
+
+// This is last so we can override Bootstrap mixins.
+@import "utils/mixins";

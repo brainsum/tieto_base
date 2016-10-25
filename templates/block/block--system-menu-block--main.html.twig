@@ -34,3 +34,10 @@
  */
 #}
 {% extends "block--bare.html.twig" %}
+
+{% block content %}
+  <button type="button" class="navbar-toggler float-xs-right hidden-md-up" data-toggle="collapse" data-target="#mainMenu" aria-controls="mainMenu" aria-expanded="false" aria-label="{{ 'Toggle navigation'|t }}"></button>
+  <div id="mainMenu" class="collapse navbar-toggleable-sm">
+    {{ content }}
+  </div>
+{% endblock %}

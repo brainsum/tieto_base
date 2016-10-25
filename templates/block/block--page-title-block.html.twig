@@ -6,4 +6,13 @@
  * @ingroup templates
  */
 #}
-{% extends "block--bare.html.twig" %}
+{%
+  set classes = [
+    'block-' ~ plugin_id|clean_class,
+  ]
+%}
+<section{{ attributes.addClass(classes) }}>
+  {% block content %}
+    {{ content }}
+  {% endblock %}
+</section>

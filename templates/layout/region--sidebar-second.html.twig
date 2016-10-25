@@ -12,12 +12,4 @@
  * @see template_preprocess_region()
  */
 #}
-{%
-  set attributes = attributes.addClass([
-    'region',
-    'region__' ~ region|clean_class,
-  ])
-%}
-{% block content %}
-  {{ content }}
-{% endblock %}
+{% extends 'region--sidebar.html.twig' %}

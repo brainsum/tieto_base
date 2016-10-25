@@ -1,15 +1,10 @@
 // Regions
+//
+//
 @import "index";
 
-.page__header {
-  background: $brand-primary;
+.region__header {
   margin-bottom: $spacer;
-}
-
-.header__title {
-  font-size: $font-size-h2;
-  font-weight: 300;
-  color: #fff;
 }
 
 .page__title {
@@ -17,6 +12,6 @@
   margin-bottom: $spacer * 2;
 }
 
-.block {
-  margin-bottom: $spacer;
+.block-local-actions-block {
+  margin: $spacer 0;
 }
