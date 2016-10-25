@@ -97,10 +97,13 @@
 //
 
 // Make a button look and behave like a link
+button.link,
+input.link,
 .button--link {
   // font-weight: bold;
   color: $link-color;
   border-radius: 0;
+  cursor: pointer;
 
   &,
   &:active,
