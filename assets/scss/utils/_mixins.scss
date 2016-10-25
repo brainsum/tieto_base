@@ -87,3 +87,28 @@
     border-color: $btn-disabled-plain-border;
   }
 }
+
+@mixin caret-base($position: after) {
+  &::#{$position} {
+    display: inline-block;
+    width: 0;
+    height: 0;
+    margin-left: $caret-width;
+    vertical-align: middle;
+    content: " ";
+    border-right: $caret-width solid transparent;
+    border-left: $caret-width solid transparent;
+  }
+}
+
+// Create carets.
+@mixin caret($dir: down, $position: after) {
+  &::#{$position} {
+    @if $dir == 'up' {
+      border-bottom: $caret-width solid;
+    }
+    @else {
+      border-top: $caret-width solid;
+    }
+  }
+}

@@ -22,7 +22,6 @@ global:
       css/components/breadcrumbs.css: {}
       css/components/tables.css: {}
       css/components/tabledrag.css: {}
-      css/components/tablesort.css: {}
       css/components/tree-child.css: {}
       css/components/ajax-progress.css: {}
       css/components/container-inline.css: {}

@@ -98,3 +98,17 @@
   @include sr-only();
   @include sr-only-focusable();
 }
+
+// Carets
+.caret-down,
+.caret-up {
+  @include caret-base();
+}
+
+.caret-down {
+  @include caret(down);
+}
+
+.caret-up {
+  @include caret(up);
+}
