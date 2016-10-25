@@ -1,0 +1,29 @@
+// Details
+//
+//
+@import "index";
+
+details {
+  margin: $spacer-y 0;
+}
+
+.details__wrapper {
+  padding: $spacer-y 0;
+}
+
+summary {
+  cursor: pointer;
+  // color: $link-color;
+  padding: $component-padding-y $component-padding-x-sm;
+  border-bottom: 2px solid $brand-primary;
+
+  @include hover {
+    background-color: $tieto-blue-lightest;
+  }
+}
+
+// Replace default browser icons.
+// @fixme with background SVG for cross-browsers!
+summary::-webkit-details-marker {
+  color: $tieto-blue;
+}

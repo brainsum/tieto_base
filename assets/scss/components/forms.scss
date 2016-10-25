@@ -3,6 +3,10 @@
 
 .form-control {
   font-family: inherit;
+
+  &.error {
+    border-color: $brand-danger;
+  }
 }
 
 .form-label {
@@ -22,11 +26,27 @@
   margin-bottom: 0;
 }
 
-.form-group {
+.form-group,
+.checkbox {
   // This is needed to fix weird line-heights with <small>.
   > .description {
     display: inline-block;
     margin-top: .25rem;
+  }
+}
+
+// Bootstrap uses `has-danger`, but `has-error` is much better.
+.has-error {
+  @include form-control-validation($brand-danger);
+
+  .form-label {
+    color: $brand-danger;
+  }
+}
+
+select.form-control {
+  &:not([size]):not([multiple]) {
+    height: calc(#{$input-height} - #{($border-width * 4)} - #{($component-padding-y)});
   }
 }
 

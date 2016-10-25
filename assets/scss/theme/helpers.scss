@@ -100,9 +100,19 @@
 }
 
 // Carets
+.caret-left,
+.caret-right,
 .caret-down,
 .caret-up {
   @include caret-base();
+}
+
+.caret-left {
+  @include caret(left);
+}
+
+.caret-right {
+  @include caret(right);
 }
 
 .caret-down {

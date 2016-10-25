@@ -87,8 +87,8 @@
       <span class="field-suffix">{{ suffix }}</span>
     {% endif %}
     {% if errors %}
-      <div class="alert alert-danger" role="alert">
-        <strong>{{ errors }}</strong>
+      <div class="form-control-feedback" role="alert">
+        {{- errors -}}
       </div>
     {% endif %}
     {% if description_display in ['after', 'invisible'] and description.content %}
@@ -118,8 +118,8 @@
       {{ label }}
     {% endif %}
     {% if errors %}
-      <div class="alert alert-danger" role="alert">
-        <strong>{{ errors }}</strong>
+      <div class="form-control-feedback" role="alert">
+        {{- errors -}}
       </div>
     {% endif %}
     {% if description_display in ['after', 'invisible'] and description.content %}

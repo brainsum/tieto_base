@@ -12,6 +12,11 @@
   margin-bottom: $spacer * 2;
 }
 
-.block-local-actions-block {
-  margin: $spacer 0;
+.block-local-actions-block,
+.block-help {
+  margin-top: $spacer;
+}
+
+.block-local-tasks-block {
+  margin-bottom: $spacer;
 }

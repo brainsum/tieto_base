@@ -165,6 +165,10 @@ function tieto_base_preprocess_menu_local_action(&$variables) {
   $variables['link']['#options']['attributes']['class'][] = 'button--green';
 }
 
+function tieto_base_preprocess_details(&$variables) {
+  $variables['is_open'] = $variables['element']['#open'];
+}
+
 function tieto_base_preprocess_menu_local_task(&$variables) {
   $link = $variables['element']['#link'];
   $url = $link['url'];
