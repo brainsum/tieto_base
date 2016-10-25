@@ -11,6 +11,8 @@
 use Drupal\Core\Template\Attribute;
 use Drupal\Core\Link;
 use Drupal\Component\Utility\Html;
+use Drupal\Core\Form\FormStateInterface;
+use Drupal\Core\Render\Element;
 
 // @todo move to theme settings.
 define('SIDEBAR_BOTH_WIDTH', 2);
@@ -126,9 +128,6 @@ function tieto_base_preprocess_maintenance_page(&$variables) {
   if (!$variables['db_is_active']) {
     $variables['site_name'] = '';
   }
-
-  // Bootstrap Barrio has custom styling for the maintenance page.
-  $variables['#attached']['library'][] = 'tieto_base/maintenance_page';
 }
 
 /**
@@ -154,25 +153,6 @@ function tieto_base_preprocess_block__system_breadcrumb_block(&$variables) {
   }
 }
 
-// function tieto_base_preprocess_form(&$variables) {
-//   $form = &$variables['element'];
-
-
-// }
-
-function tieto_base_preprocess_form_element(&$variables) {
-  if (isset($variables['label']['#title'])) {
-    $variables['input_title'] = $variables['label']['#title'];
-  }
-  if (isset($variables['element']['#attributes'])) {
-    $variables['input_attributes'] = new Attribute($variables['element']['#attributes']);
-  }
-}
-
-// function tieto_base_preprocess_form_element_label(&$variables) {
-//   // kint($variables);
-// }
-
 function tieto_base_preprocess_menu_local_action(&$variables) {
   $variables['link']['#options']['attributes']['class'][] = 'button--green';
 }
@@ -194,36 +174,98 @@ function tieto_base_preprocess_menu_local_task(&$variables) {
 }
 
 /**
- * Implements hook_theme_suggestions_HOOK_alter() for links templates.
+ * Implements hook_form_alter().
  */
-// function tieto_base_theme_suggestions_links_alter(array &$suggestions, array $variables) {
-//   // ToDo get from core a variable to flag inline links
-//   if ( in_array('inline', $variables['attributes']['class']) ) {
-//     $suggestions[] = 'links__inline';
-//   }
-// }
+function tieto_base_form_alter(&$form, FormStateInterface $form_state, $form_id) {
+  // Add layout type and form_id to children elements.
+  tieto_base_attach_form_id($form, $form_id);
+}
 
 /**
- * Implements hook_theme_suggestions_HOOK_alter() for form templates.
+ * Attaches form id to all form elements.
+ *
+ * @param $element
+ *   The form or form element which children should have form id attached.
+ * @param $form_id
+ *   The form id attached to form elements.
+ * @param $is_inline
+ *   Stacked or inline, see Bootstrap 4 Forms.
+ *
+ * @return array
  */
-function tieto_base_theme_suggestions_form_alter(array &$suggestions, array $variables) {
-  $form_id = $variables['element']['#form_id'];
-  $suggestions[] = 'form__' . $form_id;
-
-  // Inline forms.
-  $inline_forms = [
-    'user_form',
-  ];
-  if (in_array($form_id, $inline_forms)) {
-    $suggestions[] = 'form__inline';
-    $suggestions[] = 'form__inline__' . $form_id;
+function tieto_base_attach_form_id(&$element, $form_id) {
+  foreach (Element::children($element) as $child) {
+    if (!isset($element[$child]['#form_id'])) {
+      $element[$child]['#form_id'] = $form_id;
+    }
+    tieto_base_attach_form_id($element[$child], $form_id);
   }
 }
 
-// function tieto_base_theme_suggestions_form_element_alter(array &$suggestions, array $variables) {
-//   // $suggestions[] = 'form__' . $variables['element']['#form_id'];
-//   dump($variables);
-// }
+/**
+ * Implements hook_theme_suggestions_HOOK_alter().
+ */
+function tieto_base_theme_suggestions_form_alter(array &$suggestions, array $variables) {
+  $suggestions[] = 'form__' . $variables['element']['#form_id'];
+
+  if (in_array($variables['element']['#form_id'], _tieto_base_inline_forms())) {
+    $variables['attributes']['class'][] = 'form-inline';
+  }
+}
+
+/**
+ * Implements hook_theme_suggestions_HOOK_alter().
+ */
+function tieto_base_theme_suggestions_form_element_alter(array &$suggestions, array $variables) {
+  $suggestions[] = 'form_element__type__' . $variables['element']['#type'];
+  if (isset($variables['element']['#form_id'])) {
+    $suggestions[] = 'form_element__' . $variables['element']['#form_id'];
+    $suggestions[] = 'form_element__' . $variables['element']['#form_id'] . '__' . $variables['element']['#type'];
+  }
+}
+
+function tieto_base_preprocess_form(&$variables) {
+  if (in_array($variables['element']['#form_id'], _tieto_base_inline_forms())) {
+    $variables['attributes']['class'][] = 'form-inline';
+  }
+}
+
+function tieto_base_preprocess_form_element(&$variables) {
+  if (isset($variables['label']['#title'])) {
+    $variables['input_title'] = $variables['label']['#title'];
+  }
+  if (isset($variables['element']['#attributes'])) {
+    $variables['input_attributes'] = new Attribute($variables['element']['#attributes']);
+  }
+  if (isset($variables['element']['#form_id'])) {
+    $variables['inline_form'] = in_array($variables['element']['#form_id'], _tieto_base_inline_forms());
+  }
+  else {
+    $variables['inline_form'] = FALSE;
+  }
+}
+
+/**
+ * Implements hook_theme_suggestions_HOOK_alter().
+ */
+function tieto_base_theme_suggestions_form_element_label_alter(array &$suggestions, array $variables) {
+
+  if (isset($variables['element']['#element_type']) && isset($variables['element']['#form_id'])) {
+    $suggestions[] = 'form_element_label__type__' . $variables['element']['#element_type'];
+    $suggestions[] = 'form_element_label__' . $variables['element']['#form_id'];
+    $suggestions[] = 'form_element_label__' . $variables['element']['#form_id'] . '__' . $variables['element']['#element_type'];
+  }
+}
+
+function tieto_base_preprocess_form_element_label(&$variables) {
+  // dump($variables);
+  if (isset($variables['element']['#form_id'])) {
+    $variables['inline_form'] = in_array($variables['element']['#form_id'], _tieto_base_inline_forms());
+  }
+  else {
+    $variables['inline_form'] = FALSE;
+  }
+}
 
 /**
  * Returns width of content region.
@@ -243,4 +285,11 @@ function _tieto_base_content_width($first = FALSE, $second = FALSE) {
   $content_width = GRID_COLUMNS - $content_offset - $sidebar_first_width - $sidebar_first_offset - $sidebar_second_width - $sidebar_second_offset;
 
   return $content_width;
+}
+
+function _tieto_base_inline_forms() {
+  $cached = &drupal_static(__FUNCTION__);
+  return isset($cached) ? $cached : [
+    'user_form'
+  ];
 }

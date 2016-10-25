@@ -19,7 +19,6 @@
 
   // Inline forms get slightly modified <label>s.
   .form-inline & {
-    @extend .col-form-label;
     text-transform: uppercase;
     font-weight: $font-weight-normal;
   }
