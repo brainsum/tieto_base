@@ -14,12 +14,13 @@
 #}
 {%
   set classes = [
-    inline_form ? 'col-form-label' : 'form-control-label',
-    inline_form ? 'col-sm-2',
+    'form-control-label',
+    inline_form ? 'col-form-label',
+    inline_form ? 'col-sm-3',
     title_display == 'after' ? 'option',
     title_display == 'invisible' ? 'sr-only',
-    required ? 'js-form-required',
     required ? 'form-required',
+    required ? 'js-form-required',
   ]
 %}
 {% if title is not empty or required -%}
