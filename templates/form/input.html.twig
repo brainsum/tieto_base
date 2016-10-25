@@ -10,9 +10,4 @@
  * @see template_preprocess_input()
  */
 #}
-{%
-  set classes = [
-    attributes.type == 'checkbox' ? 'form-check-input' : 'form-control'
-  ]
-%}
 <input{{ attributes.addClass(classes) }} />{{ children }}

@@ -245,6 +245,9 @@ function tieto_base_preprocess_form_element(&$variables) {
     $variables['label']['#form_id'] = $variables['element']['#form_id'];
     $variables['inline_form'] = in_array($variables['element']['#form_id'], _tieto_base_inline_forms());
   }
+  if (isset($variables['element']['#attributes'])) {
+    $variables['input_attributes'] = new Attribute($variables['element']['#attributes']);
+  }
   $variables['label']['#form_element_type'] = $variables['element']['#type'];
 }
 
