@@ -8,9 +8,7 @@
 @import "index";
 @import "bootstrap/scss/close";
 
-input.button,
-button.button,
-a.button {
+.button {
   display: inline-block;
   font-weight: $btn-font-weight;
   font-family: sans-serif;

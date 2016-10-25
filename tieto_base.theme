@@ -161,6 +161,10 @@ function tieto_base_preprocess_form_element(&$variables) {
   $variables['input_attributes'] = new Attribute($variables['element']['#attributes']);
 }
 
+function tieto_base_preprocess_menu_local_action(&$variables) {
+  $variables['link']['#options']['attributes']['class'][] = 'button--green';
+}
+
 function tieto_base_preprocess_menu_local_task(&$variables) {
   $link = $variables['element']['#link'];
   $url = $link['url'];
