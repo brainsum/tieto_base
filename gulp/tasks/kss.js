@@ -30,7 +30,5 @@ gulp.task('kss:concat', () => {
 });
 
 gulp.task('kss:watch', () => {
-  gulp.watch(config.styles.watch, () => {
-    gulp.task('kss');
-  });
+  gulp.watch(config.styles.watch, ['kss']);
 });
