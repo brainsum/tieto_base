@@ -1,0 +1,34 @@
+/*
+  Design
+
+  Style guide: 2
+ */
+/*
+  Components
+
+  Style guide: 4
+*/
+/*
+  Lists
+
+  Style guide: 4.2
+ */
+.region__header {
+  margin-bottom: 1rem;
+}
+
+.page__title {
+  font-weight: bold;
+  margin-bottom: 2rem;
+}
+
+.block-local-actions-block,
+.block-help {
+  margin-top: 1rem;
+}
+
+.block-local-tasks-block {
+  margin-bottom: 1rem;
+}
+
+/*# sourceMappingURL=regions.css.map */

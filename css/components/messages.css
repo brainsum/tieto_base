@@ -1,0 +1,98 @@
+/*
+  Design
+
+  Style guide: 2
+ */
+/*
+  Components
+
+  Style guide: 4
+*/
+/*
+  Lists
+
+  Style guide: 4.2
+ */
+.alert {
+  padding: 0.5rem 1.5rem;
+  margin-bottom: 1rem;
+  border: 0 solid transparent;
+  border-radius: 0;
+}
+
+.alert-heading {
+  color: inherit;
+}
+
+.alert-link {
+  font-weight: inherit;
+}
+
+.alert-dismissible {
+  padding-right: 3rem;
+}
+
+.alert-dismissible .close {
+  position: relative;
+  top: -.125rem;
+  right: -1.5rem;
+  color: inherit;
+}
+
+.alert-success {
+  background-color: #d7e8c4;
+  border-color: #cbe1b2;
+  color: #00833e;
+}
+
+.alert-success hr {
+  border-top-color: #beda9f;
+}
+
+.alert-success .alert-link {
+  color: #005026;
+}
+
+.alert-info {
+  background-color: #cce5f4;
+  border-color: #afd6ee;
+  color: #0065a0;
+}
+
+.alert-info hr {
+  border-top-color: #9acbe9;
+}
+
+.alert-info .alert-link {
+  color: #00456d;
+}
+
+.alert-warning {
+  background-color: #ffe1c6;
+  border-color: #ffd4ad;
+  color: #d75f00;
+}
+
+.alert-warning hr {
+  border-top-color: #ffc693;
+}
+
+.alert-warning .alert-link {
+  color: #a44800;
+}
+
+.alert-danger {
+  background-color: #eed9e1;
+  border-color: #e6c7d3;
+  color: #d51067;
+}
+
+.alert-danger hr {
+  border-top-color: #deb6c5;
+}
+
+.alert-danger .alert-link {
+  color: #a60c50;
+}
+
+/*# sourceMappingURL=messages.css.map */
