@@ -39,15 +39,16 @@ a.tabledrag-handle:hover {
   text-decoration: none;
 }
 a.tabledrag-handle .handle {
-  background: url(../../../images/core/icons/787878/move.svg) no-repeat 6px 7px;
+  background: url(../../img/787878/move.svg) no-repeat 6px 7px;
   height: 14px;
-  margin: -0.4em 0.5em 0;
+  margin: -0.2em 0.4em 0;
   padding: 0.42em 0.5em;
   width: 14px;
+  box-sizing: content-box;
 }
 a.tabledrag-handle:hover .handle,
 a.tabledrag-handle:focus .handle {
-  background-image: url(../../../images/core/icons/000000/move.svg);
+  background-image: url(../../img/000000/move.svg);
 }
 .touchevents .draggable td {
   padding: 0 10px;
