@@ -32,38 +32,38 @@ libraries-override:
 # @todo Move something to libraries-override / libraries-extend,
 #       after we have refactored and restyled it.
 # @deprecated
-stylesheets-remove:
-  # These are replaced by Bootstrap.
-  - "@stable/css/system/components/hidden.module.css"
-  - "@stable/css/system/components/clearfix.module.css"
+# stylesheets-remove:
+#   # These are replaced by Bootstrap.
+#   - "@stable/css/system/components/hidden.module.css"
+#   - "@stable/css/system/components/clearfix.module.css"
 
-  # These are moved to `helpers.scss`.
-  - "@stable/css/system/components/reset-appearance.module.css"
-  - "@stable/css/system/components/resize.module.css"
-  - "@stable/css/system/components/nowrap.module.css"
-  - "@stable/css/system/components/align.module.css"
+#   # These are moved to `helpers.scss`.
+#   - "@stable/css/system/components/reset-appearance.module.css"
+#   - "@stable/css/system/components/resize.module.css"
+#   - "@stable/css/system/components/nowrap.module.css"
+#   - "@stable/css/system/components/align.module.css"
 
-  # These are moved to or refactored in `components`, or not needed at all.
-  # All coming from the `system/base` library.
-  #
-  # @see system.libraries.yml
-  - "@stable/css/system/components/progress.module.css"
-  - "@stable/css/system/components/tabledrag.module.css"
-  - "@stable/css/system/components/tablesort.module.css"
-  - "@stable/css/system/components/tree-child.module.css"
-  - "@stable/css/system/components/position-container.module.css"
-  - "@stable/css/system/components/js.module.css"
-  - "@stable/css/system/components/item-list.module.css"
-  - "@stable/css/system/components/details.module.css"
-  - "@stable/css/system/components/container-inline.module.css"
-  - "@stable/css/system/components/fieldgroup.module.css"
-  - "@stable/css/system/components/autocomplete-loading.module.css"
-  - "@stable/css/system/components/ajax-progress.module.css"
-  - "@stable/css/system/components/sticky-header.module.css"
+#   # These are moved to or refactored in `components`, or not needed at all.
+#   # All coming from the `system/base` library.
+#   #
+#   # @see system.libraries.yml
+#   - "@stable/css/system/components/progress.module.css"
+#   - "@stable/css/system/components/tabledrag.module.css"
+#   - "@stable/css/system/components/tablesort.module.css"
+#   - "@stable/css/system/components/tree-child.module.css"
+#   - "@stable/css/system/components/position-container.module.css"
+#   - "@stable/css/system/components/js.module.css"
+#   - "@stable/css/system/components/item-list.module.css"
+#   - "@stable/css/system/components/details.module.css"
+#   - "@stable/css/system/components/container-inline.module.css"
+#   - "@stable/css/system/components/fieldgroup.module.css"
+#   - "@stable/css/system/components/autocomplete-loading.module.css"
+#   - "@stable/css/system/components/ajax-progress.module.css"
+#   - "@stable/css/system/components/sticky-header.module.css"
 
-  # Core modules
-  - "@stable/css/views/views.module.css"
-  - "@stable/css/core/dropbutton/dropbutton.css"
+#   # Core modules
+#   - "@stable/css/views/views.module.css"
+#   - "@stable/css/core/dropbutton/dropbutton.css"
 
 # Content and design related styles must be available in WYSIWYG editors too.
 #
