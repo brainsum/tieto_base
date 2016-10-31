@@ -16,6 +16,8 @@
 
 {% block content %}
   <footer{{ attributes.addClass('container') }}>
+    &copy; <a href="{{ path('<front>') }}" title="{{ 'Home'|t }}" rel="home">{{ site_name|default('Home') }}</a>
     {{ content }}
+    <img class="footer__logo" src="{{ directory ~ '/img/logo_footer.svg' }}" alt="{{ site_name|default('Home') }}">
   </footer>
 {% endblock %}

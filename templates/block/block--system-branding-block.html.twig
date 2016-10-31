@@ -19,8 +19,7 @@
 {% block content %}
   <a class="navbar-brand" href="{{ path('<front>') }}" title="{{ 'Home'|t }}" rel="home">
     {% if site_logo %}
-      <img src="{{ site_logo }}" height="50" alt="{{ site_name }}" />
-      <span class="text-hide">{{ site_name }}</span>
+      <img src="{{ site_logo }}" height="50" alt="{{ site_name }}">
     {% else %}
       {{- site_name -}}
     {% endif %}

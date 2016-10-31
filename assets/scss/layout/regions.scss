@@ -7,6 +7,16 @@
   margin-bottom: $spacer;
 }
 
+.region__footer {
+  padding: $spacer 0;
+  border-top: 1px solid $brand-primary;
+}
+
+.footer__logo {
+  float: right;
+  height: 50px;
+}
+
 .page__title {
   font-weight: bold;
   margin-bottom: $spacer * 2;
