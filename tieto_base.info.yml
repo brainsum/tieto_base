@@ -63,6 +63,7 @@ stylesheets-remove:
 
   # Core modules
   - "@stable/css/views/views.module.css"
+  - "@stable/css/core/dropbutton/dropbutton.css"
 
 # Content and design related styles must be available in WYSIWYG editors too.
 #
