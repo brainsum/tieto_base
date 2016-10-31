@@ -10,6 +10,8 @@
 .region__footer {
   padding: $spacer 0;
   border-top: 1px solid $brand-primary;
+  line-height: 50px;
+  margin-top: 2 * $spacer;
 }
 
 .footer__logo {
