@@ -16,6 +16,12 @@
   // font-size: $label-font-size;
   color: $label-color;
   cursor: pointer;
+
+  &.form-required::after {
+    content: "*";
+    color: color(red);
+    padding-left: .2rem;
+  }
 }
 
 // Inline forms get slightly modified <label>s.

@@ -115,7 +115,7 @@ select.form-control:focus::-ms-value {
 }
 
 select.form-control-sm:not([size]):not([multiple]) {
-  height: 1.562rem;
+  height: 1.563rem;
 }
 
 .form-control-lg {
@@ -338,6 +338,12 @@ select.form-control-lg:not([size]):not([multiple]) {
   font-weight: 700;
   color: #7b7b7b;
   cursor: pointer;
+}
+
+.form-control-label.form-required::after {
+  content: "*";
+  color: #e56385;
+  padding-left: .2rem;
 }
 
 .form-inline .form-group {
