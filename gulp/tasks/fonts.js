@@ -1,8 +1,8 @@
 import config from '../init';
 import gulp from 'gulp';
-import fontgen from 'gulp-fontgen';
+//import fontgen from 'gulp-fontgen';
 import browserSync from 'browser-sync';
-
+/*
 gulp.task('fonts', () => {
   gulp
     .src(config.fonts.entry)
@@ -15,3 +15,4 @@ gulp.task('fonts', () => {
     .pipe(browserSync.stream());
 });
 
+*/

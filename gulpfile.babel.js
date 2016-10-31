@@ -14,7 +14,7 @@ gulp.task('build', [
 gulp.task('build:full', [
   'scripts',
   'styles',
-  'fonts',
+  //'fonts',
   'images',
 ]);
 
