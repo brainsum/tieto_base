@@ -3,6 +3,8 @@
 # ------------------------------------------------------------------------------
 
 global:
+  js:
+    js/global.bundle.js: {}
   css:
     base:
       css/base/reset.css: { weight: -10 }

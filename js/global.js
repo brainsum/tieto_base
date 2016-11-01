@@ -1,1 +1,0 @@
-(function($,Drupal){'use strict';Drupal.behaviors.myBehavior={attach:function attach(context,settings){$('.asdfasdf').hide()}}})(jQuery,Drupal);
