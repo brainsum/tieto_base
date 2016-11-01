@@ -70,8 +70,9 @@ libraries-override:
 # Replace just a part of a library asset.
 #
 # @see https://www.drupal.org/docs/8/theming-drupal-8/adding-stylesheets-css-and-javascript-js-to-a-drupal-8-theme#override-extend
-# libraries-extend:
-#   - MODULE/LIBRARY.NAME: tieto_base/LIBRARY.NAME
+libraries-extend:
+  focal_point/drupal.focal_point_preview:
+    - tieto_base/focal_point.preview
 
 # Content and design related styles must be available in WYSIWYG editors too.
 #

@@ -46,10 +46,19 @@ global:
 
 
 # ------------------------------------------------------------------------------
-# Overridden & Extended libraries
+# Overridden libraries
 # ------------------------------------------------------------------------------
 
 
+# ------------------------------------------------------------------------------
+# Extended libraries
+# ------------------------------------------------------------------------------
+
+# @todo ideally move this to a project subtheme (e.g. tieto_tmc_theme)
+focal_point.preview:
+  css:
+    theme:
+      css/components/focal-point.preview.css: {}
 
 # ------------------------------------------------------------------------------
 # External and Vendor libraries
