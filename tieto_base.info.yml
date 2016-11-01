@@ -3,7 +3,7 @@ description: 'Base theme for all Tieto sites, based on corporate styleguides.'
 package: BRAINSUM
 type: theme
 core: 8.x
-version: 0.1
+version: 0.3
 
 # These assets are loaded on every page.
 #
@@ -16,54 +16,62 @@ libraries:
 # NOTE: Try to follow the original library names for easiness!
 #
 # @see https://www.drupal.org/docs/8/theming-drupal-8/adding-stylesheets-css-and-javascript-js-to-a-drupal-8-theme#override-extend
-# @todo Move the override/extend ȧssets out of `components` directory?
+# @todo Move the override/extend assets out of `components` directory?
+# @todo Grep for the removed classes in core, and replace all.
 libraries-override:
-  views/views.module: tieto_base/views.module
+  views/views.module:
+    css:
+      component:
+        /core/themes/stable/css/views/views.module.css: css/components/views.module.css
+
+  core/drupal.vertical-tabs:
+    css:
+      component:
+        /core/themes/stable/css/core/vertical-tabs.css: css/components/vertical-tabs.css
+
+  core/drupal.dropbutton:
+    css:
+      component:
+        /core/themes/stable/css/core/dropbutton/dropbutton.css: css/components/dropbutton.css
+
+  node/drupal.node:
+    css:
+      layout:
+        /core/themes/stable/css/node/node.module.css: css/layout/node.css
+
+  node/form:
+    css:
+      layout:
+        /core/themes/stable/css/node/node.module.css: css/layout/node.css
+
+  system/base:
+    css:
+      component:
+        /core/themes/stable/css/system/components/ajax-progress.module.css: css/components/ajax-progress.css
+        /core/themes/stable/css/system/components/align.module.css: false
+        /core/themes/stable/css/system/components/autocomplete-loading.module.css: false
+        /core/themes/stable/css/system/components/fieldgroup.module.css: false
+        /core/themes/stable/css/system/components/container-inline.module.css: css/components/container-inline.css
+        /core/themes/stable/css/system/components/clearfix.module.css: false
+        /core/themes/stable/css/system/components/details.module.css: css/components/details.css
+        /core/themes/stable/css/system/components/hidden.module.css: false
+        /core/themes/stable/css/system/components/item-list.module.css: css/components/item-list.css
+        /core/themes/stable/css/system/components/js.module.css: css/state/js.css
+        /core/themes/stable/css/system/components/nowrap.module.css: false
+        /core/themes/stable/css/system/components/position-container.module.css: false
+        /core/themes/stable/css/system/components/progress.module.css: css/components/progress.css
+        /core/themes/stable/css/system/components/reset-appearance.module.css: false
+        /core/themes/stable/css/system/components/resize.module.css: false
+        /core/themes/stable/css/system/components/sticky-header.module.css: false
+        /core/themes/stable/css/system/components/tabledrag.module.css: css/components/tabledrag.css
+        /core/themes/stable/css/system/components/tablesort.module.css: false
+        /core/themes/stable/css/system/components/tree-child.module.css: css/components/tree-child.css
 
 # Replace just a part of a library asset.
 #
 # @see https://www.drupal.org/docs/8/theming-drupal-8/adding-stylesheets-css-and-javascript-js-to-a-drupal-8-theme#override-extend
 # libraries-extend:
 #   - MODULE/LIBRARY.NAME: tieto_base/LIBRARY.NAME
-
-# Remove unneeded CSS files.
-#
-# @todo Grep for the removed classes in core, and replace all.
-# @todo Move something to libraries-override / libraries-extend,
-#       after we have refactored and restyled it.
-# @deprecated
-# stylesheets-remove:
-#   # These are replaced by Bootstrap.
-#   - "@stable/css/system/components/hidden.module.css"
-#   - "@stable/css/system/components/clearfix.module.css"
-
-#   # These are moved to `helpers.scss`.
-#   - "@stable/css/system/components/reset-appearance.module.css"
-#   - "@stable/css/system/components/resize.module.css"
-#   - "@stable/css/system/components/nowrap.module.css"
-#   - "@stable/css/system/components/align.module.css"
-
-#   # These are moved to or refactored in `components`, or not needed at all.
-#   # All coming from the `system/base` library.
-#   #
-#   # @see system.libraries.yml
-#   - "@stable/css/system/components/progress.module.css"
-#   - "@stable/css/system/components/tabledrag.module.css"
-#   - "@stable/css/system/components/tablesort.module.css"
-#   - "@stable/css/system/components/tree-child.module.css"
-#   - "@stable/css/system/components/position-container.module.css"
-#   - "@stable/css/system/components/js.module.css"
-#   - "@stable/css/system/components/item-list.module.css"
-#   - "@stable/css/system/components/details.module.css"
-#   - "@stable/css/system/components/container-inline.module.css"
-#   - "@stable/css/system/components/fieldgroup.module.css"
-#   - "@stable/css/system/components/autocomplete-loading.module.css"
-#   - "@stable/css/system/components/ajax-progress.module.css"
-#   - "@stable/css/system/components/sticky-header.module.css"
-
-#   # Core modules
-#   - "@stable/css/views/views.module.css"
-#   - "@stable/css/core/dropbutton/dropbutton.css"
 
 # Content and design related styles must be available in WYSIWYG editors too.
 #

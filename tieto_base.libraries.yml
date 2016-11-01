@@ -14,8 +14,6 @@ global:
       css/layout/regions.css: {}
     component:
       css/components/buttons.css: {}
-      css/components/dropbutton.css: {}
-      css/components/details.css: {}
       css/components/forms.css: {}
       css/components/code.css: {}
       css/components/images.css: {}
@@ -23,15 +21,8 @@ global:
       css/components/messages.css: {}
       css/components/breadcrumbs.css: {}
       css/components/tables.css: {}
-      css/components/tabledrag.css: {}
-      css/components/tree-child.css: {}
-      css/components/ajax-progress.css: {}
-      css/components/container-inline.css: {}
-      css/components/item-list.css: {}
-      css/components/progress.css: {}
       css/components/pager.css: {}
     state:
-      css/state/js.css: {}
       css/state/animation.css: {}
     theme:
       css/theme/helpers.css: {}
@@ -58,10 +49,7 @@ global:
 # Overridden & Extended libraries
 # ------------------------------------------------------------------------------
 
-views.module:
-  css:
-    component:
-      css/components/views.module.css: {}
+
 
 # ------------------------------------------------------------------------------
 # External and Vendor libraries
