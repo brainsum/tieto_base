@@ -1,3 +1,2 @@
 // Customize jQuery here.
-import 'jquery';
-
+// import 'jquery';

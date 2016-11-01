@@ -16,12 +16,19 @@ gulp.task('scripts', () => {
 
     // Compile the scripts.
     .pipe(babel({
-      retainLines: true,
+      // retainLines: true,
       sourceRoot: process.cwd(),
-      presets: ['es2015'],
-      plugins: [["resolver", {"resolveDirs": [
-        './node_modules/jquery/src/core',
-      ]}]],
+      presets: [
+        "es2015"
+      ],
+      plugins: [
+        ["resolver", {
+          resolveDirs: [
+            './node_modules/jquery/src/core',
+          ]
+        }],
+        "transform-remove-strict-mode",
+      ],
       env: {
         production: {
           plugins: ["transform-remove-console"],
