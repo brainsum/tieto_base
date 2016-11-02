@@ -20,6 +20,22 @@ define('SIDEBAR_SINGLE_WIDTH', 3);
 define('GRID_COLUMNS', 12);
 
 /**
+ * Implements hook_library_info_alter().
+ */
+// function tieto_base_library_info_alter(&$libraries, $extension) {
+//   // Get route for dynamic library alters.
+//   $route = Drupal::routeMatch()->getRouteObject();
+
+//   // Add admin library dependencies for admin routes.
+//   $is_admin = Drupal::service('router.admin_context')->isAdminRoute($route);
+//   if ($extension === 'tieto_base' && $is_admin) {
+//     $libraries['global']['dependencies'] = [
+//       'system/admin',
+//     ];
+//   }
+// }
+
+/**
  * Implements hook_preprocess_HOOK().
  */
 function tieto_base_preprocess_html(&$variables) {

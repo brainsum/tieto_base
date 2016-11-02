@@ -10,4 +10,15 @@
  * @see template_preprocess_input()
  */
 #}
-<button{{ attributes|without('value') }}>{{ attributes.value }}</button>{{ children }}
+{% if attributes.id == 'edit-refresh' %}
+{#
+  This is because field_ui.js at line 232 uses input[data-drupal-selector="edit-refresh"]
+
+  @todo Create core issue on drupal.org
+  @todo Extend the library in tieto_base.
+#}
+<input{{ attributes }} />
+{% else %}
+<button{{ attributes|without('value') }}>{{ attributes.value }}</button>
+{% endif %}
+{{- children -}}

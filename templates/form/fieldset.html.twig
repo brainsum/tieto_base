@@ -22,6 +22,8 @@
 #}
 {%
   set classes = [
+    'form-item',
+    'js-form-item',
     'form-wrapper',
     'js-form-wrapper',
     errors ? 'has-error',
@@ -47,7 +49,7 @@
     {% if suffix %}
       <span class="field-suffix">{{ suffix }}</span>
     {% endif %}
-    {% include directory ~  '/templates/includes/form-errors.html.twig' %}
-    {% include directory ~  '/templates/includes/form-description.html.twig' %}
+    {% include directory ~ '/templates/includes/form-errors.html.twig' %}
+    {% include directory ~ '/templates/includes/form-description.html.twig' %}
   </div>
 </fieldset>
