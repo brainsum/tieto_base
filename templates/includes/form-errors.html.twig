@@ -1,0 +1,11 @@
+{#
+/**
+ * @file
+ * Form control errors.
+ */
+#}
+{% if errors %}
+  <div class="form-control-feedback" role="alert">
+    {{- errors -}}
+  </div>
+{% endif %}

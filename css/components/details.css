@@ -1,0 +1,38 @@
+/*
+  Design
+
+  Style guide: 2
+ */
+/*
+  Components
+
+  Style guide: 4
+*/
+/*
+  Lists
+
+  Style guide: 4.2
+ */
+details {
+  margin: 1rem 0;
+}
+
+.details__wrapper {
+  padding: 1rem 0;
+}
+
+summary {
+  cursor: pointer;
+  padding: 0.25rem 0.5rem;
+  border-bottom: 2px solid #62b3e5;
+}
+
+summary:hover {
+  background-color: #cce5f4;
+}
+
+summary::-webkit-details-marker {
+  color: #62b3e5;
+}
+
+/*# sourceMappingURL=details.css.map */

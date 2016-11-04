@@ -1,0 +1,1 @@
+import Util from "bootstrap/js/src/util";

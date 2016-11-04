@@ -7,6 +7,18 @@
   margin-bottom: $spacer;
 }
 
+.region__footer {
+  padding: $spacer 0;
+  border-top: 1px solid $brand-primary;
+  line-height: 50px;
+  margin-top: 2 * $spacer;
+}
+
+.footer__logo {
+  float: right;
+  height: 50px;
+}
+
 .page__title {
   font-weight: bold;
   margin-bottom: $spacer * 2;
@@ -14,7 +26,7 @@
 
 .block-local-actions-block,
 .block-help {
-  margin-top: $spacer;
+  margin: $spacer 0;
 }
 
 .block-local-tasks-block {

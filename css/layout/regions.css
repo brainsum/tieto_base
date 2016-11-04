@@ -1,0 +1,46 @@
+/*
+  Design
+
+  Style guide: 2
+ */
+/*
+  Components
+
+  Style guide: 4
+*/
+/*
+  Lists
+
+  Style guide: 4.2
+ */
+.region__header {
+  margin-bottom: 1rem;
+}
+
+.region__footer {
+  padding: 1rem 0;
+  border-top: 1px solid #62b3e5;
+  line-height: 50px;
+  margin-top: 2rem;
+}
+
+.footer__logo {
+  float: right;
+  height: 50px;
+}
+
+.page__title {
+  font-weight: bold;
+  margin-bottom: 2rem;
+}
+
+.block-local-actions-block,
+.block-help {
+  margin: 1rem 0;
+}
+
+.block-local-tasks-block {
+  margin-bottom: 1rem;
+}
+
+/*# sourceMappingURL=regions.css.map */

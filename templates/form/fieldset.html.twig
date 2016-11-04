@@ -22,10 +22,10 @@
 #}
 {%
   set classes = [
-    'js-form-item',
     'form-item',
+    'js-form-item',
+    'form-wrapper',
     'js-form-wrapper',
-    'form-group',
     errors ? 'has-error',
   ]
 %}
@@ -33,8 +33,8 @@
   {%
     set legend_span_classes = [
       'fieldset-legend',
-      required ? 'js-form-required',
       required ? 'form-required',
+      required ? 'js-form-required',
     ]
   %}
   {#  Always wrap fieldset legends in a SPAN for CSS positioning. #}
@@ -49,13 +49,7 @@
     {% if suffix %}
       <span class="field-suffix">{{ suffix }}</span>
     {% endif %}
-    {% if errors %}
-      <div class="form-control-feedback" role="alert">
-        {{ errors }}
-      </div>
-    {% endif %}
-    {% if description.content %}
-      <small{{ description.attributes.addClass('description', 'text-muted') }}>{{ description.content }}</small>
-    {% endif %}
+    {% include directory ~ '/templates/includes/form-errors.html.twig' %}
+    {% include directory ~ '/templates/includes/form-description.html.twig' %}
   </div>
 </fieldset>

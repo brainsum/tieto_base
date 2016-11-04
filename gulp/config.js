@@ -14,7 +14,8 @@ export default {
     base: './assets/scripts',
     watch: './assets/scripts/**/*.js',
     entry: [
-      './assets/scripts/**/*.js',
+      './assets/scripts/global.js',
+      // './assets/scripts/bootstrap.custom.js',
     ],
     dest: './js'
   },

@@ -6,10 +6,10 @@ gulp/config.local.js
 
 # Compiled assets.
 # Ideally, these will build on the server.
-css/*
-js/*
-fonts/*
-img/*
+# css/*
+# js/*
+# fonts/*
+# img/*
 
 # Generated style guide
 styleguide/*
