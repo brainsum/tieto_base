@@ -4,6 +4,7 @@ package: BRAINSUM
 type: theme
 core: 8.x
 version: 0.3
+base theme: seven
 
 # These assets are loaded on every page.
 #
@@ -19,6 +20,10 @@ libraries:
 # @todo Move the override/extend assets out of `components` directory?
 # @todo Grep for the removed classes in core, and replace all.
 libraries-override:
+  core/normalize: false
+  seven/global-styling: false
+  classy/base: false
+
   views/views.module:
     css:
       component:
