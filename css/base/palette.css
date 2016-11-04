@@ -4,6 +4,11 @@
   Style guide: 2
  */
 /*
+  Layout
+
+  Style guide: 3
+ */
+/*
   Components
 
   Style guide: 4
@@ -118,10 +123,14 @@
 
   <p>Every color has two helper classes, one for text and one for background color.</p>
   <ul>
-    <li>for text colors: .text-$color(-$variation) (example: <span class="text-blue">.text-blue</span>)</li>
-    <li>for background colors: .bg-$color(-$variation) (example: <span class="bg-grey-dark text-white">.bg-grey-dark</span>)</li>
+    <li>for text colors: .text-$color(-$variation)</li>
+    <li>for background colors: .bg-$color(-$variation)</li>
   </ul>
   <p>Classes for pure white and black colors are available too.</p>
+
+  Markup:
+  <p class="text-red">Lorem ipsum dolor sit amet, consectetur adipiscing elit. In sodales ipsum non dui suscipit viverra. Sed egestas fermentum dictum. Proin et volutpat eros, a rhoncus enim.</p>
+  <p class="bg-orange text-white">Lorem ipsum dolor sit amet, consectetur adipiscing elit. In sodales ipsum non dui suscipit viverra. Sed egestas fermentum dictum. Proin et volutpat eros, a rhoncus enim.</p>
 
   Style guide: 2.2.3
 */

@@ -4,6 +4,11 @@
   Style guide: 2
  */
 /*
+  Layout
+
+  Style guide: 3
+ */
+/*
   Components
 
   Style guide: 4
@@ -115,7 +120,7 @@ select.form-control:focus::-ms-value {
 }
 
 select.form-control-sm:not([size]):not([multiple]) {
-  height: 1.563rem;
+  height: 1.562rem;
 }
 
 .form-control-lg {

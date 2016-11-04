@@ -4,6 +4,11 @@
   Style guide: 2
  */
 /*
+  Layout
+
+  Style guide: 3
+ */
+/*
   Components
 
   Style guide: 4
@@ -94,5 +99,19 @@
 .alert-danger .alert-link {
   color: #a60c50;
 }
+
+/*
+  Messages
+
+  Show a message after a user action about the result.
+
+  Markup:
+    <div class="alert alert-success">Saved </div>
+    <div class="alert alert-danger">Error</div>
+    <div class="alert alert-warning">Warning</div>
+    <div class="alert alert-info">Information</div>
+
+  Style guide 4.9
+ */
 
 /*# sourceMappingURL=messages.css.map */
