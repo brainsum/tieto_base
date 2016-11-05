@@ -15,5 +15,5 @@ gulp/config.local.js
 styleguide/*
 
 # Sourcemaps
-css/*/*.css.map
-js/*/*.js.map
+css/**/*.css.map
+js/**/*.js.map
