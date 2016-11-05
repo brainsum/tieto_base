@@ -269,7 +269,7 @@
   margin-top: 0;
 }
 
-@media screen and (min-width: 37.563em) {
+@media screen and (min-width: 37.562em) {
   /* 601px */
   .dropbutton li {
     display: inline-block;

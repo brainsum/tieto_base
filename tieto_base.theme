@@ -15,7 +15,7 @@ use Drupal\Core\Form\FormStateInterface;
 use Drupal\Core\Render\Element;
 
 // @todo move to theme settings.
-define('SIDEBAR_BOTH_WIDTH', 2);
+define('SIDEBAR_BOTH_WIDTH', 3);
 define('SIDEBAR_SINGLE_WIDTH', 3);
 define('GRID_COLUMNS', 12);
 
@@ -69,26 +69,19 @@ function tieto_base_preprocess_page(&$variables) {
   // @fixme Fix classes, use pulls, pushes and offsets.
   // If both are present, they are 2 wide.
   if (!empty($variables['page']['sidebar_first']) && !empty($variables['page']['sidebar_second'])) {
-    $attributes = new Attribute([
-      'class' => ['col-md-' . SIDEBAR_BOTH_WIDTH]
-    ]);
-    $variables['page']['sidebar_first']['#attributes'] = $attributes;
-    $variables['page']['sidebar_second']['#attributes'] = $attributes;
+    $variables['page']['sidebar_first']['#attributes']['class'][] = 'col-md-' . SIDEBAR_BOTH_WIDTH;
+    $variables['page']['sidebar_second']['#attributes']['class'][] = 'col-md-' . SIDEBAR_BOTH_WIDTH;
   }
   // If any of them is present, it is 3 wide.
   elseif (!empty($variables['page']['sidebar_first'])) {
-    $variables['page']['sidebar_first']['#attributes'] = new Attribute([
-      'class' => ['col-md-' . SIDEBAR_SINGLE_WIDTH]
-    ]);
+    $variables['page']['sidebar_first']['#attributes']['class'][] = 'col-md-' . SIDEBAR_SINGLE_WIDTH;
   }
   elseif (!empty($variables['page']['sidebar_second'])) {
-    $variables['page']['sidebar_second']['#attributes'] = new Attribute([
-      'class' => ['col-md-' . SIDEBAR_SINGLE_WIDTH]
-    ]);
+    $variables['page']['sidebar_second']['#attributes']['class'][] = 'col-md-' . SIDEBAR_SINGLE_WIDTH;
   }
 
   $main_width = _tieto_base_content_width(!empty($variables['page']['sidebar_first']), !empty($variables['page']['sidebar_second']));
-  $variables['main_attributes'] = new Attribute([
+  $variables['content_attributes'] = new Attribute([
     'class' => ['col-md-' . $main_width],
   ]);
 }

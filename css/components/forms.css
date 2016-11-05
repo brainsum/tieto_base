@@ -115,7 +115,7 @@ select.form-control:focus::-ms-value {
 }
 
 select.form-control-sm:not([size]):not([multiple]) {
-  height: 1.563rem;
+  height: 1.562rem;
 }
 
 .form-control-lg {
