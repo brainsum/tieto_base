@@ -11,9 +11,11 @@ global:
       css/base/elements.css: {}
       css/base/typography.css: {}
       css/base/fonts.css: {}
-    layout:
       css/layout/grid.css: {}
+    layout:
       css/layout/regions.css: {}
+      css/layout/blocks.css: {}
+      css/layout/node.css: {}
     component:
       css/components/buttons.css: {}
       css/components/forms.css: {}
