@@ -17,6 +17,7 @@
   <div class="container">
     {{ page.breadcrumb }}
     {{ page.highlighted }}
+    {{ page.navigation }}
 
     <div class="row">
       {{ page.sidebar_first }}
@@ -24,7 +25,6 @@
       {# The main content of the site, which changes. #}
       <main role="main"{{ main_attributes }}>
         <a id="main-content" tabindex="-1"></a>
-        {{ page.navigation }}
         {{ page.help }}
         {{ page.content }}
       </main>
