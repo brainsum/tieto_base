@@ -4,7 +4,7 @@
 
 global:
   js:
-    js/global.bundle.js: {}
+    js/global.js: {}
   css:
     base:
       css/base/reset.css: { weight: -10 }
