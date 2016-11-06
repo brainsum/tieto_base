@@ -11,7 +11,7 @@ global:
       css/base/elements.css: {}
       css/base/typography.css: {}
       css/base/fonts.css: {}
-      css/layout/grid.css: {}
+      css/base/grid.css: {}
     layout:
       css/layout/regions.css: {}
       css/layout/blocks.css: {}
