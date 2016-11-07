@@ -298,6 +298,20 @@ function _tieto_base_content_width($first = FALSE, $second = FALSE) {
 function _tieto_base_inline_forms() {
   $cached = &drupal_static(__FUNCTION__);
   return isset($cached) ? $cached : [
-    'user_form'
+    'user_form',
   ];
+}
+
+/**
+ * Implements hook_preprocess().
+ */
+function tieto_base_preprocess(&$variables, $hook) {
+  // Attach path variables to the base theme for all templates.
+  // Useful for including partials, because `directory` only refers to the
+  // path of the current theme, so in sub-themes it will not work as expected.
+  // @todo Should I use drupal_static here?
+  $base_directory = drupal_get_path('theme', 'tieto_base');
+  $variables['base_directory'] = $base_directory;
+  $variables['templates'] = $base_directory . '/templates';
+  $variables['partials'] = $base_directory . '/templates/includes';
 }
