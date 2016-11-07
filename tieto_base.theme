@@ -310,8 +310,10 @@ function tieto_base_preprocess(&$variables, $hook) {
   // Useful for including partials, because `directory` only refers to the
   // path of the current theme, so in sub-themes it will not work as expected.
   // @todo Should I use drupal_static here?
-  $base_directory = drupal_get_path('theme', 'tieto_base');
+  global $base_path;
+  $base_directory = $base_path . drupal_get_path('theme', 'tieto_base');
   $variables['base_directory'] = $base_directory;
   $variables['templates'] = $base_directory . '/templates';
   $variables['partials'] = $base_directory . '/templates/includes';
+  $variables['images'] = $base_directory . '/img';
 }

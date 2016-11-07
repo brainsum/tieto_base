@@ -19,7 +19,7 @@
 {% block content %}
   <a class="navbar-brand" href="{{ path('<front>') }}" title="{{ 'Home'|t }}" rel="home">
     {% if site_logo %}
-      <img src="{{ site_logo }}" height="50" alt="{{ site_name }}">
+      <img src="{{ base_directory ~ '/logo.svg' }}" height="50" alt="{{ site_name }}">
     {% else %}
       {{- site_name -}}
     {% endif %}
