@@ -1,3 +1,11 @@
+.view-media-assets-library .view-filters {
+  margin: 1rem 0;
+}
+
+.view-media-assets-library .view-filters .form-actions {
+  margin: 1rem 0;
+}
+
 .view-media-assets-library .card {
   margin-bottom: 2rem;
   text-align: center;

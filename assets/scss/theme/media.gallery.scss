@@ -2,6 +2,14 @@
 
 .view-media-assets-library {
 
+  .view-filters {
+    margin: $spacer 0;
+
+    .form-actions {
+      margin: $spacer 0;
+    }
+  }
+
   .card {
     margin-bottom: 2rem;
     text-align: center;
