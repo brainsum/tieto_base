@@ -3,7 +3,6 @@ import gulp from 'gulp';
 import babel from 'rollup-plugin-babel';
 import rollup from 'rollup';
 import sourcemaps from 'gulp-sourcemaps';
-import browserSync from 'browser-sync';
 import path from 'path';
 import util from 'gulp-util';
 
@@ -48,8 +47,5 @@ gulp.task('scripts:babel', () => {
 
     // Save the final output.
     .pipe(gulp.dest(config.scripts.dest))
-
-    // Notify the browser that compile is finished.
-    .pipe(browserSync.stream());
 });
 

@@ -69,6 +69,7 @@ export default {
   },
 
   kss: {
-    dest: './styleguide'
+    dest: './styleguide',
+    watch: './builder/**/*'
   }
 }

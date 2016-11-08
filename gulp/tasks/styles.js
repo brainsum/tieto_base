@@ -5,7 +5,6 @@ import cssnano from 'gulp-cssnano';
 import csscomb from 'gulp-csscomb';
 import sourcemaps from 'gulp-sourcemaps';
 import autoprefixer from 'gulp-autoprefixer';
-import browserSync from 'browser-sync';
 import util from 'gulp-util';
 
 /**
@@ -35,8 +34,5 @@ gulp.task('styles', () => {
     .pipe(util.env.production ? cssnano(config.cssnano) : sourcemaps.write('.'))
 
     // Save the final output.
-    .pipe(gulp.dest(config.styles.dest))
-
-    // Notify the browser that compile is finished.
-    .pipe(browserSync.stream());
+    .pipe(gulp.dest(config.styles.dest));
 });
