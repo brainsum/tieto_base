@@ -4,7 +4,7 @@ package: BRAINSUM
 type: theme
 core: 8.x
 version: 0.3
-base theme: seven
+# base theme: seven
 
 # These assets are loaded on every page.
 #
@@ -20,9 +20,9 @@ libraries:
 # @todo Move the override/extend assets out of `components` directory?
 # @todo Grep for the removed classes in core, and replace all.
 libraries-override:
-  core/normalize: false
-  seven/global-styling: false
-  classy/base: false
+  # core/normalize: false
+  # seven/global-styling: false
+  # classy/base: false
 
   views/views.module:
     css:
@@ -71,6 +71,11 @@ libraries-override:
         /core/themes/stable/css/system/components/tabledrag.module.css: css/components/tabledrag.css
         /core/themes/stable/css/system/components/tablesort.module.css: false
         /core/themes/stable/css/system/components/tree-child.module.css: css/components/tree-child.css
+
+  media/view:
+    css:
+      theme:
+        css/media.view.css: false
 
 # Replace just a part of a library asset.
 #

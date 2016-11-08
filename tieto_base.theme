@@ -167,7 +167,7 @@ function tieto_base_preprocess_menu_local_task(&$variables) {
   $options = $url->getOptions();
   $url->setOptions($options + $link['localized_options']);
   $variables['link']['#options']['attributes']['class'][] = 'nav-link';
-  if ($variables['element']['#active']) {
+  if (isset($variables['element']['#active']) && $variables['element']['#active']) {
     $variables['link']['#options']['attributes']['class'][] = 'active';
   }
   $variables['item'] = Link::fromTextAndUrl($link['title'], $url);
@@ -178,6 +178,23 @@ function tieto_base_preprocess_menu_local_task(&$variables) {
  */
 function tieto_base_preprocess_region__footer(&$variables) {
   $variables['site_name'] = Drupal::config('system.site')->get('name');
+}
+
+/**
+ * Implements template_preprocess_views_view_grid().
+ */
+function tieto_base_preprocess_views_view_unformatted(&$variables) {
+
+}
+
+/**
+ * Implements hook_theme_suggestions_HOOK_alter().
+ */
+function tieto_base_theme_suggestions_views_view_alter(array &$suggestions, array $variables) {
+  $view = $variables['view'];
+  $suggestions[] = 'views_view__' . $view->id();
+  $suggestions[] = 'views_view__' . $view->current_display;
+  $suggestions[] = 'views_view__' . $view->id() . '__' . $view->current_display;
 }
 
 /**
@@ -299,6 +316,7 @@ function _tieto_base_inline_forms() {
   $cached = &drupal_static(__FUNCTION__);
   return isset($cached) ? $cached : [
     'user_form',
+    'views_exposed_form',
   ];
 }
 
@@ -314,6 +332,6 @@ function tieto_base_preprocess(&$variables, $hook) {
   $base_directory = $base_path . drupal_get_path('theme', 'tieto_base');
   $variables['base_directory'] = $base_directory;
   $variables['templates'] = $base_directory . '/templates';
-  $variables['partials'] = $base_directory . '/templates/includes';
+  $variables['partials'] = $base_directory . '/templates/_partials';
   $variables['images'] = $base_directory . '/img';
 }

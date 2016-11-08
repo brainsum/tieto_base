@@ -328,6 +328,7 @@ select.form-control-lg:not([size]):not([multiple]) {
 
 .form-control {
   font-family: inherit;
+  max-width: 100%;
 }
 
 .form-control.error {

@@ -4,6 +4,7 @@
 // All form controls, inputs, buttons, etc.
 .form-control {
   font-family: inherit;
+  max-width: 100%;
 
   &.error {
     border-color: $brand-danger;

@@ -14,5 +14,6 @@
 // Bootstrap 4 adds a .5rem bottom margin to all labels, and does some
 // magic in `_forms.scss` so we override <label> margins globally.
 label {
+  display: block;
   margin-bottom: .25rem;
 }
