@@ -83,6 +83,8 @@ libraries-override:
 libraries-extend:
   focal_point/drupal.focal_point_preview:
     - tieto_base/focal_point.preview
+  media/view:
+    - tieto_base/media.gallery
 
 # Content and design related styles must be available in WYSIWYG editors too.
 #

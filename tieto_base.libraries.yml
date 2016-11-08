@@ -20,6 +20,7 @@ global:
       css/components/buttons.css: {}
       css/components/forms.css: {}
       css/components/code.css: {}
+      css/components/cards.css: {}
       css/components/images.css: {}
       css/components/navigation.css: {}
       css/components/messages.css: {}
@@ -63,6 +64,11 @@ focal_point.preview:
   css:
     theme:
       css/components/focal-point.preview.css: {}
+
+media.gallery:
+  css:
+    theme:
+      css/theme/media.gallery.css: {}
 
 # ------------------------------------------------------------------------------
 # External and Vendor libraries

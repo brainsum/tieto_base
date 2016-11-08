@@ -1,0 +1,48 @@
+@import "index";
+
+.view-media-assets-library {
+
+  .card {
+    margin-bottom: 2rem;
+    text-align: center;
+  }
+
+  .card-title a {
+    color: white;
+    font-weight: bold;
+    &:hover {
+      color: color(blue);
+    }
+  }
+
+  .card-img-overlay {
+    background-color: rgba(0, 0, 0, .6);
+  }
+
+  // Hover animation
+  .card-img-overlay {
+    will-change: background-color, opacity;
+    opacity: 0;
+    visibility: hidden;
+    transition: opacity .3s, background-color .3s;
+  }
+
+  .card-img {
+    position: relative;
+    overflow: hidden;
+    .media {
+      transition: transform .3s;
+    }
+  }
+
+  .card:hover {
+    .card-img-overlay {
+      opacity: 1;
+      visibility: visible;
+    }
+    .card-img .media {
+      transform: scale(1.1) translateZ(0);
+    }
+  }
+
+}
