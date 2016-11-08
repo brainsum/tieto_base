@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html class="no-js" lang="en">
+<head>
+  <meta charset="utf-8">
+  <title>Tieto {{options.title}}</title>
+
+  <meta name="description" content="">
+  <meta name="generator" content="kss-node">
+  <meta name="viewport" content="width=device-width">
+
+  {{!<link rel="stylesheet" href="kss-assets/kss.css">}!}}
+  {{{styles}}}
+</head>
+<body id="kss-node">
+<div class="styleguide">
+  <aside class="styleguide__aside">
+    <div class="styleguide__logo">
+      <img src="kss-assets/logo.png">
+      <h1>Style Guide</h1>
+    </div>
+    <nav class="styleguide__nav">
+      <ul>
+        <li>
+          <a href="./index.html">1. Introduction</a>
+        </li>
+      {{#each menu}}
+        <li>
+          <a href="section-{{referenceURI}}.html">{{referenceNumber}}. {{header}}</a>
+          {{#if isActive}}
+            {{#if children}}
+              <ul>
+              {{#each children}}
+                <li>
+                  <a class="styleguide__nav-scrollspy" href="section-{{../referenceURI}}.html#kssref-{{referenceURI}}">
+                    {{referenceNumber}}. {{header}}
+                  </a>
+                </li>
+              {{/each}}
+              </ul>
+            {{/if}}
+          {{/if}}
+        </li>
+      {{/each}}
+      </ul>
+    </nav>
+  </aside>
+  <article role="main" class="styleguide__content">
+  {{#if homepage}}
+    <div id="kssref-0" class="kss-section kss-section--depth-0 kss-overview kss-style">
+      {{{homepage}}}
+    </div>
+  {{else}}
+
+    {{!
+      Display each section, in order.
+
+      The "root" element comes first in this loop, and can be detected using
+      the "#if @first" block as seen below.
+    }}
+    {{#each sections}}
+      <{{#if @first}}div{{else}}section{{/if}} id="kssref-{{referenceURI}}" class="styleguide__section styleguide__section--depth-{{depth}}">
+        <h{{depth}} class="styleguide__title styleguide__title--level-{{depth}}">
+          <a href="#kssref-{{referenceURI}}">
+            {{referenceNumber}}. {{header}}
+          </a>
+        </h{{depth}}>
+
+        {{#if description}}
+          <div class="kss-description">
+            {{{description}}}
+          </div>
+        {{/if}}
+
+        {{#if parameters}}
+          <div class="kss-parameters__title">Parameters:</div>
+          <ul class="kss-parameters">
+          {{#each parameters}}
+            <li class="kss-parameters__item">
+              <div class="kss-parameters__name"><code>{{name}}</code></div>
+              <div class="kss-parameters__description">
+                {{{description}}}
+                {{#if defaultValue}}
+                  <div class="kss-parameters__default-value">
+                    Defaults to: <code>{{defaultValue}}</code>
+                  </div>
+                {{/if}}
+              </div>
+            </li>
+          {{/each}}
+          </ul>
+        {{/if}}
+
+        {{#if example}}
+          <div class="styleguide__example">
+            <h4>Example{{#if modifiers}}s{{/if}}</h4>
+
+            <div class="styleguide__modifiers">
+              <div class="styleguide__modifier">
+                {{#if modifiers}}
+                  <div class="styleguide__modifier-title">
+                    <strong>Default</strong>
+                  </div>
+                {{/if}}
+
+                <div class="styleguide__modifier-example">
+                  {{{example}}}
+                </div>
+              </div>
+
+              {{#each modifiers}}
+                <div class="styleguide__modifier">
+                  <div class="styleguide__modifier-title">
+                    <strong>{{name}}</strong> {{{description}}}
+                  </div>
+                  <div class="styleguide__modifier-example">
+                    {{{markup}}}
+                  </div>
+                </div>
+              {{/each}}
+            </div>
+          </div>
+          {{#if example}}
+            <div class="kss-markup kss-style">
+              <pre class="prettyprint linenums lang-html"><code data-language="html">{{markup}}</code></pre>
+            </div>
+          {{/if}}
+        {{/if}}
+
+        {{#if sourceFile.name}}
+          <div class="styleguide__source">
+            <small>Source: <code>{{sourceFile.name}}</code>, line {{sourceFile.line}}</small>
+          </div>
+        {{/if}}
+
+      </{{#if @first}}div{{else}}section{{/if}}>
+    {{/each}}
+  {{/if}}
+  </article>
+</div>
+
+<!-- SCRIPTS -->
+<script src="kss-assets/kss.js"></script>
+<script src="kss-assets/scrollspy.js"></script>
+<script src="kss-assets/prettify.js"></script>
+<script>
+  prettyPrint();
+  var spy = new ScrollSpy('.styleguide__content', {
+    nav: '.styleguide__nav-scrollspy',
+    className: 'styleguide__nav-is-in-viewport'
+  });
+</script>
+{{{scripts}}}
+
+{{! This will only be included in the demo page. }}
+{{#if options.demo}}
+  <footer class="kss-github">
+    <!-- https://github.com/blog/273-github-ribbons -->
+    <a href="https://github.com/kss-node/kss-node"><img src="kss-assets/github-fork--black.png" alt="Fork me on GitHub"></a>
+  </footer>
+{{/if}}
+
+<!-- Automatically built using <a href="https://github.com/kss-node/kss-node">kss-node</a>. -->
+</body>
+</html>

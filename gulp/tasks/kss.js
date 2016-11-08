@@ -19,7 +19,8 @@ gulp.task('kss:generate', () => {
     source: config.styles.base,
     destination: config.kss.dest,
     css: 'style.css',
-    builder: 'builder'
+    builder: 'builder',
+    homepage: '../../builder/homepage.md'
   });
 });
 

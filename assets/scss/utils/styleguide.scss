@@ -1,5 +1,29 @@
 @import "index";
 
+/*
+  Design
+
+  Style guide: 2
+ */
+
+/*
+  Layout
+
+  Style guide: 3
+ */
+
+/*
+  Components
+
+  Style guide: 4
+*/
+
+/*
+  Lists
+
+  Style guide: 4.2
+ */
+
 html,
 body {
 	height: 100%;
@@ -29,6 +53,11 @@ body {
 	&__logo {
 		text-align: center;
 		margin-bottom: 2rem;
+
+		h1 {
+			margin-top: 1rem;
+			font-size: 1.25rem;
+		}
 	}
 
 	&__nav {
@@ -66,6 +95,10 @@ body {
 				}
 			}
 		}
+
+		&-is-in-viewport {
+			color: color(red-dark) !important;
+		}
 	}
 
 	&__content {
@@ -79,9 +112,30 @@ body {
 	}
 
 	&__section {
-		&:not(:last-child) {
-			margin-bottom: 4rem;
+		margin-bottom: 3rem;
+	}
+
+	&__section--depth-4 {
+		+ {
+			.styleguide__section--depth-1,
+			.styleguide__section--depth-2,
+			.styleguide__section--depth-3 {
+				margin-top: 6rem;
+			}
 		}
+	}
+
+	&__section--depth-3 {
+		+ {
+			.styleguide__section--depth-1,
+			.styleguide__section--depth-2 {
+				margin-top: 6rem;
+			}
+		}
+	}
+
+	&__title {
+		margin-bottom: 1rem;
 	}
 
 	&__anchor {
@@ -96,6 +150,31 @@ body {
 		&:hover {
 			color: color(red);
 		}
+	}
+
+	&__example {
+		padding: 1rem;
+		border: 1px solid #f9f9f9;
+
+		h4 {
+			margin-bottom: 1rem;
+			color: color(grey-dark);
+		}
+	}
+
+	&__modifier {
+		&:not(:last-child) {
+			margin-bottom: 1rem;
+		}
+	}
+
+	&__modifier-title {
+		margin-bottom: .5rem;
+	}
+
+	&__source {
+		margin-top: 1rem;
+		margin-bottom: .5rem;
 	}
 
 	&__colors {
@@ -137,4 +216,60 @@ body {
 			}
 		}
 	}
+}
+
+/**
+ * prettyprint.js styling
+ */
+pre.linenums {
+	overflow-x: hidden;
+	margin-bottom: 0;
+}
+
+ol.linenums {
+	overflow-x: auto;
+	margin: 1rem 0 0;
+	padding: 1rem 1rem .75rem;
+	list-style: none;
+	background: #f9f9f9;
+	border: 1px solid color(grey-lightest);
+	border-left: .25rem solid color(blue);
+
+	li {
+		font-size: .75rem;
+
+		code,
+		span {
+			vertical-align: middle;
+		}
+	}
+}
+
+/* SPAN elements with the classes below are added by prettyprint. */
+.pln { color: #000 }  /* plain text */
+
+.str { color: #080 }  /* string content */
+.kwd { color: #008 }  /* a keyword */
+.com { color: #800 }  /* a comment */
+.typ { color: #606 }  /* a type name */
+.lit { color: #066 }  /* a literal value */
+/* punctuation, lisp open bracket, lisp close bracket */
+.pun, .opn, .clo { color: #660 }
+.tag { color: #008 }  /* a markup tag name */
+.atn { color: #606 }  /* a markup attribute name */
+.atv { color: #080 }  /* a markup attribute value */
+.dec, .var { color: #606 }  /* a declaration; a variable name */
+.fun { color: red }  /* a function name */
+
+/* Use higher contrast and text-weight for printable form. */
+@media print, projection {
+	.str { color: #060 }
+	.kwd { color: #006; font-weight: bold }
+	.com { color: #600; font-style: italic }
+	.typ { color: #404; font-weight: bold }
+	.lit { color: #044 }
+	.pun, .opn, .clo { color: #440 }
+	.tag { color: #006; font-weight: bold }
+	.atn { color: #404 }
+	.atv { color: #060 }
 }
