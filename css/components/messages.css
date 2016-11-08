@@ -1,18 +1,3 @@
-/*
-  Design
-
-  Style guide: 2
- */
-/*
-  Components
-
-  Style guide: 4
-*/
-/*
-  Lists
-
-  Style guide: 4.2
- */
 .alert {
   padding: 0.5rem 1.5rem;
   margin-bottom: 1rem;
@@ -94,5 +79,19 @@
 .alert-danger .alert-link {
   color: #a60c50;
 }
+
+/*
+  Messages
+
+  Show a message after a user action about the result.
+
+  Markup:
+    <div class="alert alert-success">Saved </div>
+    <div class="alert alert-danger">Error</div>
+    <div class="alert alert-warning">Warning</div>
+    <div class="alert alert-info">Information</div>
+
+  Style guide 4.9
+ */
 
 /*# sourceMappingURL=messages.css.map */

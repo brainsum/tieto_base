@@ -7,18 +7,20 @@ import sequence from 'gulp-sequence';
 
 gulp.task('kss', () => {
   sequence(
-      'styles',
-      'kss:concat',
-      'kss:generate'
+    'styles',
+    'kss:concat',
+    'kss:generate'
   )();
 });
 
 gulp.task('kss:generate', () => {
   return kss({
-    title: 'Tieto Style Guide',
+    title: 'Style Guide',
     source: config.styles.base,
     destination: config.kss.dest,
-    css: 'style.css'
+    css: 'style.css',
+    builder: 'builder',
+    homepage: '../../builder/homepage.md'
   });
 });
 
@@ -30,5 +32,5 @@ gulp.task('kss:concat', () => {
 });
 
 gulp.task('kss:watch', () => {
-  gulp.watch(config.styles.watch, ['kss']);
+  gulp.watch([config.styles.watch, config.kss.watch], ['kss']);
 });

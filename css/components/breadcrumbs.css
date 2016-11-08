@@ -1,18 +1,3 @@
-/*
-  Design
-
-  Style guide: 2
- */
-/*
-  Components
-
-  Style guide: 4
-*/
-/*
-  Lists
-
-  Style guide: 4.2
- */
 .breadcrumb {
   padding: 0 0;
   margin-bottom: 1rem;
@@ -50,5 +35,27 @@
 .breadcrumb-item.active {
   color: #818a91;
 }
+
+/*
+  Breadcrumbs
+
+  Breadcrumbs are a useful to show the path the user is taken or to indicate the hierarchy. It shouldn't be the main navigational element but it can be used in different ways. 
+  
+  Style guide 4.6
+ */
+/*
+  Path
+
+  When showing the path the user has taken, allow the user to take a step back and highlight the steps as links.
+
+  Markup:
+    <nav class="breadcrumb">
+      <a class="breadcrumb-item" href="#">Home</a>
+      <a class="breadcrumb-item" href="#">Products</a>
+      <a class="breadcrumb-item" href="#">Plan & estimate & resource</a>
+    </nav>
+
+  Style guide 4.6.1
+ */
 
 /*# sourceMappingURL=breadcrumbs.css.map */
