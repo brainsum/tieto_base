@@ -14,8 +14,13 @@
 #}
 {% extends 'region.html.twig' %}
 
+{%
+  set classes = [
+    'region-sidebar',
+  ]
+%}
 {% block content %}
-  <aside{{ attributes }} role="complementary">
+  <aside{{ attributes.addClass(classes) }} role="complementary">
     {{ content }}
   </aside>
 {% endblock %}

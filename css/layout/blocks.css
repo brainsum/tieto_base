@@ -1,0 +1,36 @@
+/*
+  Design
+
+  Style guide: 2
+ */
+/*
+  Components
+
+  Style guide: 4
+*/
+/*
+  Lists
+
+  Style guide: 4.2
+ */
+.block-local-actions-block,
+.block-help {
+  margin: 1rem 0;
+}
+
+.block-local-tasks-block {
+  margin-bottom: 1rem;
+}
+
+.block > h2 {
+  font-size: 1rem;
+  font-weight: bold;
+  text-transform: uppercase;
+  color: #7b7b7b;
+}
+
+.region-sidebar .block {
+  margin-bottom: 1rem;
+}
+
+/*# sourceMappingURL=blocks.css.map */

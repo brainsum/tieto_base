@@ -13,3 +13,7 @@ gulp/config.local.js
 
 # Generated style guide
 styleguide/*
+
+# Sourcemaps
+css/**/*.css.map
+js/**/*.js.map

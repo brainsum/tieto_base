@@ -4,16 +4,18 @@
 
 global:
   js:
-    js/global.bundle.js: {}
+    js/global.js: {}
   css:
     base:
       css/base/reset.css: { weight: -10 }
       css/base/elements.css: {}
       css/base/typography.css: {}
       css/base/fonts.css: {}
+      css/base/grid.css: {}
     layout:
-      css/layout/grid.css: {}
       css/layout/regions.css: {}
+      css/layout/blocks.css: {}
+      css/layout/node.css: {}
     component:
       css/components/buttons.css: {}
       css/components/forms.css: {}

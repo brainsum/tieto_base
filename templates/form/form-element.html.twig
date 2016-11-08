@@ -71,7 +71,7 @@
       <span class="field-prefix">{{ prefix }}</span>
     {% endif %}
     {% if description_display == 'before' %}
-      {% include directory ~ '/templates/includes/form-description.html.twig' %}
+      {% include partials ~ '/form-description.html.twig' %}
     {% endif %}
     <label class="form-check-label">
       {% if label_display == 'before' %}
@@ -85,9 +85,9 @@
     {% if suffix is not empty %}
       <span class="field-suffix">{{ suffix }}</span>
     {% endif %}
-    {% include directory ~ '/templates/includes/form-errors.html.twig' %}
+    {% include partials ~ '/form-errors.html.twig' %}
     {% if description_display in ['after', 'invisible'] %}
-      {% include directory ~ '/templates/includes/form-description.html.twig' %}
+      {% include partials ~ '/form-description.html.twig' %}
     {% endif %}
   </div>
   {% else %}
@@ -99,7 +99,7 @@
       <span class="field-prefix">{{ prefix }}</span>
     {% endif %}
     {% if description_display == 'before' %}
-      {% include directory ~ '/templates/includes/form-description.html.twig' %}
+      {% include partials ~ '/form-description.html.twig' %}
     {% endif %}
     {% if inline_form %}
     <div class="col-sm-9">
@@ -111,9 +111,9 @@
     {% if label_display == 'after' %}
       {{ label }}
     {% endif %}
-    {% include directory ~ '/templates/includes/form-errors.html.twig' %}
+    {% include partials ~ '/form-errors.html.twig' %}
     {% if description_display in ['after', 'invisible'] %}
-      {% include directory ~ '/templates/includes/form-description.html.twig' %}
+      {% include partials ~ '/form-description.html.twig' %}
     {% endif %}
     {% if inline_form %}
     </div>

@@ -1,1 +1,2 @@
-import Util from "bootstrap/js/src/util";
+import 'bootstrap/js/src/util';
+import 'bootstrap/js/src/dropdown';
