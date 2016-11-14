@@ -1,5 +1,5 @@
 # tieto_base 
-Extendable, modern frontend experience for Tieto projects.
+Extendable, modern frontend experience for Tieto projects + styleguide based on KSS.
 
 ---
 
