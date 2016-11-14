@@ -19,12 +19,18 @@ If you have no Drupal and just want to develop:
 
 ## Build
 
-You need [Node.js](https://nodejs.org/en/) for theme development. After you have `node` and `npm` in your Terminal:
+You need [Node.js](https://nodejs.org/en/) for theme development. After you have `node` and `npm` and `gulp` in your Terminal run `npm install` to install dependencies.
 
-1. Run `npm install`
-2. Run `gulp` for single compile of assets.
-3. Run `gulp --production` for preparing assets for production (minification, bundling, etc.)
-4. Run `gulp watch` for watching on file changes, i.e. when developing stuff.
+### Assets
+
+1. Run `gulp` for single compile of assets.
+2. Run `gulp --production` for preparing assets for production (minification, bundling, etc.)
+3. Run `gulp watch` for watching on file changes, i.e. when developing stuff.
+
+### KSS Styleguide
+
+1. Run `gulp kss` for single compile of the styleguide. (A directory named styleguide will be created in the root folder)
+2. Run `gulp kss:watch` for watching on file changes.
 
 ## Links
 
