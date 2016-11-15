@@ -313,6 +313,17 @@ function tieto_base_preprocess_datetime_wrapper(&$variables) {
   if (isset($variables['element']['#form_id'])) {
     $variables['inline_form'] = in_array($variables['element']['#form_id'], _tieto_base_inline_forms());
   }
+  // @fixme Rewrite this mess!
+  if (isset($variables['description'])) {
+    $classes = ['form-description'];
+    if ($variables['inline_form']) {
+      $classes[] = 'col-sm-8 col-md-10';
+    }
+    $variables['description_attributes'] = new Attribute([
+      'id' => $variables['element']['#id'] . '-value--description',
+      'class' => $classes,
+    ]);
+  }
 }
 
 /**
