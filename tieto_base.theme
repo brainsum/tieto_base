@@ -374,6 +374,7 @@ function _tieto_base_inline_forms() {
     // 'user_form',
     'views_exposed_form',
     'marketing_activity_marketing_activation_form_add_form',
+    'marketing_activity_marketing_activation_form_edit_form',
   ];
 }
 
