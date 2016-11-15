@@ -27,6 +27,13 @@
     'form-wrapper',
     'js-form-wrapper',
     errors ? 'has-error',
+    inline_form ? 'row',
+  ]
+%}
+{%
+  set legend_classes = [
+    'form-control-label',
+    inline_form ? 'col-form-label col-sm-4 col-md-2',
   ]
 %}
 <fieldset{{ attributes.addClass(classes) }}>
@@ -38,10 +45,10 @@
     ]
   %}
   {#  Always wrap fieldset legends in a SPAN for CSS positioning. #}
-  <legend{{ legend.attributes.addClass('form-control-label') }}>
+  <legend{{ legend.attributes.addClass(legend_classes) }}>
     <span{{ legend_span.attributes.addClass(legend_span_classes) }}>{{ legend.title }}</span>
   </legend>
-  <div class="fieldset-wrapper">
+  <div class="fieldset-wrapper{{ inline_form ? ' col-sm-8 col-md-10' }}">
     {% if prefix %}
       <span class="field-prefix">{{ prefix }}</span>
     {% endif %}

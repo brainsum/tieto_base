@@ -51,6 +51,7 @@
     'form-item-' ~ name|clean_class,
     'form-group',
     inline_form ? 'row',
+    type == 'date' ? 'col-sm-8 col-md-10',
     'js-form-item',
     'js-form-item-' ~ name|clean_class,
     'js-form-type-' ~ type|clean_class,
@@ -90,7 +91,7 @@
       {% include partials ~ '/form-description.html.twig' %}
     {% endif %}
   </div>
-  {% else %}
+{% else %}
   <div{{ attributes.addClass(classes) }}>
     {% if label_display in ['before', 'invisible'] %}
       {{ label }}

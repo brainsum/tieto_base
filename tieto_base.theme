@@ -284,8 +284,43 @@ function tieto_base_preprocess_form_element(&$variables) {
 
 /**
  * Implements hook_preprocess_HOOK().
+ *
+ * @todo Use unified responsive classes instead of redeclaring this hook.
  */
 function tieto_base_preprocess_form_element_label(&$variables) {
+  if (isset($variables['element']['#form_id'])) {
+    $variables['inline_form'] = in_array($variables['element']['#form_id'], _tieto_base_inline_forms());
+  }
+}
+
+/**
+ * Implements hook_preprocess_HOOK().
+ *
+ * @todo Use unified responsive classes instead of redeclaring this hook.
+ */
+function tieto_base_preprocess_fieldset(&$variables) {
+  if (isset($variables['element']['#form_id'])) {
+    $variables['inline_form'] = in_array($variables['element']['#form_id'], _tieto_base_inline_forms());
+  }
+}
+
+/**
+ * Implements hook_preprocess_HOOK().
+ *
+ * @todo Use unified responsive classes instead of redeclaring this hook.
+ */
+function tieto_base_preprocess_datetime_wrapper(&$variables) {
+  if (isset($variables['element']['#form_id'])) {
+    $variables['inline_form'] = in_array($variables['element']['#form_id'], _tieto_base_inline_forms());
+  }
+}
+
+/**
+ * Implements hook_preprocess_HOOK().
+ *
+ * @todo Use unified responsive classes instead of redeclaring this hook.
+ */
+function tieto_base_preprocess_container(&$variables) {
   if (isset($variables['element']['#form_id'])) {
     $variables['inline_form'] = in_array($variables['element']['#form_id'], _tieto_base_inline_forms());
   }
@@ -325,8 +360,9 @@ function _tieto_base_content_width($first = FALSE, $second = FALSE) {
 function _tieto_base_inline_forms() {
   $cached = &drupal_static(__FUNCTION__);
   return isset($cached) ? $cached : [
-    'user_form',
+    // 'user_form',
     'views_exposed_form',
+    'marketing_activity_marketing_activation_form_add_form',
   ];
 }
 

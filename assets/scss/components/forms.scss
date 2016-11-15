@@ -28,13 +28,31 @@
 
 // Inline forms get slightly modified <label>s.
 .form-inline {
+
   .form-group {
     display: block;
-    margin-top: $spacer-y;
+    margin-bottom: $spacer-y;
+
+    &.form-type-date {
+      margin-bottom: 0;
+    }
   }
+
+  .form-wrapper {
+    margin-bottom: $spacer-y;
+  }
+
+  .form-checkboxes,
+  .form-radios {
+    .form-group {
+      margin-bottom: .25rem;
+    }
+  }
+
   .form-control {
     margin-top: 0;
   }
+
   .form-control-label {
     text-transform: uppercase;
     font-weight: $font-weight-normal;

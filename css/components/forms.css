@@ -351,7 +351,20 @@ select.form-control-lg:not([size]):not([multiple]) {
 
 .form-inline .form-group {
   display: block;
-  margin-top: 1rem;
+  margin-bottom: 1rem;
+}
+
+.form-inline .form-group.form-type-date {
+  margin-bottom: 0;
+}
+
+.form-inline .form-wrapper {
+  margin-bottom: 1rem;
+}
+
+.form-inline .form-checkboxes .form-group,
+.form-inline .form-radios .form-group {
+  margin-bottom: .25rem;
 }
 
 .form-inline .form-control {
