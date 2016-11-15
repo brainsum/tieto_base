@@ -24,6 +24,7 @@ body {
 }
 
 .styleguide {
+  display: -ms-flexbox;
   display: flex;
   height: 100%;
 }

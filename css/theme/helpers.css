@@ -704,7 +704,9 @@ a.text-gray-dark:focus, a.text-gray-dark:hover {
 }
 
 .reset-appearance {
-  appearance: none;
+  -webkit-appearance: none;
+     -moz-appearance: none;
+          appearance: none;
   border: 0 none;
   background: transparent;
   padding: 0;

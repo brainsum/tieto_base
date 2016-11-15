@@ -23,8 +23,8 @@ gulp.task('styles', () => {
     // Convert the assets to plain CSS.
     .pipe(sass(config.sass).on('error', sass.logError))
 
-    // [PROD] Add vendor prefixes for older browsers.
-    .pipe(util.env.production ? autoprefixer(config.autoprefixer) : util.noop())
+    // Add vendor prefixes for older browsers.
+    .pipe(autoprefixer(config.autoprefixer))
 
     // [PROD] Clean up CSS to match Drupal coding standards.
     .pipe(util.env.production ? csscomb() : util.noop())

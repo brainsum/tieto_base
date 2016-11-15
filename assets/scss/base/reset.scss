@@ -12,8 +12,12 @@
 //
 
 // Bootstrap 4 adds a .5rem bottom margin to all labels, and does some
-// magic in `_forms.scss` so we override <label> margins globally.
+// magic in `_forms.scss` so we override `<label>` margins globally.
 label {
-  display: block;
   margin-bottom: .25rem;
+}
+
+// We don't need Bootstrap's default 1.5rem for `<legend>` elements.
+legend {
+  font-size: $font-size-base;
 }

@@ -46,9 +46,9 @@
 #}
 {%
   set classes = [
-    type in ['checkbox', 'radio'] ? type|clean_class : 'form-type-' ~ type|clean_class,
-    'form-item-' ~ name|clean_class,
     type in ['checkbox', 'radio'] ? 'form-check',
+    'form-type-' ~ type|clean_class,
+    'form-item-' ~ name|clean_class,
     'form-group',
     inline_form ? 'row',
     'js-form-item',

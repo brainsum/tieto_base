@@ -14,9 +14,10 @@
 // Form labels.
 .form-control-label {
   font-weight: $label-font-weight;
-  // font-size: $label-font-size;
   color: $label-color;
   cursor: pointer;
+  margin-bottom: .25rem;
+  display: inline-block;
 
   &.form-required::after {
     content: "*";
@@ -56,6 +57,21 @@
     display: inline-block;
     margin-top: .5rem;
   }
+}
+
+.form-check-label {
+  padding-left: 0;
+  user-select: none;
+}
+
+.form-actions {
+  margin: $spacer 0;
+}
+
+.form-text,
+.form-date {
+  display: block;
+  margin-top: ($spacer * .25);
 }
 
 // Bootstrap uses `has-danger`, but `has-error` is much better.

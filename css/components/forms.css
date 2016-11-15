@@ -27,6 +27,21 @@
   box-shadow: 0 0 3px rgba(98, 179, 229, 0.5);
 }
 
+.form-control::-webkit-input-placeholder {
+  color: #5e5e5e;
+  opacity: 1;
+}
+
+.form-control::-moz-placeholder {
+  color: #5e5e5e;
+  opacity: 1;
+}
+
+.form-control:-ms-input-placeholder {
+  color: #5e5e5e;
+  opacity: 1;
+}
+
 .form-control::placeholder {
   color: #5e5e5e;
   opacity: 1;
@@ -324,6 +339,8 @@ select.form-control-lg:not([size]):not([multiple]) {
   font-weight: 700;
   color: #7b7b7b;
   cursor: pointer;
+  margin-bottom: .25rem;
+  display: inline-block;
 }
 
 .form-control-label.form-required::after {
@@ -359,6 +376,24 @@ select.form-control-lg:not([size]):not([multiple]) {
 .checkbox > .form-description {
   display: inline-block;
   margin-top: .5rem;
+}
+
+.form-check-label {
+  padding-left: 0;
+  -webkit-user-select: none;
+     -moz-user-select: none;
+      -ms-user-select: none;
+          user-select: none;
+}
+
+.form-actions {
+  margin: 1rem 0;
+}
+
+.form-text,
+.form-date {
+  display: block;
+  margin-top: 0.25rem;
 }
 
 .has-error .form-control-feedback,

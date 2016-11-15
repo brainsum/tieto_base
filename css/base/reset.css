@@ -583,7 +583,8 @@ label,
 select,
 summary,
 textarea {
-  touch-action: manipulation;
+  -ms-touch-action: manipulation;
+      touch-action: manipulation;
 }
 
 table {
@@ -665,8 +666,11 @@ output {
 }
 
 label {
-  display: block;
   margin-bottom: .25rem;
+}
+
+legend {
+  font-size: 1rem;
 }
 
 /*# sourceMappingURL=reset.css.map */
