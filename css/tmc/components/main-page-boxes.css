@@ -2,8 +2,6 @@
   .view-main-page-boxes .view-content {
     display: -ms-flexbox;
     display: flex;
-    -ms-flex-pack: justify;
-        justify-content: space-between;
     -ms-flex-wrap: wrap;
         flex-wrap: wrap;
     margin: 0 -1rem -3rem;
@@ -52,7 +50,7 @@
 }
 
 @media (min-width: 992px) {
-  .view-main-page-boxes .views-row + .views-row:nth-child(3n) {
+  .view-main-page-boxes .views-row + .views-row:nth-child(3n), .view-main-page-boxes .views-row + .views-row:nth-child(5n) {
     border-left: 2px solid #eeeeee;
   }
   .view-main-page-boxes .views-row + .views-row:nth-child(4n) {
