@@ -543,10 +543,22 @@
   }
 }
 
+.navbar-brand {
+  float: none;
+  vertical-align: bottom;
+}
+
 .navbar-brand img {
   display: inline-block;
   margin: 1rem;
   height: 30px;
+}
+
+.navbar-text {
+  color: #fff;
+  font-size: 1.75rem;
+  font-weight: 700;
+  vertical-align: bottom;
 }
 
 /*
