@@ -74,6 +74,11 @@ tmc.navigation:
   css:
     theme:
       css/tmc/components/navigation.css: {}
+
+tmc.main-page-boxes:
+  css:
+    theme:
+      css/tmc/components/main-page-boxes.css: {}
       
 # ------------------------------------------------------------------------------
 # External and Vendor libraries

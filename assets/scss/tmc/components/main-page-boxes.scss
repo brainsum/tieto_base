@@ -1,0 +1,88 @@
+@import "index";
+
+.view-main-page-boxes {
+    .view-content {
+        @media (min-width: 480px) {
+            display: flex;
+            justify-content: space-between;
+            flex-wrap: wrap;
+            margin: 0 -1rem -3rem;
+        }
+
+        @include media-breakpoint-up(md) {
+            margin-left: -2rem;
+            margin-right: -2rem;
+        }
+    }
+
+    .views-row {
+        margin-bottom: 2rem;
+
+        @media (min-width: 480px) {
+            display: flex;
+            flex-direction: column;
+            margin-bottom: 3rem;
+            padding: 1rem;
+            width: calc(100% / 2);
+        }
+
+        @include media-breakpoint-up(md) {
+            padding: 1rem 2rem;
+        }
+
+        @include media-breakpoint-up(lg) {
+            width: calc(100% / 3);
+        }
+
+        + .views-row {
+            @media (min-width: 480px) {
+                &:nth-child(even) {
+                    border-left: 2px solid color(grey-lightest);
+                }
+            }
+
+            @include media-breakpoint-up(lg) {
+                &:nth-child(3n) {
+                    border-left: 2px solid color(grey-lightest);
+                }
+
+                &:nth-child(4n) {
+                    border-left: 0;   
+                }
+            }
+        }
+    }
+
+    .views-field-title h1 {
+        font-weight: 700;
+        margin: 1rem 0;
+    }
+
+    .image-style-main-page-box {
+        max-width: 100%;
+        height: auto;
+    }
+
+    .views-field-body {
+        flex-grow: 1;
+    }
+
+    .views-field-field-button {
+        .field-content {
+            display: flex;
+            justify-content: space-between;
+            flex-wrap: wrap;
+        }
+    }
+
+    .button {
+        display: block;
+        width: calc(50% - .25rem);
+        margin-bottom: .5rem;
+        @include button-size($btn-padding-y, $btn-padding-x, $font-size-base, $btn-border-radius);
+
+        @include media-breakpoint-up(md) {
+            @include button-size($btn-padding-y-lg, $btn-padding-x-lg, $font-size-lg, $btn-border-radius-lg);
+        }
+    }
+}
