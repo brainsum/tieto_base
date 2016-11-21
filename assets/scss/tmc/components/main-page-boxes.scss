@@ -65,6 +65,8 @@
 
     .views-field-body {
         flex-grow: 1;
+        font-size: .85rem;
+        color: #7b7b7b;
     }
 
     .views-field-field-button {
@@ -79,10 +81,11 @@
         display: block;
         width: calc(50% - .25rem);
         margin-bottom: .5rem;
-        @include button-size($btn-padding-y, $btn-padding-x, $font-size-base, $btn-border-radius);
+        @include button-size($btn-padding-y, $btn-padding-x, 1rem, $btn-border-radius);
+        font-weight: 400;
 
         @include media-breakpoint-up(md) {
-            @include button-size($btn-padding-y-lg, $btn-padding-x-lg, $font-size-lg, $btn-border-radius-lg);
+            @include button-size($btn-padding-y-lg, $btn-padding-x-lg, 1rem, $btn-border-radius-lg);
         }
     }
 }
