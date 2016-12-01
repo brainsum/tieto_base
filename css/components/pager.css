@@ -8,8 +8,12 @@
   list-style: none;
 }
 
-.pager li.next {
+.pager .next {
   float: right;
+}
+
+.pager .previous {
+  float: left;
 }
 
 .pager__items {
