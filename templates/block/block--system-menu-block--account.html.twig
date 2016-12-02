@@ -36,8 +36,10 @@
 {% extends "block--bare.html.twig" %}
 
 {% block content %}
-  <button type="button" class="navbar-toggler float-xs-right hidden-md-up" data-toggle="collapse" data-target="#accountMenu" aria-controls="accountMenu" aria-expanded="false" aria-label="{{ 'Toggle navigation'|t }}"></button>
-  <div id="accountMenu" class="collapse float-xs-right navbar-toggleable-sm">
-    {{ content }}
+  <div class="navbar-menu">
+    <button type="button" class="navbar-toggler float-xs-right hidden-md-up" data-toggle="collapse" data-target="#accountMenu" aria-controls="accountMenu" aria-expanded="false" aria-label="{{ 'Toggle navigation'|t }}"></button>
+    <div id="accountMenu" class="collapse float-xs-right navbar-toggleable-sm">
+      {{ content }}
+    </div>
   </div>
 {% endblock %}

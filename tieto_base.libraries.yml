@@ -3,6 +3,7 @@
 # ------------------------------------------------------------------------------
 
 global:
+  version: VERSION
   js:
     js/global.js: {}
   css:
@@ -49,6 +50,11 @@ global:
 # css/components/textarea.css: {}
 # css/components/ui-dialog.css: {}
 
+fancy-logo:
+  version: VERSION
+  css:
+    theme:
+      css/theme/fancy-logo.css: {}
 
 # ------------------------------------------------------------------------------
 # Overridden libraries
