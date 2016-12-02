@@ -59,27 +59,7 @@ global:
 # Extended libraries
 # ------------------------------------------------------------------------------
 
-# @todo ideally move this to a project subtheme (e.g. tieto_tmc_theme)
-focal_point.preview:
-  css:
-    theme:
-      css/components/focal-point.preview.css: {}
 
-media.gallery:
-  css:
-    theme:
-      css/theme/media.gallery.css: {}
-
-tmc.navigation:
-  css:
-    theme:
-      css/tmc/components/navigation.css: {}
-
-tmc.main-page-boxes:
-  css:
-    theme:
-      css/tmc/components/main-page-boxes.css: {}
-      
 # ------------------------------------------------------------------------------
 # External and Vendor libraries
 # ------------------------------------------------------------------------------

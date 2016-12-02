@@ -72,20 +72,6 @@ libraries-override:
         /core/themes/stable/css/system/components/tablesort.module.css: false
         /core/themes/stable/css/system/components/tree-child.module.css: css/components/tree-child.css
 
-  media/view:
-    css:
-      theme:
-        css/media.view.css: false
-
-# Replace just a part of a library asset.
-#
-# @see https://www.drupal.org/docs/8/theming-drupal-8/adding-stylesheets-css-and-javascript-js-to-a-drupal-8-theme#override-extend
-libraries-extend:
-  focal_point/drupal.focal_point_preview:
-    - tieto_base/focal_point.preview
-  media/view:
-    - tieto_base/media.gallery
-
 # Content and design related styles must be available in WYSIWYG editors too.
 #
 # @see https://www.drupal.org/docs/8/api/ckeditor-api
