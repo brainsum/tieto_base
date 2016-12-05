@@ -12,7 +12,9 @@
 }
 
 // Form labels.
-.form-control-label {
+// `<summary>` elements should have `display: list-item`.
+// @see reset.scss
+.form-control-label:not(summary) {
   font-weight: $label-font-weight;
   color: $label-color;
   cursor: pointer;
@@ -53,7 +55,7 @@
     margin-top: 0;
   }
 
-  .form-control-label {
+  .form-control-label:not(summary) {
     text-transform: uppercase;
     font-weight: $font-weight-normal;
   }

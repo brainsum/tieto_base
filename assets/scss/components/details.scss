@@ -13,7 +13,9 @@ details {
 
 summary {
   cursor: pointer;
-  // color: $link-color;
+  color: $label-color;
+  font-weight: bold;
+  text-transform: uppercase;
   padding: $component-padding-y $component-padding-x-sm;
   border-bottom: 2px solid $brand-primary;
 

@@ -375,6 +375,8 @@ function _tieto_base_inline_forms() {
     'views_exposed_form',
     'marketing_activity_marketing_activation_form_add_form',
     'marketing_activity_marketing_activation_form_edit_form',
+    'marketing_activity_marketo_support_form_add_form',
+    'marketing_activity_marketo_support_form_edit_form',
   ];
 }
 

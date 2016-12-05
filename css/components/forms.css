@@ -335,7 +335,7 @@ select.form-control-lg:not([size]):not([multiple]) {
   border-color: #e56385;
 }
 
-.form-control-label {
+.form-control-label:not(summary) {
   font-weight: 700;
   color: #7b7b7b;
   cursor: pointer;
@@ -343,7 +343,7 @@ select.form-control-lg:not([size]):not([multiple]) {
   display: inline-block;
 }
 
-.form-control-label.form-required::after {
+.form-control-label:not(summary).form-required::after {
   content: "*";
   color: #e56385;
   padding-left: .2rem;
@@ -371,7 +371,7 @@ select.form-control-lg:not([size]):not([multiple]) {
   margin-top: 0;
 }
 
-.form-inline .form-control-label {
+.form-inline .form-control-label:not(summary) {
   text-transform: uppercase;
   font-weight: 400;
 }
