@@ -278,3 +278,29 @@ $input-height-sm:                (($font-size-sm * $line-height-sm) + ($componen
 //
 
 $caret-color: $body-color;
+
+// Dropdowns
+//
+// Dropdown menu container and contents.
+
+// $dropdown-min-width:             10rem !default;
+$dropdown-padding-y: 0;
+$dropdown-margin-top: .5rem;
+$dropdown-bg: color(blue);
+$dropdown-border-color: transparent;
+$dropdown-border-width: 0;
+// $dropdown-divider-bg:            #e5e5e5 !default;
+// $dropdown-box-shadow:            0 .5rem 1rem rgba(0,0,0,.175) !default;
+
+$dropdown-link-color: #fff;
+$dropdown-link-hover-color: color(blue);
+$dropdown-link-hover-bg: #fff;
+
+$dropdown-link-active-color: color(blue);
+$dropdown-link-active-bg: #fff;
+
+// $dropdown-link-disabled-color:   $gray-light !default;
+
+// $dropdown-item-padding-x:        1.5rem !default;
+
+// $dropdown-header-color:          $gray-light !default;

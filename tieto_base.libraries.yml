@@ -26,6 +26,7 @@ global:
       css/components/breadcrumbs.css: {}
       css/components/tables.css: {}
       css/components/pager.css: {}
+      css/components/dropdown.css: {}
     state:
       css/state/animation.css: {}
     theme:
@@ -66,8 +67,8 @@ fancy-logo:
 
 # ------------------------------------------------------------------------------
 # External and Vendor libraries
-# ------------------------------------------------------------------------------
 # @see https://www.drupal.org/developing/api/8/assets#external
+# ------------------------------------------------------------------------------
 
 bootstrap:
   remote: https://github.com/twbs/bootstrap
@@ -76,8 +77,8 @@ bootstrap:
     name: MIT
     url: https://github.com/twbs/bootstrap/blob/v4-dev/LICENSE
     gpl-compatible: true
-  css:
-    base:
-      css/vendor/bootstrap.css: {}
+  js:
+    # @todo Use custom built Bootstrap. This is just a copy-paste version.
+    js/bootstrap.min.js: { minified: true }
   dependencies:
     - core/jquery

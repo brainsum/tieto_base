@@ -1,14 +1,8 @@
 import config from '../init';
 import gulp from 'gulp';
 import babel from 'gulp-babel';
-// import rollup from 'rollup';
 import sourcemaps from 'gulp-sourcemaps';
-import path from 'path';
 import util from 'gulp-util';
-
-// gulp.task('scripts:rollup', () => {
-//   return rollup();
-// });
 
 gulp.task('scripts', () => {
   gulp
@@ -21,7 +15,7 @@ gulp.task('scripts', () => {
     // Compile the scripts.
     .pipe(babel({
       sourceRoot: process.cwd(),
-      presets: [["es2015", {modules: false}]],
+      presets: ["es2015"],
       plugins: [
         // ["resolver", {
         //   resolveDirs: [

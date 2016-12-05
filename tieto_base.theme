@@ -389,11 +389,11 @@ function tieto_base_preprocess(&$variables, $hook) {
   // path of the current theme, so in sub-themes it will not work as expected.
   // @todo Should I use drupal_static here?
   global $base_path;
-  $base_directory = $base_path . drupal_get_path('theme', 'tieto_base');
-  $variables['base_directory'] = $base_directory;
-  $variables['templates'] = $base_directory . '/templates';
-  $variables['partials'] = $base_directory . '/templates/_partials';
-  $variables['images'] = $base_directory . '/img';
+  $base_theme_path = $base_path . drupal_get_path('theme', 'tieto_base');
+  $variables['base_theme_path'] = $base_theme_path;
+  $variables['templates'] = $base_theme_path . '/templates';
+  $variables['partials'] = $base_theme_path . '/templates/_partials';
+  $variables['images'] = $base_theme_path . '/img';
 
   // This will always refer to the default system theme.
   $variables['theme_path'] = $base_path . $variables['directory'];

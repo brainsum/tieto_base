@@ -15,7 +15,6 @@ export default {
     watch: './assets/scripts/**/*.js',
     entry: [
       './assets/scripts/global.js',
-      './assets/scripts/bootstrap.js',
     ],
     dest: './js'
   },
