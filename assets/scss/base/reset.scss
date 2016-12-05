@@ -21,3 +21,9 @@ label {
 legend {
   font-size: $font-size-base;
 }
+
+// Make <video> tags responsive by default.
+video {
+  max-width: 100%;
+  height: auto;
+}
