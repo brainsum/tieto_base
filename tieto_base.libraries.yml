@@ -64,6 +64,10 @@ fancy-logo:
 # Extended libraries
 # ------------------------------------------------------------------------------
 
+adminimal-admin-toolbar:
+  css:
+    theme:
+      css/theme/adminimal_admin_toolbar.css: {}
 
 # ------------------------------------------------------------------------------
 # External and Vendor libraries

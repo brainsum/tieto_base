@@ -72,6 +72,10 @@ libraries-override:
         /core/themes/stable/css/system/components/tablesort.module.css: false
         /core/themes/stable/css/system/components/tree-child.module.css: css/components/tree-child.css
 
+libraries-extend:
+  adminimal_admin_toolbar/adminimal-admin-toolbar:
+    - tieto_base/adminimal-admin-toolbar
+
 # Content and design related styles must be available in WYSIWYG editors too.
 #
 # @see https://www.drupal.org/docs/8/api/ckeditor-api
