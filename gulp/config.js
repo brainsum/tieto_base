@@ -1,4 +1,4 @@
-export default {
+module.exports = {
 
   // Paths
   styles: {
@@ -68,4 +68,4 @@ export default {
     watch: './builder/**/*',
     dest: './styleguide'
   }
-}
+};

@@ -1,19 +1,19 @@
-import gulp from 'gulp';
-import kss from 'kss';
-import config from '../init';
-import path from 'path';
-import concat from 'gulp-concat';
-import sequence from 'gulp-sequence';
+var config = require('../init');
+var gulp = require('gulp');
+var kss = require('kss');
+var path = require('path');
+var concat = require('gulp-concat');
+var sequence = require('gulp-sequence');
 
-gulp.task('kss', () => {
-  sequence(
+gulp.task('kss', function () {
+  return sequence(
     'styles',
     'kss:concat',
     'kss:generate'
   )();
 });
 
-gulp.task('kss:generate', () => {
+gulp.task('kss:generate', function () {
   return kss({
     title: 'Style Guide',
     source: config.styles.base,
@@ -24,13 +24,13 @@ gulp.task('kss:generate', () => {
   });
 });
 
-gulp.task('kss:concat', () => {
+gulp.task('kss:concat', function () {
   return gulp
     .src(config.styles.dest + '/**/*.css')
     .pipe(concat('style.css'))
     .pipe(gulp.dest(config.kss.dest));
 });
 
-gulp.task('kss:watch', () => {
+gulp.task('kss:watch', function () {
   gulp.watch([config.styles.watch, config.kss.watch], ['kss']);
 });

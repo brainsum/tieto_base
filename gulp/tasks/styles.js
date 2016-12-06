@@ -1,19 +1,19 @@
-import config from '../init';
-import gulp from 'gulp';
-import sass from 'gulp-sass';
-import cssnano from 'gulp-cssnano';
-import csscomb from 'gulp-csscomb';
-import sourcemaps from 'gulp-sourcemaps';
-import autoprefixer from 'gulp-autoprefixer';
-import util from 'gulp-util';
+var config = require('../init');
+var gulp = require('gulp');
+var sass = require('gulp-sass');
+var cssnano = require('gulp-cssnano');
+var csscomb = require('gulp-csscomb');
+var sourcemaps = require('gulp-sourcemaps');
+var autoprefixer = require('gulp-autoprefixer');
+var util = require('gulp-util');
 
 /**
  * Styles task.
  *
  * @todo Break into "styles:dev" and "styles:prod"?
  */
-gulp.task('styles', () => {
-  gulp
+gulp.task('styles', function () {
+  return gulp
     // Get these style assets...
     .src(config.styles.entry, { base: config.styles.base })
 

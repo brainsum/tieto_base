@@ -1,11 +1,12 @@
 // @todo move this to gulpfile and figure out how to load it in all tasks.
-import util from 'gulp-util';
-import extend from 'extend';
-import config from './config'
+var util = require('gulp-util');
+var extend = require('extend');
+var config = require('./config');
 
 // If a local config file exists, merge it into this config.
 try {
-  extend(true, config, require('./config.local.js').default);
+  extend(true, config, require('./config.local.js'));
+  module.exports = config;
 } catch (err) {
   console.warn(util.colors.yellow(`
     No local configuration found.
@@ -13,5 +14,3 @@ try {
     This is useful for settings which you don't want to commit, such as browserSync proxy.
   `));
 }
-
-export default config;

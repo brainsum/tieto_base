@@ -1,8 +1,8 @@
-import gulp from 'gulp';
-import config from './gulp/init';
-import extend from 'extend';
-import util from 'gulp-util';
-import requireDir from 'require-dir';
+var gulp = require('gulp');
+var config = require('./gulp/init');
+var extend = require('extend');
+var util = require('gulp-util');
+var requireDir = require('require-dir');
 
 requireDir('./gulp/tasks', { recurse: true });
 
