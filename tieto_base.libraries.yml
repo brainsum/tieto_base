@@ -57,6 +57,7 @@ fancy-logo:
   js:
     js/fancy-logo.js: {}
   dependencies:
+    - core/drupal
     - core/classList
     - tieto_base/requestAnimationFrame
 
