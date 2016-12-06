@@ -11,21 +11,16 @@ export default {
   },
 
   scripts: {
-    base: './assets/scripts',
-    watch: './assets/scripts/**/*.js',
+    base: './js',
+    watch: './js/**/*.js',
     entry: [
-      './assets/scripts/global.js',
+      './js/global.js',
     ],
     dest: './js'
   },
 
-  fonts: {
-    entry: './assets/fonts/**/*.{ttf,otf}',
-    dest: './fonts'
-  },
-
   images: {
-    entry: '/images/**/*.{jpg,jpeg,gif,png,svg}',
+    entry: './images/**/*.{jpg,jpeg,gif,png,svg}',
     dest: './images',
   },
 
