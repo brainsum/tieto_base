@@ -10,18 +10,19 @@ export default {
     dest: './css'
   },
 
-  scripts: {
-    base: './js',
-    watch: './js/**/*.js',
-    entry: [
-      './js/global.js',
-    ],
-    dest: './js'
-  },
+  // scripts: {
+  //   base: './js',
+  //   watch: './js/**/*.js',
+  //   entry: [
+  //     './js/global.js',
+  //   ],
+  //   dest: './js'
+  // },
 
   images: {
-    entry: './images/**/*.{jpg,jpeg,gif,png,svg}',
+    entry: './images',
     dest: './images',
+    formats: ['jpg', 'jpeg', 'gif', 'png', 'svg'],
   },
 
   // gulp-imagemin
@@ -63,7 +64,8 @@ export default {
   },
 
   kss: {
-    dest: './styleguide',
-    watch: './builder/**/*'
+    entry: './builder',
+    watch: './builder/**/*',
+    dest: './styleguide'
   }
 }
