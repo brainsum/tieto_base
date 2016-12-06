@@ -2,10 +2,10 @@ export default {
 
   // Paths
   styles: {
-    base: './assets/scss',
-    watch: './assets/scss/**/*.{sass,scss}',
+    base: './scss',
+    watch: './scss/**/*.{sass,scss}',
     entry: [
-      './assets/scss/**/*.{sass,scss}',
+      './scss/**/*.{sass,scss}',
     ],
     dest: './css'
   },
@@ -25,8 +25,8 @@ export default {
   },
 
   images: {
-    entry: '/assets/images/**/*.{jpg,jpeg,gif,png,svg}',
-    dest: './img',
+    entry: '/images/**/*.{jpg,jpeg,gif,png,svg}',
+    dest: './images',
   },
 
   // gulp-imagemin
@@ -47,7 +47,7 @@ export default {
     outputStyle: 'expanded',
     precision: 3,
     includePaths: [
-      process.cwd() + '/assets/scss/',
+      process.cwd() + '/scss/',
       process.cwd() + '/node_modules',
       process.cwd() + '/node_modules/normalize.css',
     ],
