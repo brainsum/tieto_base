@@ -3,9 +3,6 @@
 /**
  * @file
  * Code for Tieto Base theme.
- *
- * @todo This is all copied from Bootstrap Barrio. Refactor this!
- * @see https://www.drupal.org/project/bootstrap_barrio
  */
 
 use Drupal\Core\Template\Attribute;
