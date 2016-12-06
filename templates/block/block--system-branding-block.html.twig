@@ -17,7 +17,7 @@
 {% extends "block--bare.html.twig" %}
 
 {% block content %}
-  <a class="navbar-brand" href="{{ path('<front>') }}" title="{{ 'Home'|t }}" rel="home">
+  <a id="site-logo" class="navbar-brand" href="{{ path('<front>') }}" title="{{ 'Home'|t }}" rel="home">
     {% if site_logo %}
       <img src="{{ site_logo }}" alt="{{ site_name }}">
     {% else %}

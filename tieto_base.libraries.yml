@@ -54,6 +54,11 @@ fancy-logo:
   css:
     theme:
       css/theme/fancy-logo.css: {}
+  js:
+    js/fancy-logo.js: {}
+  dependencies:
+    - core/classList
+    - tieto_base/requestAnimationFrame
 
 # ------------------------------------------------------------------------------
 # Overridden libraries
@@ -86,3 +91,13 @@ bootstrap:
     js/bootstrap.min.js: { minified: true }
   dependencies:
     - core/jquery
+
+# @see http://paulirish.com/2011/requestanimationframe-for-smart-animating/
+# @see http://caniuse.com/#feat=requestanimationframe
+requestAnimationFrame:
+  remote: https://gist.github.com/paulirish/1579671
+  license:
+    name: MIT
+    gpl-compatible: true
+  js:
+    js/polyfill/requestAnimationFrame.js: { browsers: { IE: 'lte IE 9' } }

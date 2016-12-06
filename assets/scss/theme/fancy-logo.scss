@@ -8,10 +8,15 @@ $logo-transform: rotate(16.5deg) skew(-29deg);
 .navbar-brand {
   display: block;
   float: left;
-  padding-left: 18px;
+  position: fixed;
+  width: 100%;
+  z-index: 500;
+  // top: 0;
+  // left: 0;
+  padding: 18px 0 0 1rem;
 
   img {
-    margin: 1rem 0;
+    margin: 0;
   }
 
   &::after {
@@ -31,7 +36,7 @@ $logo-transform: rotate(16.5deg) skew(-29deg);
     height: 200px;
   }
 
-  &.not-fixed::after {
+  &:not(.fixed)::after {
     transition: width .2s, transform .2s ease .2s;
     transform: $logo-transform;
   }
@@ -41,17 +46,10 @@ $logo-transform: rotate(16.5deg) skew(-29deg);
     transform: rotate(0) skew(0) translate3d(60px, -40px, 0);
     width: 100%;
   }
+}
 
-  // Make horizontal bar and logo smaller on mobile
-  @include media-breakpoint-down(md) {
-    &::after {
-      top: -105px;
-    }
-
-    img {
-      width: 80px;
-      height: 53px;
-      margin: 0;
-    }
-  }
+.region__header .navbar-menu {
+  position: fixed;
+  z-index: 500;
+  right: 0;
 }
