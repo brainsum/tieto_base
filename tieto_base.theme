@@ -393,7 +393,7 @@ function tieto_base_preprocess(&$variables, $hook) {
   $variables['base_theme_path'] = $base_theme_path;
   $variables['templates'] = $base_theme_path . '/templates';
   $variables['partials'] = $base_theme_path . '/templates/_partials';
-  $variables['images'] = $base_theme_path . '/img';
+  $variables['images'] = $base_theme_path . '/images';
 
   // This will always refer to the default system theme.
   $variables['theme_path'] = $base_path . $variables['directory'];

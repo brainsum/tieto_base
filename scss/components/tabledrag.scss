@@ -39,7 +39,7 @@ a.tabledrag-handle:hover {
   text-decoration: none;
 }
 a.tabledrag-handle .handle {
-  background: url(../../img/787878/move.svg) no-repeat 6px 7px;
+  background: url(/core/misc/icons/787878/move.svg) no-repeat 6px 7px;
   height: 14px;
   margin: -0.2em 0.4em 0;
   padding: 0.42em 0.5em;
@@ -48,7 +48,7 @@ a.tabledrag-handle .handle {
 }
 a.tabledrag-handle:hover .handle,
 a.tabledrag-handle:focus .handle {
-  background-image: url(../../img/000000/move.svg);
+  background-image: url(/core/misc/icons/000000/move.svg);
 }
 .touchevents .draggable td {
   padding: 0 10px;
