@@ -1,1 +1,22 @@
-.region__header{margin-bottom:1rem}.region__footer{margin-top:2rem;padding:1rem 0;border-top:1px solid #62b3e5;line-height:50px}.footer__logo{float:right;height:50px}.page__title{margin-bottom:1.5rem;font-weight:700}
+.region__header {
+  margin-bottom: 1rem;
+}
+
+.region__footer {
+  padding: 1rem 0;
+  border-top: 1px solid #62b3e5;
+  line-height: 50px;
+  margin-top: 2rem;
+}
+
+.footer__logo {
+  float: right;
+  height: 50px;
+}
+
+.page__title {
+  font-weight: bold;
+  margin-bottom: 1.5rem;
+}
+
+/*# sourceMappingURL=regions.css.map */
