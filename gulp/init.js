@@ -6,7 +6,6 @@ var config = require('./config');
 // If a local config file exists, merge it into this config.
 try {
   extend(true, config, require('./config.local.js'));
-  module.exports = config;
 } catch (err) {
   console.warn(util.colors.yellow(`
     No local configuration found.
@@ -14,3 +13,5 @@ try {
     This is useful for settings which you don't want to commit, such as browserSync proxy.
   `));
 }
+
+module.exports = config;

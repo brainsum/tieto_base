@@ -4,9 +4,7 @@ module.exports = {
   styles: {
     base: './scss',
     watch: './scss/**/*.{sass,scss}',
-    entry: [
-      './scss/**/*.{sass,scss}',
-    ],
+    entry: './scss/**/*.{sass,scss}',
     dest: './css'
   },
 
