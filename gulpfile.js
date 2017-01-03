@@ -90,6 +90,25 @@ gulp.task('eslint', function () {
     .pipe(eslint.format());
 });
 
+// Uninstalls tieto_base and bootstrap, and enabled bartik and seven.
+gulp.task('theme:uninstall', shell.task([
+  'drush -y en bartik seven',
+  'drush -y cset system.theme default bartik',
+  'drush -y cset system.theme admin seven',
+  'drush -y pmu tieto_base',
+  'drush -y pmu bootstrap',
+  'drush cr'
+]));
+
+// Install tieto_base.
+gulp.task('theme:install', shell.task([
+  'drush -y en bootstrap tieto_base',
+  'drush -y cset system.theme default tieto_base',
+  'drush -y cset system.theme admin tieto_base',
+  'drush cr'
+]));
+
+// Reinstall tieto_base.
 gulp.task('theme:reinstall', shell.task([
   'drush -y cset system.theme default bootstrap',
   'drush -y pmu tieto_base',

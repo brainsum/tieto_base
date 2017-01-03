@@ -66,6 +66,11 @@
   color: #0065a0;
 }
 
+.tabs--header .dropdown.open .dropdown-toggle, .tabs--header .dropdown.open .dropdown-toggle:focus, .tabs--header .dropdown.open .dropdown-toggle:hover {
+  background-color: #fff;
+  color: #e56385;
+}
+
 .tabs--primary {
   border-bottom: 3px solid #62b3e5;
 }

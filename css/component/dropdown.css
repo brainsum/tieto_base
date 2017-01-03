@@ -139,3 +139,7 @@
   bottom: 100%;
   margin-bottom: 0.125rem;
 }
+
+.dropdown-item > a {
+  display: block;
+}

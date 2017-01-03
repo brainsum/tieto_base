@@ -1,2 +1,6 @@
 @import "index";
 @import "bootstrap/scss/dropdown";
+
+.dropdown-item > a {
+  display: block;
+}

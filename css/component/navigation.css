@@ -559,6 +559,10 @@
   margin-bottom: 0;
 }
 
+.navbar-nav {
+  float: right;
+}
+
 .navbar-nav .nav-link {
   padding-top: 1rem;
   padding-bottom: 1rem;

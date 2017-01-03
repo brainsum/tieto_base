@@ -19,9 +19,12 @@
   }
 }
 
-.navbar-nav .nav-link {
-  padding-top: $spacer;
-  padding-bottom: $spacer;
+.navbar-nav {
+  float: right;
+  .nav-link {
+    padding-top: $spacer;
+    padding-bottom: $spacer;
+  }
 }
 
 .navbar-toggler {

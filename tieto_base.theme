@@ -24,6 +24,22 @@ function tieto_base_preprocess_html(&$variables) {
 /**
  * Implements hook_preprocess_HOOK().
  */
+function tieto_base_preprocess_menu(&$variables) {
+  // If a menu link is expanded and has children, attach the dropdown library
+  // and exit the loop.
+  //
+  // @todo Move this somewhere, keep this file clean!
+  foreach ($variables['items'] as $key => $item) {
+    if ($item['is_expanded'] && !empty($item['below'])) {
+      $variables['#attached']['library'][] = 'bootstrap/dropdown';
+      break;
+    }
+  }
+}
+
+/**
+ * Implements hook_preprocess_HOOK().
+ */
 function tieto_base_preprocess_region__footer(&$variables) {
   // @todo Move to BootstrapSetting or something.
   // @see http://drupal-bootstrap.org/api/bootstrap/src%21Annotation%21BootstrapSetting.php/class/BootstrapSetting/8
@@ -37,14 +53,12 @@ function tieto_base_preprocess(&$variables, $hook) {
   // Attach path variables to the base theme for all templates.
   // Useful for including partials, because `directory` only refers to the
   // path of the current theme, so in sub-themes it will not work as expected.
-  // @todo Should I use drupal_static here?
+  //
+  // @todo Move this to @BootstrapPreprocess class or other!
   global $base_path;
   $base_theme_path = $base_path . drupal_get_path('theme', 'tieto_base');
   $variables['base_theme_path'] = $base_theme_path;
   $variables['templates'] = $base_theme_path . '/templates';
   $variables['partials'] = $base_theme_path . '/templates/_partials';
   $variables['images'] = $base_theme_path . '/images';
-
-  // This will always refer to the default system theme.
-  // $variables['theme_path'] = $base_path . $variables['directory'];
 }

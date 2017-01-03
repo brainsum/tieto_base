@@ -73,6 +73,14 @@
       color: $link-color;
     }
   }
+
+  .dropdown.open .dropdown-toggle {
+    @include plain-hover-focus {
+      background-color: #fff;
+      color: $link-active-color;
+    }
+  }
+
 }
 
 .tabs--primary {

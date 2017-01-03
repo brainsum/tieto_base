@@ -21,34 +21,41 @@
   We call a macro which calls itself to render the full tree.
   @see http://twig.sensiolabs.org/doc/tags/macro.html
 #}
-{{ menus.menu_links(items, attributes, 0) }}
+{{ menus.menu_links(items, attributes, 0, menu_name) }}
 
-{% macro menu_links(items, attributes, menu_level) %}
+{% macro menu_links(items, attributes, menu_level, menu_name) %}
   {% import _self as menus %}
   {% if items %}
     {% if menu_level == 0 %}
-      <ul{{ attributes.addClass('menu', 'nav') }}>
+      {% if menu_name %}
+        {% set attributes = attributes.setAttribute('id', menu_name ? 'menu-' ~ menu_name|clean_class) %}
+      {% endif %}
+      <ul{{ attributes.addClass('nav') }}>
     {% else %}
-      <ul{{ attributes.addClass('dropdown-menu') }}>
+      <ul class="dropdown-menu">
     {% endif %}
     {% for item in items %}
       {%
         set item_classes = [
-          'expanded',
-          'dropdown',
+          menu_level > 0 ? 'dropdown-item' : 'nav-item',
+          item.is_expanded and menu_level == 0 ? 'dropdown',
           item.in_active_trail ? 'active',
         ]
       %}
-      {% if menu_level == 0 and item.is_expanded %}
-        <li{{ item.attributes.addClass(item_classes) }}>
-        <a href="{{ item.url }}" class="dropdown-toggle" data-target="#" data-toggle="dropdown">{{ item.title }}</a>
-      {% else %}
-        <li{{ item.attributes.addClass(item_classes) }}>
-        {{ link(item.title, item.url) }}
-      {% endif %}
-      {% if item.below %}
-        {{ menus.menu_links(item.below, attributes.removeClass('nav'), menu_level + 1) }}
-      {% endif %}
+      <li{{ item.attributes.addClass(item_classes) }}>
+        {%
+          set link_classes = [
+            menu_level == 0 ? 'nav-link',
+            item.below ? 'dropdown-toggle',
+            item.in_active_trail ? 'active',
+          ]
+        %}
+        {% if item.below %}
+          {{ link(item.title, item.url, {'class': link_classes, 'data-target': '#', 'data-toggle': 'dropdown', 'aria-expanded': 'false', 'role': 'button'}) }}
+          {{ menus.menu_links(item.below, attributes, menu_level + 1) }}
+        {% else %}
+          {{ link(item.title, item.url, {'class': link_classes}) }}
+        {% endif %}
       </li>
     {% endfor %}
     </ul>
