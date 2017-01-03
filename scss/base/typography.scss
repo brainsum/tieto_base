@@ -1,6 +1,6 @@
 @import "index";
 @import "bootstrap/scss/type";
-
+@import "bootstrap/scss/list-group";
 /*
   Typography
 
@@ -47,3 +47,37 @@ h1 {
 
   Style guide 2.3.3.4
 */
+
+/**
+ * @todo Write styleguide from here. Follow Bootstrap's sections maybe.
+ */
+
+// Text
+p:last-child {
+  margin-bottom: 0;
+}
+
+// Lists
+ol, ul {
+  padding-left: 1.5em;
+  .popover &:last-child {
+    margin-bottom: 0;
+  }
+}
+
+.list-inline > li {
+  display: inline-block;
+
+  &:not(:last-child) {
+    margin-right: $list-inline-padding;
+  }
+}
+
+// Blockquotes
+blockquote {
+  font-style: italic;
+  font-size: $font-size-lg;
+  border-left: 4px solid color(grey);
+  color: color(grey);
+  padding: .5rem 1rem;
+}

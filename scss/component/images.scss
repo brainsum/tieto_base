@@ -1,0 +1,6 @@
+@import "index";
+@import "bootstrap/scss/images";
+
+.img-responsive {
+  @extend .img-fluid;
+}

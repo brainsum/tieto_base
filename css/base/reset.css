@@ -673,9 +673,11 @@ legend {
   font-size: 1rem;
 }
 
-video {
+video, img {
   max-width: 100%;
   height: auto;
 }
 
-/*# sourceMappingURL=reset.css.map */
+input, select, textarea {
+  box-sizing: border-box;
+}

@@ -1,7 +1,6 @@
 @import "index";
 
-.block-local-actions-block,
-.block-help {
+.block-local-actions-block {
   margin: $spacer 0;
 }
 
@@ -19,5 +18,16 @@
 
   .region-sidebar & {
     margin-bottom: $spacer;
+  }
+}
+
+.menu-account {
+  float: right;
+}
+
+.block-system-menu-blockfooter {
+  @include media-breakpoint-up(sm) {
+    display: inline-block;
+    margin-left: 1em;
   }
 }

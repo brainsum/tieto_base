@@ -1,4 +1,4 @@
-# tieto_base 
+# tietobootstrap
 Extendable, modern frontend experience for Tieto projects + styleguide based on KSS.
 
 ---
@@ -7,14 +7,14 @@ Extendable, modern frontend experience for Tieto projects + styleguide based on 
 
 For existing Drupal:
 
-1. Run `git clone https://github.com/gergelypap/tieto_base.git <project>/themes`
+1. Run `git clone https://github.com/gergelypap/tietobootstrap.git <project>/themes`
 2. Enable in admin Appearance page.
 
 If you have no Drupal and just want to develop:
 
 1. Run `composer create-project drupal-composer/drupal-project <project> --stability RC --no-interaction`
 2. `cd <project>`
-3. Run `git clone https://github.com/gergelypap/tieto_base.git web/themes`
+3. Run `git clone https://github.com/gergelypap/tietobootstrap.git web/themes`
 4. Enable in admin Appearance page.
 
 ## Build

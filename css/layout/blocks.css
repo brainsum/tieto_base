@@ -1,5 +1,4 @@
-.block-local-actions-block,
-.block-help {
+.block-local-actions-block {
   margin: 1rem 0;
 }
 
@@ -18,4 +17,13 @@
   margin-bottom: 1rem;
 }
 
-/*# sourceMappingURL=blocks.css.map */
+.menu-account {
+  float: right;
+}
+
+@media (min-width: 576px) {
+  .block-system-menu-blockfooter {
+    display: inline-block;
+    margin-left: 1em;
+  }
+}

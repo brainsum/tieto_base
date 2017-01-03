@@ -1,10 +1,10 @@
 name: Tieto Base
 description: 'Base theme for all Tieto sites, based on corporate styleguides.'
-package: BRAINSUM
+package: 'Bootstrap'
 type: theme
 core: 8.x
-version: 0.3
-# base theme: false
+version: 0.4
+base theme: bootstrap
 
 # These assets are loaded on every page.
 #
@@ -13,28 +13,27 @@ version: 0.3
 libraries:
   - tieto_base/global
 
-# Replace any library files, or even the whole library.
-# NOTE: Try to follow the original library names for easiness!
-#
-# @see https://www.drupal.org/docs/8/theming-drupal-8/adding-stylesheets-css-and-javascript-js-to-a-drupal-8-theme#override-extend
-# @todo Move the override/extend assets out of `components` directory?
-# @todo Grep for the removed classes in core, and replace all.
 libraries-override:
 
-  views/views.module:
-    css:
-      component:
-        css/views.module.css: css/components/views.module.css
+  system/admin: tieto_base/admin
 
-  core/drupal.vertical-tabs:
+  system/base:
     css:
       component:
-        misc/vertical-tabs.css: css/components/vertical-tabs.css
-
-  core/drupal.dropbutton:
-    css:
-      component:
-        misc/dropbutton/dropbutton.css: css/components/dropbutton.css
+        css/components/align.module.css: false
+        css/components/clearfix.module.css: false
+        css/components/details.module.css: css/component/details.css
+        css/components/fieldgroup.module.css: false
+        css/components/item-list.module.css: css/component/item-list.css
+        css/components/js.module.css: css/state/js.css
+        css/components/nowrap.module.css: false
+        css/components/position-container.module.css: false
+        css/components/progress.module.css: css/component/progress.css
+        css/components/reset-appearance.module.css: false
+        css/components/resize.module.css: false
+        css/components/sticky-header.module.css: false
+        css/components/tablesort.module.css: false
+        css/components/tree-child.module.css: css/component/tree-child.css
 
   node/drupal.node:
     css:
@@ -46,54 +45,58 @@ libraries-override:
       layout:
         css/node.module.css: css/layout/node.css
 
-  system/base:
-    css:
-      component:
-        css/components/ajax-progress.module.css: css/components/ajax-progress.css
-        css/components/align.module.css: false
-        css/components/autocomplete-loading.module.css: false
-        css/components/fieldgroup.module.css: false
-        css/components/container-inline.module.css: css/components/container-inline.css
-        css/components/clearfix.module.css: false
-        css/components/details.module.css: css/components/details.css
-        css/components/hidden.module.css: false
-        css/components/item-list.module.css: css/components/item-list.css
-        css/components/js.module.css: css/state/js.css
-        css/components/nowrap.module.css: false
-        css/components/position-container.module.css: false
-        css/components/progress.module.css: css/components/progress.css
-        css/components/reset-appearance.module.css: false
-        css/components/resize.module.css: false
-        css/components/sticky-header.module.css: false
-        css/components/tabledrag.module.css: css/components/tabledrag.css
-        css/components/tablesort.module.css: false
-        css/components/tree-child.module.css: css/components/tree-child.css
+  bootstrap/tooltip:
+    js:
+      js/tooltip.js: js/tooltip.js
+
+  bootstrap/drupal.ajax:
+    js:
+      js/misc/ajax.js: js/misc/ajax.js
 
 libraries-extend:
   adminimal_admin_toolbar/adminimal-admin-toolbar:
     - tieto_base/adminimal-admin-toolbar
+  bootstrap/dropdown:
+    - tieto_base/dropdown
+  bootstrap/popover:
+    - tieto_base/popover
+  bootstrap/drupal.tabledrag:
+    - tieto_base/drupal.tabledrag
+  bootstrap/modal:
+    - tieto_base/modal
+  bootstrap/drupal.ajax:
+    - tieto_base/drupal.ajax
+  core/jquery.ui.autocomplete:
+    - tieto_base/jquery.ui.autocomplete
+  field_ui/drupal.field_ui:
+    - tieto_base/drupal.field_ui
 
 # Content and design related styles must be available in WYSIWYG editors too.
 #
 # @see https://www.drupal.org/docs/8/api/ckeditor-api
 ckeditor_stylesheets:
   - css/base/reset.css
-  - css/base/elements.css
+  - css/base/code.css
   - css/base/fonts.css
+  - css/base/links.css
+  - css/base/palette.css
   - css/base/typography.css
-  - css/components/tables.css
-  - css/components/code.css
-  - css/components/images.css
+  - css/component/buttons.css
+  - css/component/helpers.css
+  - css/component/images.css
+  - css/component/tables.css
+  - css/theme/wysiwyg.css
 
 # These regions will show on Admin > Structure > Blocks.
 regions:
-  top: 'Page top'
-  header: 'Header'
-  breadcrumb: 'Breadcrumb'
-  highlighted: 'Highlighted'
   navigation: 'Navigation'
-  content: 'Content' # required!
-  sidebar_first: 'Sidebar (first)'
-  sidebar_second: 'Sidebar (second)'
+  navigation_collapsible: 'Navigation (Collapsible)'
+  header: 'Header'
+  highlighted: 'Highlighted'
+  help: 'Help'
+  content: 'Content'
+  sidebar_first: 'Primary'
+  sidebar_second: 'Secondary'
   footer: 'Footer'
-  bottom: 'Page bottom'
+  page_top: 'Page top'
+  page_bottom: 'Page bottom'

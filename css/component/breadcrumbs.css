@@ -1,0 +1,59 @@
+.breadcrumb {
+  padding: 0 0;
+  margin-bottom: 1rem;
+  list-style: none;
+  background-color: none;
+  border-radius: 0.25rem;
+}
+
+.breadcrumb::after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
+.breadcrumb-item {
+  float: left;
+}
+
+.breadcrumb-item + .breadcrumb-item::before {
+  display: inline-block;
+  padding-right: 0.5rem;
+  padding-left: 0.5rem;
+  color: #818a91;
+  content: "/";
+}
+
+.breadcrumb-item + .breadcrumb-item:hover::before {
+  text-decoration: underline;
+}
+
+.breadcrumb-item + .breadcrumb-item:hover::before {
+  text-decoration: none;
+}
+
+.breadcrumb-item.active {
+  color: #818a91;
+}
+
+/*
+  Breadcrumbs
+
+  Breadcrumbs are a useful to show the path the user is taken or to indicate the hierarchy. It shouldn't be the main navigational element but it can be used in different ways.
+
+  Style guide 4.6
+ */
+/*
+  Path
+
+  When showing the path the user has taken, allow the user to take a step back and highlight the steps as links.
+
+  Markup:
+    <nav class="breadcrumb">
+      <a class="breadcrumb-item" href="#">Home</a>
+      <a class="breadcrumb-item" href="#">Products</a>
+      <a class="breadcrumb-item" href="#">Plan & estimate & resource</a>
+    </nav>
+
+  Style guide 4.6.1
+ */

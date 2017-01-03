@@ -1,16 +1,6 @@
 # Vendor directories.
 node_modules/
 
-# Local configuration.
-gulp/config.local.js
-
-# Compiled assets.
-# Ideally, these will build on the server.
-# css/*
-# js/*
-# fonts/*
-# img/*
-
 # Generated style guide
 styleguide/*
 

@@ -43,13 +43,21 @@
 
   &.disabled,
   &:disabled {
-    &:focus {
-      background-color: $background;
-          border-color: $border;
+    &:focus,
+    &.focus {
+      background-color: $btn-disabled-bg;
+          border-color: $btn-disabled-border;
+          color: $btn-disabled-color;
+    }
+    @if $enable-shadows {
+      &:active {
+        box-shadow: none;
+      }
     }
     @include hover {
-      background-color: $background;
-          border-color: $border;
+      background-color: $btn-disabled-bg;
+          border-color: $btn-disabled-border;
+          color: $btn-disabled-color;
     }
   }
 }

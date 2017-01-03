@@ -26,225 +26,225 @@
 
 html,
 body {
-	height: 100%;
+    height: 100%;
 }
 
 .styleguide {
-	display: flex;
-	height: 100%;
+    display: flex;
+    height: 100%;
 
-	a {
-		&:focus {
-			outline: none;
-		}
-	}
+    a {
+        &:focus {
+            outline: none;
+        }
+    }
 
-	&__aside {
-		padding: 2rem;
-		width: calc(100% / 4);
-		background: #f8f8f8;
-		overflow-y: auto;
+    &__aside {
+        padding: 2rem;
+        width: calc(100% / 4);
+        background: #f8f8f8;
+        overflow-y: auto;
 
-		@media (min-width: 1580px) {
-			width: calc(100% / 5);
-		}
+        @media (min-width: 1580px) {
+            width: calc(100% / 5);
+        }
 
-		&__logo {
-			margin-top: -2rem;
-			margin-left: -2rem;
-		}
+        &__logo {
+            margin-top: -2rem;
+            margin-left: -2rem;
+        }
 
-		&__title {
-			margin-top: 3rem;
-			margin-bottom: 3rem;
-			font-size: 2.25rem;
-			text-align: center;
-		}
-	}
+        &__title {
+            margin-top: 3rem;
+            margin-bottom: 3rem;
+            font-size: 2.25rem;
+            text-align: center;
+        }
+    }
 
-	&__nav {
-		ul {
-			list-style: none;
-			padding: 0;
-			margin: 0;
+    &__nav {
+        ul {
+            list-style: none;
+            padding: 0;
+            margin: 0;
 
-			a {
-				display: inline-block;
-				white-space: nowrap;
-			}
+            a {
+                display: inline-block;
+                white-space: nowrap;
+            }
 
-			ul {
-				//display: none;
-				margin-left: .5rem;
-			}
+            ul {
+                //display: none;
+                margin-left: .5rem;
+            }
 
-			li {
-				position: relative;
-				padding: .5rem 1rem;
+            li {
+                position: relative;
+                padding: .5rem 1rem;
 
-				&.is-open {
-					> ul {
-						display: block;
-					}
-				}
-			}
-		}
+                &.is-open {
+                    > ul {
+                        display: block;
+                    }
+                }
+            }
+        }
 
-		> ul {
-			> li {
-				> a {
-					font-size: 1.5rem;
-				}
-			}
-		}
+        > ul {
+            > li {
+                > a {
+                    font-size: 1.5rem;
+                }
+            }
+        }
 
-		&-is-in-viewport {
-			color: color(red-dark) !important;
-		}
-	}
+        &-is-in-viewport {
+            color: color(red-dark) !important;
+        }
+    }
 
-	&__content {
-		padding: 2rem;
-		overflow-y: auto;
-		width: calc(100% / 4 * 3);
+    &__content {
+        padding: 2rem;
+        overflow-y: auto;
+        width: calc(100% / 4 * 3);
 
-		@media (min-width: 1580px) {
-			width: calc(100% / 5 * 4);
-		}
-	}
+        @media (min-width: 1580px) {
+            width: calc(100% / 5 * 4);
+        }
+    }
 
-	&__section {
-		margin-bottom: 3rem;
-	}
+    &__section {
+        margin-bottom: 3rem;
+    }
 
-	&__section--depth-4 {
-		+ {
-			.styleguide__section--depth-1,
-			.styleguide__section--depth-2,
-			.styleguide__section--depth-3 {
-				margin-top: 6rem;
-			}
-		}
-	}
+    &__section--depth-4 {
+        + {
+            .styleguide__section--depth-1,
+            .styleguide__section--depth-2,
+            .styleguide__section--depth-3 {
+                margin-top: 6rem;
+            }
+        }
+    }
 
-	&__section--depth-3 {
-		+ {
-			.styleguide__section--depth-1,
-			.styleguide__section--depth-2 {
-				margin-top: 6rem;
-			}
-		}
-	}
+    &__section--depth-3 {
+        + {
+            .styleguide__section--depth-1,
+            .styleguide__section--depth-2 {
+                margin-top: 6rem;
+            }
+        }
+    }
 
-	&__title {
-		margin-bottom: 1rem;
-	}
+    &__title {
+        margin-bottom: 1rem;
+    }
 
-	&__anchor {
-		display: inline-block;
-		margin-right: .25rem;
+    &__anchor {
+        display: inline-block;
+        margin-right: .25rem;
 
-		&,
-		&:visited {
-			color: color(grey-light);
-		}
+        &,
+        &:visited {
+            color: color(grey-light);
+        }
 
-		&:hover {
-			color: color(red);
-		}
-	}
+        &:hover {
+            color: color(red);
+        }
+    }
 
-	&__example {
-		padding: 1rem;
-		border: 1px solid #f9f9f9;
+    &__example {
+        padding: 1rem;
+        border: 1px solid #f9f9f9;
 
-		h4 {
-			margin-bottom: 1rem;
-			color: color(grey-dark);
-		}
-	}
+        h4 {
+            margin-bottom: 1rem;
+            color: color(grey-dark);
+        }
+    }
 
-	&__modifier {
-		&:not(:last-child) {
-			margin-bottom: 1rem;
-		}
-	}
+    &__modifier {
+        &:not(:last-child) {
+            margin-bottom: 1rem;
+        }
+    }
 
-	&__modifier-title {
-		margin-bottom: .5rem;
-	}
+    &__modifier-title {
+        margin-bottom: .5rem;
+    }
 
-	&__source {
-		margin-top: 1rem;
-		margin-bottom: .5rem;
-	}
+    &__source {
+        margin-top: 1rem;
+        margin-bottom: .5rem;
+    }
 
-	&__colors {
-		width: 100%;
-		table-layout: fixed;
+    &__colors {
+        width: 100%;
+        table-layout: fixed;
 
-		th,
-		td {
-			padding: 1rem;
-			text-align: center;
-		}
+        th,
+        td {
+            padding: 1rem;
+            text-align: center;
+        }
 
-		th {
-			text-transform: capitalize;
-			font-weight: 400;
-		}
+        th {
+            text-transform: capitalize;
+            font-weight: 400;
+        }
 
-		td {
-			color: #fff;
-		}
-	}
+        td {
+            color: #fff;
+        }
+    }
 
-	&__brand-colors {
-		tbody {
-			tr:nth-child(-n + 2) {
-				td {
-					color: $body-color;
-				}
-			}
-		}
-	}
+    &__brand-colors {
+        tbody {
+            tr:nth-child(-n + 2) {
+                td {
+                    color: $body-color;
+                }
+            }
+        }
+    }
 
-	&__grey-colors {
-		tbody {
-			tr {
-				td:nth-child(-n + 2) {
-					color: color(grey-darkest);
-				}
-			}
-		}
-	}
+    &__grey-colors {
+        tbody {
+            tr {
+                td:nth-child(-n + 2) {
+                    color: color(grey-darkest);
+                }
+            }
+        }
+    }
 }
 
 /**
  * prettyprint.js styling
  */
 pre.linenums {
-	overflow-x: hidden;
-	margin-bottom: 0;
+    overflow-x: hidden;
+    margin-bottom: 0;
 }
 
 ol.linenums {
-	overflow-x: auto;
-	margin: 1rem 0 0;
-	padding: 1rem 1rem .75rem;
-	list-style: none;
-	background: #f9f9f9;
-	border: 1px solid color(grey-lightest);
-	border-left: .25rem solid color(blue);
+    overflow-x: auto;
+    margin: 1rem 0 0;
+    padding: 1rem 1rem .75rem;
+    list-style: none;
+    background: #f9f9f9;
+    border: 1px solid color(grey-lightest);
+    border-left: .25rem solid color(blue);
 
-	li {
-		font-size: .75rem;
+    li {
+        font-size: .75rem;
 
-		code,
-		span {
-			vertical-align: middle;
-		}
-	}
+        code,
+        span {
+            vertical-align: middle;
+        }
+    }
 }
 
 /* SPAN elements with the classes below are added by prettyprint. */
@@ -265,13 +265,13 @@ ol.linenums {
 
 /* Use higher contrast and text-weight for printable form. */
 @media print, projection {
-	.str { color: #060 }
-	.kwd { color: #006; font-weight: bold }
-	.com { color: #600; font-style: italic }
-	.typ { color: #404; font-weight: bold }
-	.lit { color: #044 }
-	.pun, .opn, .clo { color: #440 }
-	.tag { color: #006; font-weight: bold }
-	.atn { color: #404 }
-	.atv { color: #060 }
+    .str { color: #060 }
+    .kwd { color: #006; font-weight: bold }
+    .com { color: #600; font-style: italic }
+    .typ { color: #404; font-weight: bold }
+    .lit { color: #044 }
+    .pun, .opn, .clo { color: #440 }
+    .tag { color: #006; font-weight: bold }
+    .atn { color: #404 }
+    .atv { color: #060 }
 }

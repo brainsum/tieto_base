@@ -7,50 +7,104 @@ global:
   css:
     base:
       css/base/reset.css: { weight: -10 }
-      css/base/elements.css: {}
-      css/base/typography.css: {}
+      css/base/code.css: {}
       css/base/fonts.css: {}
-      css/base/grid.css: {}
+      css/base/links.css: {}
+      css/base/palette.css: {}
+      css/base/typography.css: {}
     layout:
-      css/layout/regions.css: {}
+      css/layout/grid.css: {}
       css/layout/blocks.css: {}
       css/layout/node.css: {}
+      css/layout/regions.css: {}
+      css/layout/toolbar.css: {}
     component:
-      css/components/buttons.css: {}
-      css/components/forms.css: {}
-      css/components/code.css: {}
-      css/components/cards.css: {}
-      css/components/images.css: {}
-      css/components/navigation.css: {}
-      css/components/messages.css: {}
-      css/components/breadcrumbs.css: {}
-      css/components/tables.css: {}
-      css/components/pager.css: {}
-      css/components/dropdown.css: {}
+      css/component/breadcrumbs.css: {}
+      css/component/buttons.css: {}
+      css/component/cards.css: {}
+      css/component/forms.css: {}
+      css/component/helpers.css: {}
+      css/component/icon.css: {}
+      css/component/images.css: {}
+      css/component/messages.css: {}
+      css/component/navigation.css: {}
+      css/component/pager.css: {}
+      css/component/tables.css: {}
+      css/component/tabs.css: {}
     state:
       css/state/animation.css: {}
     theme:
-      css/theme/helpers.css: {}
       css/theme/print.css: { media: print }
+  dependencies:
+    - tieto_base/bootstrap-scripts
+
+# Copied and rewritten from Seven
+admin:
+  version: VERSION
+  css:
+    layout:
+      css/admin/system.admin.css: {}
+    component:
+      css/admin/admin-list.css: {}
+
+tabs-toggle:
+  version: VERSION
+  js:
+    js/tabs-toggle.js: {}
+  dependencies:
+    - core/matchmedia
+    - core/jquery
+    - core/drupal
+    - core/jquery.once
+    - core/drupal.debounce
+
+drupal.collapse:
+  js:
+    /core/misc/details-aria.js: {}
+    # collapse.js will be replaced by Bootstrap's version.
+    # @see \Drupal\tieto_base\Plugin\Alter\LibraryInfo::alter
+    # @see https://www.drupal.org/node/2840414
+    /core/misc/collapse.js: {}
+  dependencies:
+    - core/jquery
+    - core/modernizr
+    - core/drupal
+    - core/drupal.form
+    - core/jquery.once
+
+# @todo use custom build.
+bootstrap-scripts:
+  version: 4.0.0-alpha5
+  js:
+    js/tether.min.js: {}
+    js/bootstrap.min.js: {}
+  dependencies:
+    - core/jquery
 
 # @todo Check these:
-# css/components/action-links.css: {}
-# css/components/collapse-processed.css: {}
-# css/components/exposed-filters.css: {}
-# css/components/field.css: {}
-# css/components/icons.css: {}
-# css/components/inline-form.css: {}
-# css/components/link.css: {}
-# css/components/links.css: {}
-# css/components/menu.css: {}
-# css/components/more-link.css: {}
-# css/components/tableselect.css: {}
-# css/components/tabs.css: {}
-# css/components/textarea.css: {}
-# css/components/ui-dialog.css: {}
+# css/component/action-links.css: {}
+# css/component/collapse-processed.css: {}
+# css/component/exposed-filters.css: {}
+# css/component/field.css: {}
+# css/component/icons.css: {}
+# css/component/inline-form.css: {}
+# css/component/link.css: {}
+# css/component/links.css: {}
+# css/component/menu.css: {}
+# css/component/more-link.css: {}
+# css/component/tableselect.css: {}
+# css/component/tabs.css: {}
+# css/component/textarea.css: {}
+# css/component/ui-dialog.css: {}
 
+# ------------------------------------------------------------------------------
+# Extras
+# ------------------------------------------------------------------------------
+
+# Fancy Logo
+# Skewed Tieto logo, which transforms into a full-width nav when scrolling down.
 fancy-logo:
-  version: VERSION
+  version: 1.0
   css:
     theme:
       css/theme/fancy-logo.css: {}
@@ -62,36 +116,65 @@ fancy-logo:
     - tieto_base/requestAnimationFrame
 
 # ------------------------------------------------------------------------------
-# Overridden libraries
+# Overridden
 # ------------------------------------------------------------------------------
 
 
 # ------------------------------------------------------------------------------
-# Extended libraries
+# Extends
 # ------------------------------------------------------------------------------
 
 adminimal-admin-toolbar:
+  version: VERSION
   css:
     theme:
-      css/theme/adminimal_admin_toolbar.css: {}
+      css/theme/adminimal-admin-toolbar.css: {}
+
+dropdown:
+  version: VERSION
+  css:
+    component:
+      css/component/dropdown.css: {}
+
+popover:
+  version: VERSION
+  css:
+    component:
+      css/component/popover.css: {}
+
+jquery.ui.autocomplete:
+  version: VERSION
+  css:
+    theme:
+      css/theme/ui.autocomplete.css: {}
+
+drupal.tabledrag:
+  version: VERSION
+  css:
+    component:
+      css/component/tabledrag.css: {}
+
+drupal.field_ui:
+  version: VERSION
+  css:
+    theme:
+      css/theme/field_ui.admin.css: {}
+
+modal:
+  version: VERSION
+  css:
+    component:
+      css/component/modal.css: {}
+
+drupal.ajax:
+  version: VERSION
+  css:
+    component:
+      css/component/ajax-progress.css: {}
 
 # ------------------------------------------------------------------------------
-# External and Vendor libraries
-# @see https://www.drupal.org/developing/api/8/assets#external
+# Polyfills & Shims
 # ------------------------------------------------------------------------------
-
-bootstrap:
-  remote: https://github.com/twbs/bootstrap
-  version: "4.0-alpha5"
-  license:
-    name: MIT
-    url: https://github.com/twbs/bootstrap/blob/v4-dev/LICENSE
-    gpl-compatible: true
-  js:
-    # @todo Use custom built Bootstrap. This is just a copy-paste version.
-    js/bootstrap.min.js: { minified: true }
-  dependencies:
-    - core/jquery
 
 # @see http://paulirish.com/2011/requestanimationframe-for-smart-animating/
 # @see http://caniuse.com/#feat=requestanimationframe

@@ -12,7 +12,8 @@
 }
 
 .navbar-brand::after {
-  transform: rotate(16.5deg) skew(-29deg);
+  -webkit-transform: rotate(16.5deg) skew(-29deg);
+          transform: rotate(16.5deg) skew(-29deg);
   will-change: transform, width;
   background: #62b3e5;
   content: " ";
@@ -26,13 +27,21 @@
 }
 
 .navbar-brand:not(.fixed)::after {
+  -webkit-transition: width .2s, -webkit-transform .2s ease .2s;
+  transition: width .2s, -webkit-transform .2s ease .2s;
   transition: width .2s, transform .2s ease .2s;
-  transform: rotate(16.5deg) skew(-29deg);
+  transition: width .2s, transform .2s ease .2s, -webkit-transform .2s ease .2s;
+  -webkit-transform: rotate(16.5deg) skew(-29deg);
+          transform: rotate(16.5deg) skew(-29deg);
 }
 
 .navbar-brand.fixed::after {
+  -webkit-transition: width .2s ease .2s, -webkit-transform .2s;
+  transition: width .2s ease .2s, -webkit-transform .2s;
   transition: transform .2s, width .2s ease .2s;
-  transform: rotate(0) skew(0) translate3d(60px, -40px, 0);
+  transition: transform .2s, width .2s ease .2s, -webkit-transform .2s;
+  -webkit-transform: rotate(0) skew(0) translate3d(60px, -40px, 0);
+          transform: rotate(0) skew(0) translate3d(60px, -40px, 0);
   width: 100%;
 }
 
@@ -41,5 +50,3 @@
   z-index: 500;
   right: 0;
 }
-
-/*# sourceMappingURL=fancy-logo.css.map */

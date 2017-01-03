@@ -1,22 +1,48 @@
-.region__header {
-  margin-bottom: 1rem;
-}
-
-.region__footer {
+.footer {
   padding: 1rem 0;
-  border-top: 1px solid #62b3e5;
+  border-top: 1px solid #d2d2d2;
   line-height: 50px;
   margin-top: 2rem;
+  text-align: center;
+  font-size: 0.875rem;
+  color: #999999;
 }
 
-.footer__logo {
-  float: right;
+.footer a {
+  color: #999999;
+}
+
+.footer a:hover {
+  text-decoration: underline;
+}
+
+@media (min-width: 576px) {
+  .footer {
+    text-align: left;
+  }
+}
+
+.footer-logo {
   height: 50px;
 }
 
-.page__title {
+@media (min-width: 576px) {
+  .footer-logo {
+    float: right;
+  }
+}
+
+.page-header {
   font-weight: bold;
   margin-bottom: 1.5rem;
 }
 
-/*# sourceMappingURL=regions.css.map */
+.region-help > .glyphicon {
+  font-size: 1.25rem;
+  float: left;
+  margin: -0.05em 0.5em 0 0;
+}
+
+.region-help .block {
+  overflow: hidden;
+}

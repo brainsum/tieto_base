@@ -143,6 +143,8 @@ $component-padding-y-lg:               .5rem;
 
 $navbar-border-radius: 0;
 
+$navbar-brand-padding-y: 1rem;
+
 $navbar-padding-x: 0;
 $navbar-padding-y: 0;
 
@@ -156,7 +158,10 @@ $navbar-dark-hover-color:           rgba(255,255,255,1);
 $nav-tabs-border-width: 0;
 $nav-tabs-active-link-hover-color: #fff;
 $nav-tabs-active-link-hover-bg: $brand-primary;
-$tabs-box-shadow: 0 -1px 2px 0 rgba(0, 0, 0, .1);
+
+$nav-pills-border-radius: 0;
+// $nav-pills-active-link-color: #fff;
+// $nav-pills-active-link-bg: $brand-primary;
 
 // Pagination
 
@@ -166,7 +171,7 @@ $pagination-padding-y:                .25rem;
 $breadcrumb-padding-y: 0;
 $breadcrumb-padding-x: 0;
 $breadcrumb-bg: none;
-$breadcrumb-divider: ">"; // @fixme
+$breadcrumb-divider: "/"; // @fixme
 
 // Alerts
 //
@@ -284,20 +289,20 @@ $caret-color: $body-color;
 // Dropdown menu container and contents.
 
 // $dropdown-min-width:             10rem !default;
-$dropdown-padding-y: 0;
-$dropdown-margin-top: .5rem;
-$dropdown-bg: color(blue);
-$dropdown-border-color: transparent;
-$dropdown-border-width: 0;
+// $dropdown-padding-y: 0;
+// $dropdown-margin-top: .5rem;
+// $dropdown-bg: color(blue);
+// $dropdown-border-color: transparent;
+// $dropdown-border-width: 0;
 // $dropdown-divider-bg:            #e5e5e5 !default;
 // $dropdown-box-shadow:            0 .5rem 1rem rgba(0,0,0,.175) !default;
 
-$dropdown-link-color: #fff;
-$dropdown-link-hover-color: color(blue);
-$dropdown-link-hover-bg: #fff;
+// $dropdown-link-color: #fff;
+// $dropdown-link-hover-color: color(blue);
+// $dropdown-link-hover-bg: #fff;
 
-$dropdown-link-active-color: color(blue);
-$dropdown-link-active-bg: #fff;
+// $dropdown-link-active-color: color(blue);
+// $dropdown-link-active-bg: #fff;
 
 // $dropdown-link-disabled-color:   $gray-light !default;
 

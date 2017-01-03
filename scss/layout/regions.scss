@@ -3,23 +3,48 @@
 //
 @import "index";
 
-.region__header {
-  margin-bottom: $spacer;
-}
-
-.region__footer {
+.footer {
   padding: $spacer 0;
-  border-top: 1px solid $brand-primary;
+  border-top: 1px solid color(grey-light);
   line-height: 50px;
   margin-top: 2 * $spacer;
+  text-align: center;
+  font-size: $font-size-sm;
+  color: color(grey);
+
+  a {
+    color: color(grey);
+    @include hover {
+      text-decoration: underline;
+    }
+  }
+
+  @include media-breakpoint-up(sm) {
+    text-align: left;
+  }
 }
 
-.footer__logo {
-  float: right;
+.footer-logo {
   height: 50px;
+
+  @include media-breakpoint-up(sm) {
+    float: right;
+  }
 }
 
-.page__title {
+.page-header {
   font-weight: bold;
   margin-bottom: 1.5rem;
+}
+
+// Help region.
+.region-help {
+  > .glyphicon {
+    font-size: $font-size-lg;
+    float: left;
+    margin: -0.05em 0.5em 0 0;
+  }
+  .block {
+    overflow: hidden;
+  }
 }

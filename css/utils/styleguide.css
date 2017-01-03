@@ -24,6 +24,7 @@ body {
 }
 
 .styleguide {
+  display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
   height: 100%;
@@ -307,5 +308,3 @@ ol.linenums li span {
     color: #060;
   }
 }
-
-/*# sourceMappingURL=styleguide.css.map */
