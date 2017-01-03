@@ -98,4 +98,6 @@ gulp.task('theme:reinstall', shell.task([
 ]));
 
 gulp.task('lint', ['csscomb', 'eslint']);
+gulp.task('build', ['sass', 'csscomb', 'eslint']);
+
 gulp.task('default', ['sass']);

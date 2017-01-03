@@ -1,9 +1,9 @@
 name: Tieto Base
-description: 'Base theme for all Tieto sites, based on corporate styleguides.'
+description: 'A Drupal 8 base theme for Tieto projects, based on corporate styleguides.'
 package: 'Bootstrap'
 type: theme
 core: 8.x
-version: 0.4
+version: 8.x-1.0-alpha1
 base theme: bootstrap
 
 # These assets are loaded on every page.

@@ -1,0 +1,31 @@
+{
+    "name": "drupal/tieto_base",
+    "description": "A Drupal 8 base theme for Tieto projects, based on corporate styleguides.",
+    "version": "1.0.0-alpha1",
+    "license": "GPL-2.0+",
+    "homepage": "http://tietobase.brainsum.com/",
+    "type": "drupal-theme",
+    "minimum-stability": "dev",
+    "authors": [
+        {
+            "name": "Gergely Pap (gpap)",
+            "email": "gpap@brainsum.com",
+            "homepage": "https://www.drupal.org/u/gpap",
+            "role": "Maintainer"
+        },
+        {
+            "name": "Dániel Décsi (danieldecsi)",
+            "email": "d@niel.hu",
+            "homepage": "https://www.drupal.org/u/danieldecsi",
+            "role": "Co-maintainer"
+        }
+    ],
+    "support": {
+        "docs": "http://tietobase.brainsum.com",
+        "issues": "https://github.com/brainsum/tieto_base/issues",
+        "source": "https://github.com/brainsum/tieto_base"
+    },
+    "require": {
+        "drupal/bootstrap": "~3.1"
+    }
+}
