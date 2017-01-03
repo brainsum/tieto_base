@@ -75,6 +75,7 @@ gulp.task('sass', function () {
     .pipe(gulp.dest('css'));
 });
 
+// @see https://www.drupal.org/node/1887862 [CSS Guidelines]
 gulp.task('csscomb', function () {
   return gulp
     .src('css/**/*.css')
