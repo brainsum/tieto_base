@@ -33,6 +33,7 @@ tr.add-new .tabledrag-changed {
 .tabledrag-changed-warning {
   margin: 0;
   overflow: hidden;
+  clear: both;
 }
 .tabledrag-handle {
   color: $gray-light;
