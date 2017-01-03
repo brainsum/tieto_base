@@ -2,7 +2,7 @@
 
 namespace Drupal\tieto_base\Plugin\Preprocess;
 
-use Drupal\bootstrap\Plugin\Preprocess\PreprocessBase;
+use Drupal\tieto_base\Plugin\Preprocess\PreprocessBase;
 use Drupal\bootstrap\Plugin\Preprocess\PreprocessInterface;
 use Drupal\bootstrap\Annotation\BootstrapPreprocess;
 use Drupal\bootstrap\Bootstrap;

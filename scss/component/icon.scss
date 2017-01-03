@@ -28,8 +28,8 @@ a {
 // @todo Replace this with SVG icons!
 
 $bootstrap-sass-asset-helper: false;
-$icon-font-path: "../../fonts/" !default;
-$icon-font-name: "glyphicons-halflings-regular" !default;
-$icon-font-svg-id: "glyphicons_halflingsregular" !default;
+$icon-font-path: "../../fonts/";
+$icon-font-name: "glyphicons-halflings-regular";
+$icon-font-svg-id: "glyphicons_halflingsregular";
 
 @import "glyphicons";
