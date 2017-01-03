@@ -1,0 +1,20 @@
+<?php
+
+/**
+ * @file
+ * Install and update hooks for Tieto Base.
+ *
+ * @todo This is not working until https://www.drupal.org/node/2652542 is done.
+ */
+
+/**
+ * Implements hook_install().
+ */
+function tieto_base_install() {
+  // Set the active theme and admin theme.
+  // $theme_handler = \Drupal::service('theme_handler');
+  // $theme_handler->configFactory->getEditable('system.theme')
+  //   ->set('default', 'tieto_base')
+  //   ->set('admin', NULL)
+  //   ->save();
+}

@@ -94,6 +94,7 @@ gulp.task('theme:reinstall', shell.task([
   'drush -y pmu tieto_base',
   'drush -y en tieto_base',
   'drush -y cset system.theme default tieto_base',
+  'drush -y cset system.theme admin 0',
   'drush cr'
 ]));
 
