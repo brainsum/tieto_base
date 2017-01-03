@@ -39,6 +39,7 @@
         set item_classes = [
           menu_level > 0 ? 'dropdown-item' : 'nav-item',
           item.is_expanded and menu_level == 0 ? 'dropdown',
+          menu_name == 'footer' ? 'dropup',
           item.in_active_trail ? 'active',
         ]
       %}

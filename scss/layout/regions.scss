@@ -6,11 +6,18 @@
 .footer {
   padding: $spacer 0;
   border-top: 1px solid color(grey-light);
-  line-height: 50px;
   margin-top: 2 * $spacer;
   text-align: center;
   font-size: $font-size-sm;
   color: color(grey);
+
+  .block {
+    padding: $spacer 0;
+  }
+
+  .dropdown-menu {
+    font-size: $font-size-sm;
+  }
 
   a {
     color: color(grey);
