@@ -293,6 +293,12 @@ a.disabled, fieldset[disabled] a {
   }
 }
 
+// Anchor buttons next to each other must get a margin.
+a.btn + a.btn,
+a.button + a.button {
+  margin-left: .5rem;
+}
+
 /*
   Block buttons
 
