@@ -71,15 +71,9 @@
         {{ page.navigation }}
       {% endblock %}
 
-      {% if page.navigation_collapsible %}
-        {% block navigation_collapsible %}
-          {# @todo Make the responsive menu configurable #}
-          <button type="button" class="navbar-toggler hidden-md-up" data-toggle="collapse" data-target="#navbarCollapse" aria-controls="navbarCollapse" aria-expanded="false" aria-label="{{ 'Toggle navigation'|t }}"></button>
-          <div id="navbarCollapse" class="navbar-collapse navbar-toggleable-sm collapse">
-            {{ page.navigation_collapsible }}
-          </div>
-        {% endblock %}
-      {% endif %}
+      {% block navigation_collapsible %}
+        {{ page.navigation_collapsible }}
+      {% endblock %}
 
       {% if not navbar_attributes.inner_container %}
         </div>

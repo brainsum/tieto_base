@@ -14,4 +14,12 @@
  * @see template_preprocess_region()
  */
 #}
-{% extends 'region-bare.html.twig' %}
+{% extends 'region.html.twig' %}
+
+{% block content %}
+  {# @todo Make the responsive menu configurable #}
+  <button type="button" class="navbar-toggler hidden-md-up" data-toggle="collapse" data-target="#navbarCollapse" aria-controls="navbarCollapse" aria-expanded="false" aria-label="{{ 'Toggle navigation'|t }}"></button>
+  <div id="navbarCollapse" class="navbar-collapse navbar-toggleable-sm collapse">
+    {{ content }}
+  </div>
+{% endblock %}

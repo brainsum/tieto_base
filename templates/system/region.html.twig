@@ -22,6 +22,8 @@
 %}
 {% if content %}
   <div{{ attributes.addClass(classes) }}>
-    {{ content }}
+    {% block content %}
+      {{ content }}
+    {% endblock %}
   </div>
 {% endif %}

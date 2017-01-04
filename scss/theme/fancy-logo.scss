@@ -5,6 +5,10 @@
 
 $logo-transform: rotate(16.5deg) skew(-29deg);
 
+.navbar {
+  background: 0;
+}
+
 .fancy-logo {
   position: fixed;
   width: 100%;
@@ -51,17 +55,6 @@ $logo-transform: rotate(16.5deg) skew(-29deg);
   margin: 18px 1rem;
 }
 
-.navbar-collapse {
-  clear: both;
-  margin: .5rem;
-
-  @include media-breakpoint-down(md) {
-    margin: 1rem;
-    padding: .5rem 1rem;
-    background: $brand-primary;
-  }
-}
-
 @include media-breakpoint-down(md) {
   .navbar-nav {
     .nav-link {
@@ -70,22 +63,28 @@ $logo-transform: rotate(16.5deg) skew(-29deg);
   }
 }
 
-.navbar .header-menu-wrapper {
+.region-navigation-collapsible {
   position: fixed;
   z-index: 2;
   right: 0;
   top: 0;
+
+  .navbar-collapse {
+    clear: both;
+    margin: .5rem;
+
+    @include media-breakpoint-down(md) {
+      margin: 1rem;
+      background: $brand-primary;
+    }
+  }
 }
 
-.fancy-logo, .navbar .header-menu-wrapper {
-  // Fix for admin menu
+// Fix for admin menu
+.fancy-logo, .region-navigation-collapsible {
   .toolbar-fixed & {
     top: $admin-toolbar-height;
   }
-
-  // .toolbar-vertical:not(.toolbar-fixed) & {
-  //   top: $admin-toolbar-height;
-  // }
 
   .toolbar-horizontal.toolbar-tray-open & {
     top: 2 * $admin-toolbar-height;
