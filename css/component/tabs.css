@@ -55,13 +55,18 @@
   clear: both;
 }
 
-.tabs--header .nav-link {
+.tabs--header .nav-item .nav-link {
   background-color: #cce5f4;
   color: #0065a0;
   padding: .5em 2em;
 }
 
-.tabs--header .nav-link.is-active {
+.tabs--header .nav-item .nav-link:focus, .tabs--header .nav-item .nav-link:hover {
+  background-color: #fff;
+  color: #0065a0;
+}
+
+.tabs--header .nav-item .nav-link.is-active {
   background-color: #fff;
   color: #0065a0;
 }

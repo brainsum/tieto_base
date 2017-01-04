@@ -63,16 +63,23 @@
 .tabs--header {
   clear: both;
 
-  .nav-link {
+
+  .nav-item .nav-link {
     background-color: color(blue-lightest);
     color: $link-color;
     padding: .5em 2em;
+
+    @include hover-focus {
+      background-color: #fff;
+      color: $link-color;
+    }
 
     &.is-active {
       background-color: #fff;
       color: $link-color;
     }
   }
+
 
   .dropdown.open .dropdown-toggle {
     @include plain-hover-focus {
