@@ -523,6 +523,10 @@ select.form-control-lg:not([size]):not([multiple]), .input-group-lg > select.for
   display: block;
 }
 
+.form-check-input:only-child {
+  margin-right: .5rem;
+}
+
 .fieldgroup {
   margin-bottom: 1rem;
 }

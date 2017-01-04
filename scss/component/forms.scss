@@ -87,6 +87,9 @@
   display: block;
 }
 
+.form-check-input:only-child {
+  margin-right: .5rem;
+}
 // .form-check-label {
 //   user-select: none;
 // }
