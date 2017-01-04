@@ -65,7 +65,4 @@ function tieto_base_preprocess(&$variables, $hook) {
     'partials' => $base_theme_path . '/templates/_partials',
     'images' => $base_theme_path . '/images',
   ];
-
-  // Fix relative path to default theme.
-  $variables['theme_path'] = base_path() . $variables['directory'];
 }
