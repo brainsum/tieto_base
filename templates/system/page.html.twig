@@ -55,32 +55,33 @@
  * @see template_preprocess_page()
  * @see html.html.twig
  */
+
+@todo Simplify this file!
+
 #}
-{% set container = theme.settings.fluid_container ? 'container-fluid' : 'container' %}
 {# Navbar #}
 {% if page.navigation or page.navigation_collapsible %}
   {% block navbar %}
-    {%
-      set navbar_classes = [
-        'navbar',
-        theme.settings.navbar_inverse ? 'navbar-dark',
-        theme.settings.navbar_position ? 'navbar-' ~ theme.settings.navbar_position|clean_class : container,
-      ]
-    %}
-    <header{{ navbar_attributes.addClass(navbar_classes) }} id="navbar" role="banner">
-      {% if not navbar_attributes.hasClass('container') %}
-        <div class="{{ container }}">
+    <header{{ navbar_attributes }} id="navbar" role="banner">
+      {% if navbar_attributes.inner_container %}
+        <div class="{{ container_class }}">
       {% endif %}
 
-      {{ page.navigation }}
-      {# .btn-navbar is used as the toggle for collapsed navbar content #}
+      {% block navigation %}
+        {{ page.navigation }}
+      {% endblock %}
+
       {% if page.navigation_collapsible %}
-        <button type="button" class="navbar-toggler hidden-md-up" data-toggle="collapse" data-target="#navbarCollapse" aria-controls="navbarCollapse" aria-expanded="false" aria-label="{{ 'Toggle navigation'|t }}"></button>
-        <div id="navbarCollapse" class="navbar-collapse navbar-toggleable-sm collapse">
-          {{ page.navigation_collapsible }}
-        </div>
+        {% block navigation_collapsible %}
+          {# @todo Make the responsive menu configurable #}
+          <button type="button" class="navbar-toggler hidden-md-up" data-toggle="collapse" data-target="#navbarCollapse" aria-controls="navbarCollapse" aria-expanded="false" aria-label="{{ 'Toggle navigation'|t }}"></button>
+          <div id="navbarCollapse" class="navbar-collapse navbar-toggleable-sm collapse">
+            {{ page.navigation_collapsible }}
+          </div>
+        {% endblock %}
       {% endif %}
-      {% if not navbar_attributes.hasClass('container') %}
+
+      {% if not navbar_attributes.inner_container %}
         </div>
       {% endif %}
     </header>
@@ -89,7 +90,7 @@
 
 {# Main #}
 {% block main %}
-  <main role="main" class="{{ container }} js-quickedit-main-content">
+  <main role="main" class="{{ container_class }} js-quickedit-main-content">
     <div class="row">
 
       {# Header #}

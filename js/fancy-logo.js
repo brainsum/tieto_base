@@ -4,12 +4,12 @@
  * throttling to prevent too many function calls.
  */
 
-(function (Drupal, window, document) {
+(function (Drupal) {
   'use strict';
 
   var latestKnownScrollY = 0;
   var ticking = false;
-  var logo = document.querySelector('#site-logo');
+  var logo = document.querySelector('.fancy-logo');
   var toggleClass = 'fixed';
 
   function update() {
@@ -37,4 +37,4 @@
     }
   };
 
-})(Drupal, window, document);
+})(Drupal);

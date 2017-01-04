@@ -55,10 +55,17 @@ function tieto_base_preprocess(&$variables, $hook) {
   // path of the current theme, so in sub-themes it will not work as expected.
   //
   // @todo Move this to @BootstrapPreprocess class or other!
-  global $base_path;
-  $base_theme_path = $base_path . drupal_get_path('theme', 'tieto_base');
-  $variables['base_theme_path'] = $base_theme_path;
-  $variables['templates'] = $base_theme_path . '/templates';
-  $variables['partials'] = $base_theme_path . '/templates/_partials';
-  $variables['images'] = $base_theme_path . '/images';
+  // @todo Add more variables.
+  $base_theme_path = base_path() . drupal_get_path('theme', 'tieto_base');
+
+  $variables['tieto_base'] = [
+    'root' => $base_theme_path,
+    'logo' => $base_theme_path . '/logo.svg', // @todo Don't hardcode .svg
+    'templates' => $base_theme_path . '/templates',
+    'partials' => $base_theme_path . '/templates/_partials',
+    'images' => $base_theme_path . '/images',
+  ];
+
+  // Fix relative path to default theme.
+  $variables['theme_path'] = base_path() . $variables['directory'];
 }

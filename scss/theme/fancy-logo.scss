@@ -5,18 +5,17 @@
 
 $logo-transform: rotate(16.5deg) skew(-29deg);
 
-.navbar-brand {
-  display: block;
-  float: left;
+.fancy-logo {
   position: fixed;
   width: 100%;
-  z-index: 500;
-  // top: 0;
-  // left: 0;
-  padding: 18px 0 0 1rem;
+  z-index: 2;
+  top: 0;
+  left: 0;
 
-  img {
-    margin: 0;
+  .navbar-brand {
+    margin: 20px;
+    display: inline-block;
+    padding: 0;
   }
 
   &::after {
@@ -48,8 +47,47 @@ $logo-transform: rotate(16.5deg) skew(-29deg);
   }
 }
 
-.region__header .navbar-menu {
+.navbar-toggler {
+  margin: 18px 1rem;
+}
+
+.navbar-collapse {
+  clear: both;
+  margin: .5rem;
+
+  @include media-breakpoint-down(md) {
+    margin: 1rem;
+    padding: .5rem 1rem;
+    background: $brand-primary;
+  }
+}
+
+@include media-breakpoint-down(md) {
+  .navbar-nav {
+    .nav-link {
+      margin: 0;
+    }
+  }
+}
+
+.navbar .header-menu-wrapper {
   position: fixed;
-  z-index: 500;
+  z-index: 2;
   right: 0;
+  top: 0;
+}
+
+.fancy-logo, .navbar .header-menu-wrapper {
+  // Fix for admin menu
+  .toolbar-fixed & {
+    top: $admin-toolbar-height;
+  }
+
+  // .toolbar-vertical:not(.toolbar-fixed) & {
+  //   top: $admin-toolbar-height;
+  // }
+
+  .toolbar-horizontal.toolbar-tray-open & {
+    top: 2 * $admin-toolbar-height;
+  }
 }
