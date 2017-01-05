@@ -173,6 +173,14 @@ drupal.ajax:
     component:
       css/component/ajax-progress.css: {}
 
+drupal.entity_embed.dialog:
+  js:
+    js/entity_embed.dialog.js: {}
+
+drupal.dialog.ajax:
+  js:
+    js/dialog.ajax.js: {}
+
 # ------------------------------------------------------------------------------
 # Polyfills & Shims
 # ------------------------------------------------------------------------------
