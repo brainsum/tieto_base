@@ -4,37 +4,37 @@
  * throttling to prevent too many function calls.
  */
 
-(function (Drupal) {
+(function (Drupal, $) {
   'use strict';
-
-  var latestKnownScrollY = 0;
-  var ticking = false;
-  var logo = document.querySelector('.fancy-logo');
-  var toggleClass = 'fixed';
-
-  function update() {
-    // reset the tick so we can
-    // capture the next onScroll
-    ticking = false;
-    logo.classList.toggle(toggleClass, latestKnownScrollY > 300);
-  }
-
-  function onScroll() {
-    latestKnownScrollY = window.scrollY; //No IE8
-    requestTick();
-  }
-
-  function requestTick() {
-    if (!ticking) {
-      requestAnimationFrame(update);
-    }
-    ticking = true;
-  }
 
   Drupal.behaviors.fancyLogoAnimation = {
     attach: function (context, settings) {
+      var latestKnownScrollY = 0;
+      var ticking = false;
+      var $logo = $('.fancy-logo').once('fancy-logo');
+      var classAfterScroll = 'fixed';
+
+      function update() {
+        // reset the tick so we can
+        // capture the next onScroll
+        ticking = false;
+        $logo.toggleClass(classAfterScroll, latestKnownScrollY > 300);
+      }
+
+      function onScroll() {
+        latestKnownScrollY = window.scrollY; //No IE8
+        requestTick();
+      }
+
+      function requestTick() {
+        if (!ticking) {
+          requestAnimationFrame(update);
+        }
+        ticking = true;
+      }
+
       window.addEventListener('scroll', onScroll, false);
     }
   };
 
-})(Drupal);
+})(Drupal, jQuery);
