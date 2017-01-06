@@ -24,7 +24,15 @@ class ThemeSuggestions extends BootstrapThemeSuggestions {
   public function alter(&$suggestions, &$context1 = NULL, &$hook = NULL) {
     parent::alter($suggestions, $context1, $hook);
     // Placeholder. Write theme suggestion changes here.
-    // $variables = Variables::create($context1);
+    $variables = Variables::create($context1);
+
+    switch ($hook) {
+      case 'fieldset':
+        if ($variables->element && !$variables->element->isType(['radios', 'checkboxes'])) {
+          $suggestions[] = 'details';
+        }
+        break;
+    }
   }
 
 }
