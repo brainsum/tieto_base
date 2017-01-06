@@ -84,7 +84,7 @@ table_striped: 1
 
 # Modals
 # @see http://drupal-bootstrap.org/api/bootstrap/docs%21Theme-Settings.md/group/theme_settings/8#java-script-modals
-modal_enabled: 1
+modal_enabled: 0
 modal_animation: 0
 modal_backdrop: 'true'
 modal_keyboard: 1

@@ -54,10 +54,11 @@ libraries-override:
     js:
       js/misc/ajax.js: js/misc/ajax.js
 
-  drupal.entity_embed.dialog:
-    css:
-      theme:
-        css/entity_embed.dialog.css: css/theme/entity_embed.dialog.css
+  # @todo Fix the Bootstrap modals for Entity Embed.
+  # drupal.entity_embed.dialog:
+  #   css:
+  #     theme:
+  #       css/entity_embed.dialog.css: css/theme/entity_embed.dialog.css
 
 libraries-extend:
   adminimal_admin_toolbar/adminimal-admin-toolbar:
@@ -68,8 +69,6 @@ libraries-extend:
     - tieto_base/popover
   bootstrap/drupal.tabledrag:
     - tieto_base/drupal.tabledrag
-  bootstrap/drupal.dialog.ajax:
-    - tieto_base/drupal.dialog.ajax
   bootstrap/modal:
     - tieto_base/modal
   bootstrap/drupal.ajax:
@@ -78,8 +77,11 @@ libraries-extend:
     - tieto_base/jquery.ui.autocomplete
   field_ui/drupal.field_ui:
     - tieto_base/drupal.field_ui
-  drupal.entity_embed.dialog:
-    - tieto_base/drupal.entity_embed.dialog
+  # @todo Fix the Bootstrap modals for Entity Embed.
+  # bootstrap/drupal.dialog.ajax:
+  #   - tieto_base/drupal.dialog.ajax
+  # drupal.entity_embed.dialog:
+  #   - tieto_base/drupal.entity_embed.dialog
 
 # Content and design related styles must be available in WYSIWYG editors too.
 #
