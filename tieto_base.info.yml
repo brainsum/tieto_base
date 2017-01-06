@@ -5,6 +5,7 @@ type: theme
 core: 8.x
 version: 8.x-1.0-alpha1
 base theme: bootstrap
+screenshot: screenshot.jpg
 
 # These assets are loaded on every page.
 #
