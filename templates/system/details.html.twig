@@ -17,18 +17,16 @@
  */
 #}
 <details{{ attributes }}>
-  {%- if title -%}
-    {%
-      set summary_classes = [
-        'form-control-label',
-        required ? 'js-form-required',
-        required ? 'form-required',
-      ]
-    %}
-    <summary{{ summary_attributes.addClass(summary_classes) }}>
-      {{- title -}}
-    </summary>
-  {%- endif -%}
+  {%
+    set summary_classes = [
+      'form-control-label',
+      required ? 'js-form-required',
+      required ? 'form-required',
+    ]
+  %}
+  <summary{{ summary_attributes.addClass(summary_classes) }}>
+    {{- title ? title : "Details"|t -}}
+  </summary>
 
   <div class="details-wrapper">
     {% if errors %}
