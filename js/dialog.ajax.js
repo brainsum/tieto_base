@@ -8,11 +8,7 @@
 
   // Save the parent which we will override.
   // @todo Is there a better solution?
-  Drupal.behaviors._dialog = {
-    attach: function (context, settings) {
-      return Drupal.behaviors.dialog.prepareDialogButtons;
-    }
-  };
+  var _prepareDialogButtons = Drupal.behaviors.dialog.prepareDialogButtons;
 
   $.extend(Drupal.behaviors.dialog, {
 
@@ -23,7 +19,7 @@
         return;
       }
       // Otherwise, call the parent function in Bootstrap.
-      Drupal.behaviors._dialog.attach($dialog);
+      _prepareDialogButtons($dialog);
     }
   });
 
