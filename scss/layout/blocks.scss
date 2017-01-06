@@ -2,6 +2,10 @@
 
 .block-local-actions-block {
   margin: $spacer 0;
+  a.btn + a.btn,
+  a.button, a.button {
+    margin-left: .25rem;
+  }
 }
 
 .block-local-tasks-block {

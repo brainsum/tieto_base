@@ -2,6 +2,11 @@
   margin: 1rem 0;
 }
 
+.block-local-actions-block a.btn + a.btn,
+.block-local-actions-block a.button, .block-local-actions-block a.button {
+  margin-left: .25rem;
+}
+
 .block-local-tasks-block {
   margin-bottom: 1rem;
 }

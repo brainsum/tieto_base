@@ -1247,11 +1247,6 @@ a.disabled.btn, a.disabled.button, fieldset[disabled] a.btn, fieldset[disabled] 
   pointer-events: none;
 }
 
-a.btn + a.btn,
-a.button + a.button {
-  margin-left: .5rem;
-}
-
 /*
   Block buttons
 
