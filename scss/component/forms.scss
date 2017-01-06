@@ -91,7 +91,12 @@
   margin-right: .25rem;
 }
 
-.fieldgroup {
+// .fieldgroup {
+//   margin-bottom: $spacer;
+// }
+
+// @fixme wtf
+.form-wrapper:not(.field--widget-options-buttons):not(.fieldgroup) {
   margin-bottom: $spacer;
 }
 

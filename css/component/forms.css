@@ -527,7 +527,7 @@ select.form-control-lg:not([size]):not([multiple]), .input-group-lg > select.for
   margin-right: .25rem;
 }
 
-.fieldgroup {
+.form-wrapper:not(.field--widget-options-buttons):not(.fieldgroup) {
   margin-bottom: 1rem;
 }
 
