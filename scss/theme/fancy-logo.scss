@@ -12,7 +12,7 @@ $logo-transform: rotate(16.5deg) skew(-29deg);
 .fancy-logo {
   position: fixed;
   width: 100%;
-  z-index: 2;
+  z-index: $zindex-navbar;
   top: 0;
   left: 0;
 
@@ -65,7 +65,7 @@ $logo-transform: rotate(16.5deg) skew(-29deg);
 
 .region-navigation-collapsible {
   position: fixed;
-  z-index: 2;
+  z-index: $zindex-navbar;
   right: 0;
   top: 0;
 
