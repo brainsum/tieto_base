@@ -14,7 +14,7 @@
      */
     attach: function (context, settings) {
       $('body').once('js-entity-embed-dialog').on('entityBrowserIFrameAppend', function () {
-        $('.entity-embed-dialog').trigger('resize');
+        $('.entity-select-dialog').trigger('resize');
         // Hide the next button, the click is triggered by Drupal.entityEmbedDialog.selectionCompleted.
         // Fixed wrong selector.
         $('#drupal-modal').parent().find('.entity-embed-dialog .js-button-next').addClass('sr-only');
@@ -26,7 +26,7 @@
      * @inheritdoc
      */
     selectionCompleted: function (event, uuid, entities) {
-      $('.entity-embed-dialog .js-button-next').click();
+      $('.entity-select-dialog .js-button-next').click();
     },
   };
 
