@@ -518,19 +518,22 @@ select.form-control-lg:not([size]):not([multiple]), .input-group-lg > select.for
   text-align: center;
 }
 
+.views-exposed-form > .form-actions::after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
 @media (min-width: 768px) {
-  .views-exposed-form > .form-item,
-  .views-exposed-form > .form-wrapper {
+  .views-exposed-form > .form-item {
     float: left;
     width: 50%;
     padding-right: 1rem;
   }
-  .views-exposed-form > .form-item:nth-child(odd),
-  .views-exposed-form > .form-wrapper:nth-child(odd) {
+  .views-exposed-form > .form-item:nth-child(odd) {
     clear: left;
   }
-  .views-exposed-form > .form-item > .form-control-label,
-  .views-exposed-form > .form-wrapper > .form-control-label {
+  .views-exposed-form > .form-item > .form-control-label {
     width: 40%;
     float: left;
     padding-right: 1rem;
@@ -538,26 +541,19 @@ select.form-control-lg:not([size]):not([multiple]), .input-group-lg > select.for
   }
   .views-exposed-form > .form-item > .form-control,
   .views-exposed-form > .form-item > .select-wrapper,
-  .views-exposed-form > .form-item > .input-group,
-  .views-exposed-form > .form-wrapper > .form-control,
-  .views-exposed-form > .form-wrapper > .select-wrapper,
-  .views-exposed-form > .form-wrapper > .input-group {
+  .views-exposed-form > .form-item > .input-group {
     width: 60%;
     margin: 0;
   }
 }
 
 @media (min-width: 992px) {
-  .views-exposed-form > .form-item > .form-control-label,
-  .views-exposed-form > .form-wrapper > .form-control-label {
+  .views-exposed-form > .form-item > .form-control-label {
     width: 30%;
   }
   .views-exposed-form > .form-item > .form-control,
   .views-exposed-form > .form-item > .select-wrapper,
-  .views-exposed-form > .form-item > .input-group,
-  .views-exposed-form > .form-wrapper > .form-control,
-  .views-exposed-form > .form-wrapper > .select-wrapper,
-  .views-exposed-form > .form-wrapper > .input-group {
+  .views-exposed-form > .form-item > .input-group {
     width: 70%;
   }
 }

@@ -49,10 +49,10 @@
 
   > .form-actions {
     text-align: center;
+    @include clearfix;
   }
 
-  > .form-item,
-  > .form-wrapper {
+  > .form-item {
     @include media-breakpoint-up(md) {
       float: left;
       width: 50%;
