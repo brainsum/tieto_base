@@ -40,8 +40,65 @@
   }
 }
 
+// @todo Clean up?
+.views-exposed-form {
+  .form-control-label:not(summary) {
+    text-transform: uppercase;
+    font-weight: $font-weight-normal;
+  }
+
+  > .form-actions {
+    text-align: center;
+  }
+
+  > .form-item,
+  > .form-wrapper {
+    @include media-breakpoint-up(md) {
+      float: left;
+      width: 50%;
+      padding-right: $spacer;
+
+      &:nth-child(odd) {
+        clear: left;
+      }
+
+      > .form-control-label {
+        width: 40%;
+        float: left;
+        padding-right: 1rem;
+        margin-top: .25rem;
+      }
+
+      > .form-control,
+      > .select-wrapper,
+      > .input-group {
+        width: 60%;
+        margin: 0;
+      }
+    }
+
+    @include media-breakpoint-up(lg) {
+      > .form-control-label {
+        width: 30%;
+      }
+
+      > .form-control,
+      > .select-wrapper,
+      > .input-group {
+        width: 70%;
+      }
+    }
+  }
+
+
+}
+
+select.form-control:not([size]):not([multiple]) {
+height: calc(2rem + 2px); // @fixme
+}
+
 // // Inline forms get slightly modified <label>s.
-.form-inline {
+// .form-inline {
   // display: flex;
 
 
@@ -90,7 +147,7 @@
   //   text-transform: uppercase;
   //   font-weight: $font-weight-normal;
   // }
-}
+// }
 
 // .text-format-wrapper .form-group {
 //   margin-bottom: 0;
