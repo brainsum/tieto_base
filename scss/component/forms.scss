@@ -89,69 +89,11 @@
       }
     }
   }
-
-
 }
 
 select.form-control:not([size]):not([multiple]) {
-height: calc(2rem + 2px); // @fixme
+  height: calc(2rem + 2px); // @fixme
 }
-
-// // Inline forms get slightly modified <label>s.
-// .form-inline {
-  // display: flex;
-
-
-  //   width: 50%;
-  //   float: left;
-  //   .form-control-label {
-  //     width: 30%;
-  //     float: left;
-  //   }
-  //   > .form-control,
-  //   > .input-group,
-  //   > .select-wrapper {
-  //     width: 70%;
-  //   }
-
-  //   > .select-wrapper > .form-select {
-  //     width: 100%;
-  //   }
-  // }
-
-  // .form-group {
-  //   display: block;
-  //   margin-bottom: $spacer-y;
-
-  //   &.form-type-date {
-  //     margin-bottom: 0;
-  //   }
-  // }
-
-  // .form-wrapper {
-  //   margin-bottom: $spacer-y;
-  // }
-
-  // .form-checkboxes,
-  // .form-radios {
-  //   .form-group {
-  //     margin-bottom: .25rem;
-  //   }
-  // }
-
-  // .form-control {
-  //   margin-top: 0;
-  // }
-
-  // .form-control-label:not(summary) {
-  //   text-transform: uppercase;
-  //   font-weight: $font-weight-normal;
-  // }
-// }
-
-// .text-format-wrapper .form-group {
-//   margin-bottom: 0;
-// }
 
 .description,
 .help-block,
