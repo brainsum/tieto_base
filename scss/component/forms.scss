@@ -33,38 +33,64 @@
   font-weight: bold;
 }
 
+.form-item > {
+  .select-wrapper,
+  .input-group {
+    margin-top: .25rem;
+  }
+}
+
 // // Inline forms get slightly modified <label>s.
-// .form-inline {
+.form-inline {
+  // display: flex;
 
-//   .form-group {
-//     display: block;
-//     margin-bottom: $spacer-y;
 
-//     &.form-type-date {
-//       margin-bottom: 0;
-//     }
-//   }
+  //   width: 50%;
+  //   float: left;
+  //   .form-control-label {
+  //     width: 30%;
+  //     float: left;
+  //   }
+  //   > .form-control,
+  //   > .input-group,
+  //   > .select-wrapper {
+  //     width: 70%;
+  //   }
 
-//   .form-wrapper {
-//     margin-bottom: $spacer-y;
-//   }
+  //   > .select-wrapper > .form-select {
+  //     width: 100%;
+  //   }
+  // }
 
-//   .form-checkboxes,
-//   .form-radios {
-//     .form-group {
-//       margin-bottom: .25rem;
-//     }
-//   }
+  // .form-group {
+  //   display: block;
+  //   margin-bottom: $spacer-y;
 
-//   .form-control {
-//     margin-top: 0;
-//   }
+  //   &.form-type-date {
+  //     margin-bottom: 0;
+  //   }
+  // }
 
-//   .form-control-label:not(summary) {
-//     text-transform: uppercase;
-//     font-weight: $font-weight-normal;
-//   }
-// }
+  // .form-wrapper {
+  //   margin-bottom: $spacer-y;
+  // }
+
+  // .form-checkboxes,
+  // .form-radios {
+  //   .form-group {
+  //     margin-bottom: .25rem;
+  //   }
+  // }
+
+  // .form-control {
+  //   margin-top: 0;
+  // }
+
+  // .form-control-label:not(summary) {
+  //   text-transform: uppercase;
+  //   font-weight: $font-weight-normal;
+  // }
+}
 
 // .text-format-wrapper .form-group {
 //   margin-bottom: 0;

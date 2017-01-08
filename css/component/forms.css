@@ -504,6 +504,11 @@ select.form-control-lg:not([size]):not([multiple]), .input-group-lg > select.for
   font-weight: bold;
 }
 
+.form-item > .select-wrapper,
+.form-item > .input-group {
+  margin-top: .25rem;
+}
+
 .description,
 .help-block,
 .control-group .help-inline {
