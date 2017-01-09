@@ -592,6 +592,10 @@ select.form-control:not([size]):not([multiple]) {
   margin-top: 0;
 }
 
+.form-type-checkbox .input-group-addon {
+  display: none;
+}
+
 .has-error .form-control-feedback,
 .has-error .form-control-label,
 .has-error .form-check-label,

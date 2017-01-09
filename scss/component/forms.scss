@@ -135,6 +135,12 @@ select.form-control:not([size]):not([multiple]) {
   margin-top: 0;
 }
 
+.form-type-checkbox {
+  .input-group-addon {
+    display: none; // @fixme
+  }
+}
+
 // .form-text,
 // .form-date {
 //   display: block;
