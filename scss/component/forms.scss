@@ -49,7 +49,7 @@
 
   > .form-actions {
     text-align: center;
-    @include clearfix;
+    clear: both;
   }
 
   > .form-item {

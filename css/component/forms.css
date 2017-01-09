@@ -516,11 +516,6 @@ select.form-control-lg:not([size]):not([multiple]), .input-group-lg > select.for
 
 .views-exposed-form > .form-actions {
   text-align: center;
-}
-
-.views-exposed-form > .form-actions::after {
-  content: "";
-  display: table;
   clear: both;
 }
 
