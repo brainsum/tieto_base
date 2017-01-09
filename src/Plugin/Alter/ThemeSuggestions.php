@@ -35,17 +35,6 @@ class ThemeSuggestions extends BootstrapThemeSuggestions {
           $variables->element->setAttribute('open', TRUE);
         }
         break;
-
-      // case 'input':
-      //   if ($variables->element && $variables->element->isButton()) {
-      //     if ($variables->element->getProperty('dropbutton')) {
-      //       $suggestions[] = 'input__button__dropdown';
-      //     }
-      //     else {
-      //       $suggestions[] = $variables->element->getProperty('split') ? 'input__button__split' : 'input';
-      //     }
-      //   }
-      //   break;
     }
   }
 
