@@ -82,9 +82,7 @@
   }
 }
 
-.toolbar-fixed .fancy-logo,
-.toolbar-vertical .fancy-logo, .toolbar-fixed .region-navigation-collapsible,
-.toolbar-vertical .region-navigation-collapsible {
+.toolbar-fixed .fancy-logo, .toolbar-fixed .region-navigation-collapsible {
   top: 39px;
 }
 

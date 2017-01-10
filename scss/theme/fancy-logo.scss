@@ -85,8 +85,7 @@ $logo-transform: rotate(16.5deg) skew(-29deg);
 
 // Fix for admin menu
 .fancy-logo, .region-navigation-collapsible {
-  .toolbar-fixed &,
-  .toolbar-vertical & {
+  .toolbar-fixed & {
     top: $admin-toolbar-height;
   }
 
