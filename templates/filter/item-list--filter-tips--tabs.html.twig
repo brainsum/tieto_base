@@ -36,8 +36,7 @@
     <{{ list_type }}{{ attributes.addClass('tabs', 'tabs--primary') }}>
       {%- for item in items -%}
         <li{{ item.attributes.addClass('nav-item') }}>
-          {# @fixme #}
-          <span class="nav-link">{{ item.value }}</span>
+          {{ item.value }}
         </li>
       {%- endfor -%}
     </{{ list_type }}>
