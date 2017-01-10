@@ -84,7 +84,7 @@
   background-color: #cce5f4;
 }
 
-.tabs--primary .nav-link.is-active {
+.tabs--primary .nav-item.active .nav-link, .tabs--primary .nav-item.active .nav-link:focus, .tabs--primary .nav-item.active .nav-link:hover, .tabs--primary .nav-item .nav-link.is-active, .tabs--primary .nav-item .nav-link.is-active:focus, .tabs--primary .nav-item .nav-link.is-active:hover {
   background-color: #62b3e5;
   color: #fff;
 }
