@@ -12,7 +12,7 @@ $logo-transform: rotate(16.5deg) skew(-29deg);
 .fancy-logo {
   position: fixed;
   width: 100%;
-  z-index: $zindex-navbar;
+  z-index: 500;
   top: 0;
   left: 0;
 
@@ -53,6 +53,8 @@ $logo-transform: rotate(16.5deg) skew(-29deg);
 
 .navbar-toggler {
   margin: 18px 1rem;
+  background-image: $navbar-dark-toggler-bg;
+  border-color: $navbar-dark-toggler-border;
 }
 
 @include media-breakpoint-down(md) {
@@ -65,9 +67,10 @@ $logo-transform: rotate(16.5deg) skew(-29deg);
 
 .region-navigation-collapsible {
   position: fixed;
-  z-index: $zindex-navbar;
+  z-index: 500;
   right: 0;
   top: 0;
+  z-index: 501;
 
   .navbar-collapse {
     clear: both;
@@ -82,7 +85,8 @@ $logo-transform: rotate(16.5deg) skew(-29deg);
 
 // Fix for admin menu
 .fancy-logo, .region-navigation-collapsible {
-  .toolbar-fixed & {
+  .toolbar-fixed &,
+  .toolbar-vertical & {
     top: $admin-toolbar-height;
   }
 
