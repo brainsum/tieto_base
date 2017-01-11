@@ -10,6 +10,7 @@ var gulp = require('gulp');
 var sass = require('gulp-sass');
 var csscomb = require('gulp-csscomb');
 var eslint = require('gulp-eslint');
+var imagemin = require('gulp-imagemin');
 var autoprefixer = require('gulp-autoprefixer');
 var browserSync = require('browser-sync');
 
@@ -73,6 +74,24 @@ gulp.task('sass', function () {
     .pipe(sass(config.sass).on('error', sass.logError))
     .pipe(autoprefixer())
     .pipe(gulp.dest('css'));
+});
+
+gulp.task('imagemin', function () {
+  return gulp
+    .src('images/**/*')
+    .pipe(imagemin([
+      imagemin.gifsicle({interlaced: true}),
+      imagemin.jpegtran({progressive: true}),
+      imagemin.optipng({optimizationLevel: 5}),
+      // @see https://github.com/svg/svgo
+      imagemin.svgo({plugins: [
+        {removeViewBox: false},
+        {removeTitle: true},
+        {removeDimensions: true},
+        {cleanupIDs: true},
+      ]})
+    ]))
+    .pipe(gulp.dest('images'));
 });
 
 // @see https://www.drupal.org/node/1887862 [CSS Guidelines]
