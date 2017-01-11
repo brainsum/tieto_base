@@ -95,8 +95,10 @@
 
   .nav-link {
     background-color: color(blue-lightest);
+  }
 
-    &.is-active {
+  .nav-item.active .nav-link, .nav-item .nav-link.is-active {
+    @include plain-hover-focus {
       background-color: $brand-primary;
       color: #fff;
     }

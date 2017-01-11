@@ -4,12 +4,28 @@
 @import "index";
 
 .footer {
-  padding: $spacer 0;
-  border-top: 1px solid color(grey-light);
+  $footer-height: 100px;
   margin-top: 2 * $spacer;
-  text-align: center;
-  font-size: $font-size-sm;
-  color: color(grey);
+
+  @include element('content') {
+    border-top: 1px solid $brand-primary;
+    font-size: $font-size-sm;
+    color: color(grey);
+  }
+
+  @include element('item') {
+    // @todo THIS IS SUCH A CRAP!! Try adding more stuff to the footer...
+    line-height: $footer-height;
+
+    @include modifier('logo') {
+      display: inline-block;
+      height: $footer-height;
+
+      @include media-breakpoint-up(sm) {
+        float: right;
+      }
+    }
+  }
 
   .block {
     padding: $spacer 0;
@@ -28,14 +44,6 @@
 
   @include media-breakpoint-up(sm) {
     text-align: left;
-  }
-}
-
-.footer-logo {
-  height: 50px;
-
-  @include media-breakpoint-up(sm) {
-    float: right;
   }
 }
 
