@@ -62,11 +62,5 @@ module.exports = {
     discardComments: {
       removeAll: true
     }
-  },
-
-  kss: {
-    entry: './builder',
-    watch: './builder/**/*',
-    dest: './styleguide'
   }
 };
