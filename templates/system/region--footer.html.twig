@@ -12,12 +12,14 @@
  * @see template_preprocess_region()
  */
 #}
-<footer{{ attributes.addClass('footer') }} role="contentinfo">
-  <div class="container">
-    &copy; <a href="{{ path('<front>') }}" title="{{ 'Home'|t }}" rel="home">{{- site_name|default('Home') -}}</a>
+<footer{{ attributes.addClass('footer', 'container') }} role="contentinfo">
+  <div class="footer__content">
+    <a class="footer__item" href="{{ path('<front>') }}" title="{{ 'Home'|t }}" rel="home">&copy; {{ site_name|default('Home') }}</a>
     {% if content %}
       {{ content }}
     {% endif %}
-    <img class="footer-logo" height="50" src="{{ tieto_base.images ~ '/logo_footer.svg' }}" alt="{{ site_name|default('Home') }}">
+    <a class="footer__item footer__item--logo" href="https://www.tieto.com" title="{{ 'Go to Tieto.com'|t }}" target="_blank" rel="noopener">
+      <img width="150" src="{{ tieto_base.images ~ '/logo_footer.svg' }}" alt="Tieto Logo">
+    </a>
   </div>
 </footer>

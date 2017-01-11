@@ -139,3 +139,24 @@
     }
   }
 }
+
+// BEM
+@mixin element($name) {
+  @at-root #{&}__#{$name} {
+    @content;
+  }
+}
+
+@mixin e($name) {
+  @include element($name);
+}
+
+@mixin modifier($name) {
+  @at-root #{&}--#{$name} {
+    @content;
+  }
+}
+
+@mixin m($name) {
+  @include modifier($name);
+}
