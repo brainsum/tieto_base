@@ -35,6 +35,20 @@ class ThemeSuggestions extends BootstrapThemeSuggestions {
           $variables->element->setAttribute('open', TRUE);
         }
         break;
+
+      case 'field':
+        if ($variables->element) {
+          // Add entity type suggestions.
+          if ($entity_type = $variables->element->getProperty('entity_type')) {
+            $suggestions[] = "{$hook}__{$entity_type}";
+
+            // Add view mode suggestions.
+            if ($view_mode = $variables->element->getProperty('view_mode')) {
+              $suggestions[] = "{$hook}__{$entity_type}__{$view_mode}";
+            }
+          }
+        }
+        break;
     }
   }
 

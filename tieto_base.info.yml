@@ -54,6 +54,11 @@ libraries-override:
     js:
       js/misc/ajax.js: js/misc/ajax.js
 
+  media/view:
+    css:
+      theme:
+        css/media.view.css: false # @todo
+
   # @todo Fix the Bootstrap modals for Entity Embed.
   # drupal.entity_embed.dialog:
   #   css:

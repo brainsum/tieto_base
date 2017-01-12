@@ -1,0 +1,41 @@
+.view-media-library::after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
+.view-media-library .view-filters {
+  margin-bottom: 2rem;
+}
+
+.view-media-library .pager-nav {
+  clear: both;
+  text-align: center;
+  padding: 1rem 0;
+}
+
+.view-media-library .views-row {
+  margin-bottom: 1rem;
+}
+
+@media (min-width: 576px) {
+  .view-media-library .views-row {
+    margin-bottom: 0;
+    float: left;
+    width: 50%;
+  }
+}
+
+@media (min-width: 768px) {
+  .view-media-library .views-row {
+    float: left;
+    width: 33.333%;
+  }
+}
+
+@media (min-width: 992px) {
+  .view-media-library .views-row {
+    float: left;
+    width: 25%;
+  }
+}

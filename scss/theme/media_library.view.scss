@@ -1,0 +1,30 @@
+@import "index";
+
+.view-media-library {
+  @include clearfix;
+
+  .view-filters {
+    margin-bottom: 2 * $spacer;
+  }
+
+  // @todo Move to and finalize pagers in "_pager.scss".
+  .pager-nav {
+    clear: both;
+    text-align: center;
+    padding: $spacer 0;
+  }
+
+  .views-row {
+    margin-bottom: $spacer;
+    @include media-breakpoint-up(sm) {
+      margin-bottom: 0;
+      @include make-col(6);
+    }
+    @include media-breakpoint-up(md) {
+      @include make-col(4);
+    }
+    @include media-breakpoint-up(lg) {
+      @include make-col(3);
+    }
+  }
+}
