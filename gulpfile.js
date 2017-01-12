@@ -13,6 +13,9 @@ var eslint = require('gulp-eslint');
 var imagemin = require('gulp-imagemin');
 var autoprefixer = require('gulp-autoprefixer');
 var browserSync = require('browser-sync');
+var kss = require('kss');
+var concat = require('gulp-concat');
+var sequence = require('gulp-sequence');
 
 // @todo separate config!
 var config = {
@@ -136,6 +139,33 @@ gulp.task('theme:reinstall', shell.task([
   'drush -y cset system.theme admin tieto_base',
   'drush cr'
 ]));
+
+gulp.task('kss', function () {
+  return sequence(
+    'sass',
+    'kss:concat',
+    'kss:generate'
+  )();
+});
+
+gulp.task('kss:generate', function () {
+  return kss({
+    title: 'Style Guide',
+    source: 'scss',
+    destination: config.kss.dest,
+    css: 'style.css',
+    builder: 'builder',
+    // Relative to the source directory (scss here), see https://github.com/kss-node/kss-node/issues/349
+    homepage: '../builder/homepage.md'
+  });
+});
+
+gulp.task('kss:concat', function () {
+  return gulp
+    .src('css/**/*.css')
+    .pipe(concat('style.css'))
+    .pipe(gulp.dest(config.kss.dest));
+});
 
 gulp.task('lint', ['csscomb', 'eslint']);
 gulp.task('build', ['sass', 'csscomb', 'eslint']);

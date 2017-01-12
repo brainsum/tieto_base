@@ -1,54 +1,56 @@
 {
-    "name": "tieto-base",
-    "description": "A Drupal 8 base theme for Tieto projects, based on corporate styleguides.",
-    "version": "1.0.0-alpha.1",
-    "license": "GPL-2.0+",
-    "homepage": "http://tietobase.brainsum.com",
-    "private": true,
-    "author": "BRAINSUM <tieto@brainsum.com>",
-    "contributors": [
-        {
-            "name": "Gergely Pap (gpap)",
-            "email": "gpap@brainsum.com",
-            "url": "https://www.drupal.org/u/gpap"
-        },
-        {
-            "name": "Dániel Décsi (danieldecsi)",
-            "email": "d@niel.hu",
-            "url": "https://www.drupal.org/u/danieldecsi"
-        }
-    ],
-    "repository": {
-        "type": "git",
-        "url": "https://github.com/brainsum/tieto_base"
+  "name": "tieto-base",
+  "description": "A Drupal 8 base theme for Tieto projects, based on corporate styleguides.",
+  "version": "1.0.0-alpha.1",
+  "license": "GPL-2.0+",
+  "homepage": "http://tietobase.brainsum.com",
+  "private": true,
+  "author": "BRAINSUM <tieto@brainsum.com>",
+  "contributors": [
+    {
+      "name": "Gergely Pap (gpap)",
+      "email": "gpap@brainsum.com",
+      "url": "https://www.drupal.org/u/gpap"
     },
-    "bugs": {
-        "url" : "https://github.com/brainsum/tieto_base/issues",
-        "email" : "tieto@brainsum.com"
-    },
-    "scripts": {
-        "dev": "gulp watch",
-        "build": "gulp build",
-        "build:prod": "NODE_ENV=production gulp build --production"
-    },
-    "dependencies": {
-        "bootstrap": "4.0.0-alpha.5",
-        "jquery": "^3.1.1",
-        "kss": "^3.0.0-beta.16",
-        "normalize.css": "^5.0.0"
-    },
-    "devDependencies": {
-        "bootstrap-sass": "^3.3.7",
-        "browser-sync": "^2.17.0",
-        "gulp": "^3.9.1",
-        "gulp-autoprefixer": "^3.1.1",
-        "gulp-csscomb": "^3.0.8",
-        "gulp-cssnano": "^2.1.2",
-        "gulp-eslint": "^3.0.1",
-        "gulp-imagemin": "^3.0.3",
-        "gulp-sass": "^2.3.2",
-        "gulp-shell": "^0.5.2",
-        "gulp-sourcemaps": "^1.6.0",
-        "gulp-util": "^3.0.7"
+    {
+      "name": "Dániel Décsi (danieldecsi)",
+      "email": "d@niel.hu",
+      "url": "https://www.drupal.org/u/danieldecsi"
     }
+  ],
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/brainsum/tieto_base"
+  },
+  "bugs": {
+    "url": "https://github.com/brainsum/tieto_base/issues",
+    "email": "tieto@brainsum.com"
+  },
+  "scripts": {
+    "dev": "gulp watch",
+    "build": "gulp build",
+    "build:prod": "NODE_ENV=production gulp build --production"
+  },
+  "dependencies": {
+    "bootstrap": "4.0.0-alpha.5",
+    "gulp-concat": "^2.6.1",
+    "gulp-sequence": "^0.4.6",
+    "jquery": "^3.1.1",
+    "kss": "^3.0.0-beta.16",
+    "normalize.css": "^5.0.0"
+  },
+  "devDependencies": {
+    "bootstrap-sass": "^3.3.7",
+    "browser-sync": "^2.17.0",
+    "gulp": "^3.9.1",
+    "gulp-autoprefixer": "^3.1.1",
+    "gulp-csscomb": "^3.0.8",
+    "gulp-cssnano": "^2.1.2",
+    "gulp-eslint": "^3.0.1",
+    "gulp-imagemin": "^3.0.3",
+    "gulp-sass": "^2.3.2",
+    "gulp-shell": "^0.5.2",
+    "gulp-sourcemaps": "^1.6.0",
+    "gulp-util": "^3.0.7"
+  }
 }

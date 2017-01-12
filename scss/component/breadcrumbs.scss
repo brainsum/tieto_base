@@ -12,14 +12,33 @@
 /*
   Path
 
-  When showing the path the user has taken, allow the user to take a step back and highlight the steps as links.
+  When showing the path the user has taken, allow the user to take a step back and highlight the steps as links, except the last on that inditaces the current page.
+
+  Style guide 4.6.1
+ */
+
+/*
+  List markup
+
+  Markup:
+    <ol class="breadcrumb">
+      <li class="breadcrumb-item"><a href="#">Home</a></li>
+      <li class="breadcrumb-item"><a href="#">Products</a></li>
+      <li class="breadcrumb-item active">Plan & estimate & resource</li>
+    </ol>
+  
+  Style guide 4.6.1.1
+*/
+
+/*
+  Navigation markup
 
   Markup:
     <nav class="breadcrumb">
       <a class="breadcrumb-item" href="#">Home</a>
       <a class="breadcrumb-item" href="#">Products</a>
-      <a class="breadcrumb-item" href="#">Plan & estimate & resource</a>
+      <span class="breadcrumb-item active">Plan & estimate & resource</span>
     </nav>
 
-  Style guide 4.6.1
- */
+  Style guide 4.6.1.2
+*/

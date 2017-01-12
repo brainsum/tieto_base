@@ -65,11 +65,10 @@
 
   Markup: <button class="button {{modifier_class}}">Push me</button>
 
-  .button--blue - Primary buttons are blue, because the primary brand color is blue. This is a generic button and can be used for everything.
-  .button--primary - Alias for .button--blue
-  .button--green - In interfaces, however, green buttons are mostly used to symbolize positive actions, like saving, creating, publishing and similar.
-  .button--red - Buttons in red are mainly used for negative actions, like deleting, unpublishing, rejecting and similar.
-  .button--orange - Buttons in orange are not widely used, but can be a nice contrasting alternative.
+  .button--primary - Primary buttons are blue, because the primary brand color is blue. This is a generic button and can be used for everything.
+  .button--success - In interfaces, however, green buttons are mostly used to symbolize positive actions, like saving, creating, publishing and similar.
+  .button--danger - Buttons in red are mainly used for negative actions, like deleting, unpublishing, rejecting and similar.
+  .button--warning - Buttons in orange are not widely used, but can be a nice contrasting alternative.
 
   Style guide: 4.8.1
 */
@@ -103,17 +102,16 @@
 }
 
 /*
-  Plain variants
+  Outline variants
 
-  Each button variant has a plain version.
+  Each button variant has an outline version.
 
   Markup: <button class="button {{modifier_class}}">Push me</button>
 
-  .button--plain--blue - Primary buttons are blue, because the primary brand color is blue. This is a generic button and can be used for everything.
-  .button--plain--primary - Alias for .button--plain--blue
-  .button--plain--green - In interfaces, however, green buttons are mostly used to symbolize positive actions, like saving, creating, publishing and similar.
-  .button--plain--red - Buttons in red are mainly used for negative actions, like deleting, unpublishing, rejecting and similar.
-  .button--plain--orange - Buttons in orange are not widely used, but can be a nice contrasting alternative.
+  .button--outline-primary - Primary buttons are blue, because the primary brand color is blue. This is a generic button and can be used for everything.
+  .button--outline-success - In interfaces, however, green buttons are mostly used to symbolize positive actions, like saving, creating, publishing and similar.
+  .button--outline-danger - Buttons in red are mainly used for negative actions, like deleting, unpublishing, rejecting and similar.
+  .button--outline-warning - Buttons in orange are not widely used, but can be a nice contrasting alternative.
 
   Style guide: 4.8.2
  */
@@ -166,7 +164,7 @@
 
   Markup: <button class="button {{modifier_class}}">Push me</button>
 
-  .button--link.btn--blue - Blue link button
+  .button--link.btn--primary - Primary link button
 
   Style guide 4.8.3
  */
@@ -259,8 +257,8 @@ input.link,
 
   Markup: <button class="button {{modifier_class}}">Push me</button>
 
-  .button--lg - Button with larger size
-  .button--sm - Button with smaller size
+  .button--large - Button with larger size
+  .button--small - Button with smaller size
 
   Style guide 4.8.4
  */
