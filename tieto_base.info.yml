@@ -58,6 +58,8 @@ libraries-override:
     css:
       theme:
         css/media.view.css: false # @todo
+    js:
+      js/media.view.js: js/media.view.js
 
   # @todo Fix the Bootstrap modals for Entity Embed.
   # drupal.entity_embed.dialog:

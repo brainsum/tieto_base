@@ -60,6 +60,9 @@ class MediaLibrary extends MediaBase {
     $variables->view_url = Url::fromRoute('entity.media.canonical', $route_parameters);
     $variables->edit_link = Link::fromTextAndUrl(NULL, $edit_url);
     $variables->delete_link = Link::fromTextAndUrl(NULL, $delete_url);
+
+    // kint($media); die();
+
   }
 
 }
