@@ -57,6 +57,7 @@ html.no-touchevents .card--media:hover .card-img-overlay {
   position: absolute;
   top: 1rem;
   right: 1rem;
+  z-index: 1;
 }
 
 .card--media .card-title a {

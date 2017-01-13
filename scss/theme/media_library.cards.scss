@@ -50,6 +50,7 @@
     position: absolute;
     top: $spacer;
     right: $spacer;
+    z-index: 1;
   }
 
   .card-title a {

@@ -22,11 +22,11 @@
 %}
 <div{{ attributes.addClass(classes) }}>
   {{ content.thumbnail }}
-  <div class="card-img-overlay">
-    <div class="card-actions">
-      {{ edit_link }}
-      {{ delete_link }}
-    </div>
+  <div class="card-actions">
+    {{ edit_link }}
+    {{ delete_link }}
+  </div>
+  <a href="{{ view_url }}" title="{{ 'View this media'|t }}" class="card-img-overlay">
     <div class="card-content">
       <h4 class="card-title">{{ content.name }}</h4>
       <span class="card-text">{{ bundle_label }}</span>
@@ -41,6 +41,6 @@
         {{ content.field_field_industry }}
       </small>
     </div>
-  </div>
+  </a>
 </div>
 {% endif %}
