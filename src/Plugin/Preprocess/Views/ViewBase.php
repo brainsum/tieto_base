@@ -1,6 +1,6 @@
 <?php
 
-namespace Drupal\tieto_base\Plugin\Preprocess;
+namespace Drupal\tieto_base\Plugin\Preprocess\Views;
 
 use Drupal\tieto_base\Plugin\Preprocess\PreprocessBase;
 use Drupal\bootstrap\Plugin\Preprocess\PreprocessInterface;
@@ -14,4 +14,4 @@ use Drupal\bootstrap\Utility\Variables;
  *
  * @BootstrapPreprocess("views_view")
  */
-class View extends PreprocessBase implements PreprocessInterface {}
+class ViewBase extends PreprocessBase implements PreprocessInterface {}

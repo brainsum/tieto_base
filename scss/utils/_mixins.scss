@@ -141,9 +141,10 @@
 }
 
 // BEM
+
 @mixin element($name) {
   @at-root #{&}__#{$name} {
-    @content;
+    @content
   }
 }
 
@@ -153,10 +154,38 @@
 
 @mixin modifier($name) {
   @at-root #{&}--#{$name} {
-    @content;
+    @content
   }
 }
 
 @mixin m($name) {
   @include modifier($name);
+}
+
+// Touchscreen detection supported by Modernizr. (Drupal core has it by default)
+
+@mixin touchscreen {
+  @at-root {
+    html.touchevents #{&} {
+      @content
+    }
+  }
+}
+
+@mixin no-touchscreen {
+  @at-root {
+    html.no-touchevents #{&} {
+      @content
+    }
+  }
+}
+
+// Also, check for any class added by Modernizr.
+
+@mixin modernizr($class) {
+  @at-root {
+    html.#{$class} #{&} {
+      @content
+    }
+  }
 }

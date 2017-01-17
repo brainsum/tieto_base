@@ -58,6 +58,13 @@ libraries-override:
     css:
       component:
         assets/vendor/jquery.ui/themes/base/dialog.css: css/component/dialog.css
+        
+  media/view:
+    css:
+      theme:
+        css/media.view.css: false # @todo
+    js:
+      js/media.view.js: js/media.view.js
 
 libraries-extend:
   adminimal_admin_toolbar/adminimal-admin-toolbar:

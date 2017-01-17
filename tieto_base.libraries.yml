@@ -116,6 +116,13 @@ fancy-logo:
     - core/jquery.once
     - tieto_base/requestAnimationFrame
 
+media_library:
+  version: VERSION
+  css:
+    theme:
+      css/theme/media_library.view.css: {}
+      css/theme/media_library.cards.css: {}
+
 # ------------------------------------------------------------------------------
 # Overridden
 # ------------------------------------------------------------------------------

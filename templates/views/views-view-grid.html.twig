@@ -26,27 +26,24 @@
 #}
 {%
   set classes = [
+    'clearfix',
     'views-view-grid',
     options.alignment,
-    'cols-' ~ options.columns,
-    'clearfix',
   ]
 %}
 {% if options.row_class_default %}
   {%
     set row_classes = [
-      'views-row',
-      'row',
       options.alignment == 'horizontal' ? 'clearfix',
+      options.alignment == 'vertical' ? 'views-grid-item',
     ]
   %}
 {% endif %}
 {% if options.col_class_default %}
   {%
     set col_classes = [
-      'views-col',
-      'col-sm-3',
       options.alignment == 'vertical' ? 'clearfix',
+      options.alignment == 'horizontal' ? 'views-grid-item',
     ]
   %}
 {% endif %}
@@ -56,9 +53,9 @@
 <div{{ attributes.addClass(classes) }}>
   {% if options.alignment == 'horizontal' %}
     {% for row in items %}
-      <div{{ row.attributes.addClass(row_classes, options.row_class_default ? 'row-' ~ loop.index) }}>
+      <div{{ row.attributes.addClass(row_classes) }}>
         {% for column in row.content %}
-          <div{{ column.attributes.addClass(col_classes, options.col_class_default ? 'col-' ~ loop.index) }}>
+          <div{{ column.attributes.addClass(col_classes) }}>
             {{ column.content }}
           </div>
         {% endfor %}
@@ -66,9 +63,9 @@
     {% endfor %}
   {% else %}
     {% for column in items %}
-      <div{{ column.attributes.addClass(col_classes, options.col_class_default ? 'col-' ~ loop.index) }}>
+      <div{{ column.attributes }}>
         {% for row in column.content %}
-          <div{{ row.attributes.addClass(row_classes, options.row_class_default ? 'row-' ~ loop.index) }}>
+          <div{{ row.attributes }}>
             {{ row.content }}
           </div>
         {% endfor %}
