@@ -146,3 +146,11 @@
   border-bottom-width: 4px;
   font-size: 1.25rem;
 }
+
+.eb-tabs {
+  margin-bottom: 2rem;
+}
+
+.eb-tabs > ul {
+  border-bottom: 0;
+}

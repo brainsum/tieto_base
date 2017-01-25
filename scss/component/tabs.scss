@@ -324,3 +324,12 @@
 //     }
 //   }
 // }
+
+// Had no idea how to load entity embed dialog specific CSS to place this there.
+.eb-tabs {
+  margin-bottom: 2rem;
+
+  > ul {
+    border-bottom: 0;
+  }
+}
