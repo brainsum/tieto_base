@@ -58,11 +58,12 @@ class MediaLibrary extends MediaBase {
 
     // Add variables to the template.
     $variables->view_url = Url::fromRoute('entity.media.canonical', $route_parameters);
-    $variables->edit_link = Link::fromTextAndUrl(NULL, $edit_url);
-    $variables->delete_link = Link::fromTextAndUrl(NULL, $delete_url);
-
-    // kint($media); die();
-
+    if ($edit_url->access()) {
+      $variables->edit_link = Link::fromTextAndUrl(NULL, $edit_url);
+    }
+    if ($delete_url->access()) {
+      $variables->delete_link = Link::fromTextAndUrl(NULL, $delete_url);
+    }
   }
 
 }
