@@ -122,6 +122,8 @@ media_library:
     theme:
       css/theme/media_library.view.css: {}
       css/theme/media_library.cards.css: {}
+  dependencies:
+    - core/modernizr
 
 # ------------------------------------------------------------------------------
 # Overridden
