@@ -203,3 +203,9 @@ requestAnimationFrame:
     gpl-compatible: true
   js:
     js/polyfill/requestAnimationFrame.js: { browsers: { IE: 'lte IE 9' } }
+
+dialog:
+  version: VERSION
+  css:
+    theme:
+      css/components/dialog.css: {}

@@ -14,8 +14,11 @@
 #}
 {% extends 'media-card.html.twig' %}
 
+{# Remove the block content from the parent. #}
+{% block actions %}{% endblock %}
+
 {% block card_content %}
-  <a href="{{ view_url }}" title="{{ 'View this media'|t }}" class="card-img-overlay">
+  <div class="card-img-overlay">
     {{ parent() }}
-  </a>
+  </div>
 {% endblock %}
