@@ -1,6 +1,9 @@
 # tietobootstrap
 Extendable, modern frontend experience for Tieto projects + styleguide based on KSS.
 
+!!! moved to https://gitlab.shared.pub.tds.tieto.com/TietoPublicWebsites/tietobasetheme !!!
+!!! THIS IS A DEPRECATED REPOSITORY !!!
+
 ---
 
 ## Quick setup
