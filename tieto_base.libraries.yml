@@ -74,7 +74,7 @@ drupal.collapse:
 
 # @todo use custom build.
 bootstrap-scripts:
-  version: 4.0.0-alpha5
+  version: 4.0.0-alpha6
   js:
     js/tether.min.js: {}
     js/bootstrap.min.js: {}

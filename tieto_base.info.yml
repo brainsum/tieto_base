@@ -13,6 +13,7 @@ screenshot: screenshot.jpg
 # @see https://www.drupal.org/node/2349827
 libraries:
   - tieto_base/global
+  - tieto_base/tabs-toggle
 
 libraries-override:
 
@@ -58,7 +59,7 @@ libraries-override:
     css:
       component:
         assets/vendor/jquery.ui/themes/base/dialog.css: css/component/dialog.css
-        
+
   media/view:
     css:
       theme:
