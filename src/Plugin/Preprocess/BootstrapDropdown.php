@@ -32,7 +32,7 @@ class BootstrapDropdown extends BootstrapBootstrapDropdown {
 
     // Add class to child links.
     foreach ($variables->items as &$link) {
-      if ($link['#type'] === 'link') {
+      if (isset($link['#type']) && $link['#type'] === 'link') {
         $link['#attributes']['class'] = ['dropdown-item'];
       }
     }
