@@ -29,9 +29,6 @@ class MediaLibrary extends MediaBase {
     // Options for edit/delete links.
     // @see \Drupal\Core\Url::fromUri() for available keys.
     $link_options = [
-      'query' => [
-        'destination' => TietoBase::getDestination()
-      ],
       'attributes' => [
         'class' => ['glyphicon', 'btn', 'btn-sm', 'btn-default'],
       ],
@@ -52,7 +49,8 @@ class MediaLibrary extends MediaBase {
     );
 
     // Build the Edit and Delete links.
-    $route_parameters = ['media' => $media->id()];
+    $destination = \Drupal::destination()->get();
+    $route_parameters = ['media' => $media->id(), 'destination' => $destination];
     $edit_url = Url::fromRoute('entity.media.edit_form', $route_parameters, $edit_link_options);
     $delete_url = Url::fromRoute('entity.media.delete_form', $route_parameters, $delete_link_options);
 
