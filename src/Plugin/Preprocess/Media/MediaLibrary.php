@@ -55,7 +55,7 @@ class MediaLibrary extends MediaBase {
     $delete_url = Url::fromRoute('entity.media.delete_form', $route_parameters, $delete_link_options);
 
     // Add variables to the template.
-    $variables->view_url = Url::fromRoute('entity.media.canonical', ['media' => $media->id()]);
+    $variables->view_url = Url::fromRoute('entity.media.canonical', $route_parameters);
     if ($edit_url->access()) {
       $variables->edit_link = Link::fromTextAndUrl(NULL, $edit_url);
     }
